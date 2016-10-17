@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.3//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cpgame.demo.dao.UserMapper">
+
+	<resultMap type="UserEntity" id="userResultMap">
+		<id property="userId" column="USERID" />
+		<result property="username" column="USERNAME" />
+		<result property="passwordMd5" column="PASSWORDMD5" />
+		<result property="email" column="EMAIL" />
+		<result property="phone" column="PHONE" />
+		<result property="idCard" column="IDCARD" />
+		<result property="regTime" column="REGTIME" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		userId, userName, passwordMd5, email, phone, idCard,regTime
+	</sql>
+	<select id="selectByUserId" parameterType="java.lang.Integer"
+		resultMap="userResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from users
+		where userId = #{userId,jdbcType=INTEGER}
+	</select>
+
+	<delete id="deleteByUserId" parameterType="java.lang.Integer">
+		delete from users
+		where userId = #{userId,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="UserEntity">
+		insert into users (userId,
+		userName, passwordMd5,
+		email, phone, idCard,
+		regTime)
+		values
+		(#{userId,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR},
+		#{passwordMd5,jdbcType=VARCHAR},
+		#{email,jdbcType=VARCHAR},
+		#{phone,jdbcType=VARCHAR}, #{idCard,jdbcType=VARCHAR},
+		#{regTime,jdbcType=LONGVARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="UserEntity">
+		insert into users
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="userId != null">
+				userId,
+			</if>
+			<if test="username != null">
+				userName,
+			</if>
+			<if test="passwordMd5 != null">
+				passwordMd5,
+			</if>
+			<if test="email != null">
+				email,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="idcard != null">
+				idCard,
+			</if>
+			<if test="regtime != null">
+				regTime,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="userid != null">
+				#{userId,jdbcType=INTEGER},
+			</if>
+			<if test="userName != null">
+				#{username,jdbcType=VARCHAR},
+			</if>
+			<if test="passwordMd5 != null">
+				#{passwordMd5,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null">
+				#{email,jdbcType=VARCHAR},
+			</if>
+			<if test="phone != null">
+				#{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="idCard != null">
+				#{idCard,jdbcType=VARCHAR},
+			</if>
+			<if test="regTime != null">
+				#{regTime,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByUserIdSelective" parameterType="UserEntity">
+		update users
+		<set>
+			<if test="username != null">
+				userName = #{username,jdbcType=VARCHAR},
+			</if>
+			<if test="passwordmd5 != null">
+				passwordMd5 = #{passwordMd5,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null">
+				email = #{email,jdbcType=VARCHAR},
+			</if>
+			<if test="phone != null">
+				phone = #{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="idcard != null">
+				idCard = #{idCard,jdbcType=VARCHAR},
+			</if>
+			<if test="regtime != null">
+				regTime = #{regTime,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where userId = #{userId,jdbcType=INTEGER}
+	</update>
+	<update id="updateByUserIdWithBLOBs" parameterType="UserEntity">
+		update
+		users
+		set userame = #{username,jdbcType=VARCHAR},
+		passwordMd5 =
+		#{passwordMd5,jdbcType=VARCHAR},
+		email = #{email,jdbcType=VARCHAR},
+		phone = #{phone,jdbcType=VARCHAR},
+		idCard = #{idCard,jdbcType=VARCHAR},
+		regTime = #{regTime,jdbcType=LONGVARCHAR}
+		where userId =
+		#{userId,jdbcType=INTEGER}
+	</update>
+	<update id="updateByUserId" parameterType="UserEntity">
+		update users
+		set
+		username = #{username,jdbcType=VARCHAR},
+		passwordMd5 =
+		#{passwordMd5,jdbcType=VARCHAR},
+		email = #{email,jdbcType=VARCHAR},
+		phone = #{phone,jdbcType=VARCHAR},
+		idCard = #{idCard,jdbcType=VARCHAR}
+		where userId = #{userId,jdbcType=INTEGER}
+	</update>
+	
+	<select id="getUserById" parameterType="int" resultType="UserEntity"
+		resultMap="userResultMap">
+		SELECT * from USERS WHERE USERID = #{userId}
+	</select>
+
+	<select id="getUserByName" parameterType="String" resultType="UserEntity"
+		resultMap="userResultMap">
+		SELECT * from USERS WHERE USERNAME = #{username}
+	</select>
+
+	<insert id="insertUser" parameterType="UserEntity">
+		INSERT INTO
+		USERS
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="userId != null">
+				USERID,
+			</if>
+			<if test="username != null">
+				username,
+			</if>
+			<if test="passwordMd5 != null">
+				passwordMd5,
+			</if>
+			<if test="email != null">
+				email,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="idCard != null">
+				idCard,
+			</if>
+			<if test="regTime != null">
+				regTime
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="userId != null">
+				#{userId},
+			</if>
+			<if test="username != null">
+				#{username},
+			</if>
+			<if test="passwordMd5 != null">
+				#{passwordMd5},
+			</if>
+			<if test="email != null">
+				#{email},
+			</if>
+			<if test="phone != null">
+				#{phone},
+			</if>
+			<if test="idCard != null">
+				#{idCard},
+			</if>
+			<if test="regTime != null">
+				#{regTime}
+			</if>
+		</trim>
+	</insert>
+
+	<select id="isExistEmail" parameterType="String" resultType="String">
+		select email from users where email = #{email}
+	</select>
+
+	<select id="isExistPhone" parameterType="String" resultType="String">
+		select email from users where phone = #{phone}
+	</select>
+
+	<select id="isExistIdCard" parameterType="String" resultType="String">
+		select email from users where idCard = #{idCard}
+	</select>
+
+
+
+</mapper>

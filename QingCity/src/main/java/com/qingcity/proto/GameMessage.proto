@@ -1,0 +1,21 @@
+option java_package = "cpgame.demo.proto";
+option java_outer_classname = "GameMessage";
+
+message LoginCheck {
+  required string username=1;
+  required string password=2;
+}
+
+message RegisterCheck {
+  required string username=1;
+  required string password=2;
+  required string password2=3;
+  required string email=4;
+}
+
+message UsersCheckResp{
+  required string content=1;
+}
+
+
+

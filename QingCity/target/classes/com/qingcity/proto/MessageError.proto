@@ -1,0 +1,6 @@
+option java_package = "cpgame.demo.proto";
+option java_outer_classname = "MessageError";
+
+message Error{
+   required string content=1;
+}

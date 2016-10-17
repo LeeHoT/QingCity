@@ -1,0 +1,48 @@
+package com.qingcity.entity;
+
+import java.io.Serializable;
+
+/**
+ * 后台处理逻辑的核心实体类
+ */
+
+public class MsgEntity implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	private int msgLength; // 消息长度
+	private short cmdCode;// 储存命令码
+	private byte protocalType;// 协议类型 ProtocolType
+	private byte[] data;// 存放实际数据,用于protobuf解码成对应message
+
+	public byte getProtocalType() {
+		return protocalType;
+	}
+
+	public void setProtocalType(byte protocalType) {
+		this.protocalType = protocalType;
+	}
+
+	public int getMsgLength() {
+		return msgLength;
+	}
+
+	public void setMsgLength(int msgLen) {
+		this.msgLength = msgLen;
+	}
+
+	public short getCmdCode() {
+		return cmdCode;
+	}
+
+	public void setCmdCode(short cmdCode) {
+		this.cmdCode = cmdCode;
+	}
+
+	public byte[] getData() {
+		return data;
+	}
+
+	public void setData(byte[] data) {
+		this.data = data;
+	}
+}

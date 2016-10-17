@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="timer" class="java.util.Timer" scope="prototype"></bean>
+
+	<!-- Handler bean -->
+	<bean id="userHandler" class="com.qingcity.handler.UserHandler">
+		<property name="userEntity" ref="userEntity"></property>
+		<property name="resEntity" ref="msgEntity"></property>
+	</bean>
+
+	<!-- Service bean -->
+	<bean id="userService" class="com.qingcity.service.impl.UserServiceImpl"
+		scope="prototype"></bean>
+
+	<bean id="playerService" class="com.qingcity.service.impl.PlayerServiceImpl"
+		scope="prototype">
+	</bean>
+
+	<bean id="musicService" class="com.qingcity.service.impl.MusicServiceImpl"
+		scope="prototype"></bean>
+
+	<bean id="musicScoreService" class="com.qingcity.service.impl.MusicScoreServiceImpl"
+		scope="prototype"></bean>
+
+
+
+	<!--实体类 bean -->
+	<bean id="userEntity" class="com.qingcity.entity.UserEntity"
+		scope="prototype"></bean>
+
+	<bean id="msgEntity" class="com.qingcity.entity.MsgEntity" scope="prototype"></bean>
+
+	<bean id="playerEntity" class="com.qingcity.entity.PlayerEntity"
+		scope="prototype"></bean>
+
+	<bean id="musicEntiy" class="com.qingcity.entity.MusicEntity"
+		scope="prototype"></bean>
+
+	<bean id="musicScoreEntity" class="com.qingcity.entity.MusicScoreEntity"
+		scope="prototype"></bean>
+
+	<bean id="Reward" class="com.qingcity.entity.Reward" scope="prototype"></bean>
+
+	<bean id="task" class="com.qingcity.entity.Task"></bean>
+
+	<bean id="taskStatus" class="com.qingcity.entity.TaskStatus"></bean>
+
+	<bean id="rewardRecord" class="com.qingcity.entity.RewardRecord"></bean>
+
+</beans>

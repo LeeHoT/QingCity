@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.3//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qingcity.dao.PlayerMapper">
+
+	<resultMap type="PlayerEntity" id="playerResultMap">
+		<id property="playerId" column="PLAYERID" />
+		<result property="level" column="LEVEL" />
+		<result property="totalGrade" column="TOTALGRADE" />
+		<result property="power" column="POWER" />
+		<result property="diamond" column="DIAMOND" />
+		<result property="gold" column="GOLD" />
+	</resultMap>
+
+	<!-- 可复用SQL语句 -->
+	<sql id="Base_Column_List">
+		playerId, level, totalGrade, power, diamond, gold
+	</sql>
+	<select id="selectByPlayerId" parameterType="java.lang.Integer"
+		resultMap="playerResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from player
+		where playerId = #{playerId,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPlayerId" parameterType="java.lang.Integer">
+		delete from player
+		where playerId = #{playerId,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="PlayerEntity">
+		insert into player (playerId,
+		level, totalGrade,
+		power, diamond, gold
+		)
+		values
+		(#{playerId,jdbcType=INTEGER}, #{level,jdbcType=INTEGER},
+		#{totalGrade,jdbcType=INTEGER},
+		#{power,jdbcType=INTEGER},
+		#{diamond,jdbcType=INTEGER}, #{gold,jdbcType=INTEGER}
+		)
+	</insert>
+	<insert id="insertSelective" parameterType="PlayerEntity">
+		insert into player
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="playerid != null">
+				playerId,
+			</if>
+			<if test="level != null">
+				level,
+			</if>
+			<if test="totalgrade != null">
+				totalGrade,
+			</if>
+			<if test="power != null">
+				power,
+			</if>
+			<if test="diamond != null">
+				diamond,
+			</if>
+			<if test="gold != null">
+				gold,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="playerid != null">
+				#{playerId,jdbcType=INTEGER},
+			</if>
+			<if test="level != null">
+				#{level,jdbcType=INTEGER},
+			</if>
+			<if test="totalgrade != null">
+				#{totalGrade,jdbcType=INTEGER},
+			</if>
+			<if test="power != null">
+				#{power,jdbcType=INTEGER},
+			</if>
+			<if test="diamond != null">
+				#{diamond,jdbcType=INTEGER},
+			</if>
+			<if test="gold != null">
+				#{gold,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPlayerIdSelective" parameterType="PlayerEntity">
+		update player
+		<set>
+			<if test="level != null">
+				level = #{level,jdbcType=INTEGER},
+			</if>
+			<if test="totalgrade != null">
+				totalGrade = #{totalGrade,jdbcType=INTEGER},
+			</if>
+			<if test="power != null">
+				power = #{power,jdbcType=INTEGER},
+			</if>
+			<if test="diamond != null">
+				diamond = #{diamond,jdbcType=INTEGER},
+			</if>
+			<if test="gold != null">
+				gold = #{gold,jdbcType=INTEGER},
+			</if>
+		</set>
+		where playerId = #{playerId,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPlayerId" parameterType="PlayerEntity">
+		update player
+		set
+		level = #{level,jdbcType=INTEGER},
+		totalGrade =
+		#{totalGrade,jdbcType=INTEGER},
+		power = #{power,jdbcType=INTEGER},
+		diamond = #{diamond,jdbcType=INTEGER},
+		gold = #{gold,jdbcType=INTEGER}
+		where playerId = #{playerId,jdbcType=INTEGER}
+	</update>
+
+	<update id="updatePower">
+		UPDATE PLAYER SET
+		POWER=POWER+#{power} WHERE
+		PLAYERID=#{playerId}
+	</update>
+
+	<select id="getPower" parameterType="int" resultType="int">
+		SELECT
+		POWER FROM PLAYER WHERE PLAYERID = #{playerId}
+	</select>
+
+	<update id="updateGold">
+		UPDATE PLAYER SET
+		GOLD=GOLD+#{gold} WHERE
+		PLAYERID=#{playerId}
+	</update>
+
+	<select id="getGold" parameterType="int" resultType="int">
+		SELECT
+		GOLD
+		FROM PLAYER WHERE PLAYERID = #{playerId}
+	</select>
+
+	<select id="getDiamond" parameterType="int" resultType="int">
+		SELECT
+		DIAMOND FROM PLAYER WHERE PLAYERID = #{playerId}
+	</select>
+
+	<update id="updateDiamond" parameterType="int">
+		UPDATE PLAYER SET
+		DIAMOND=DIAMOND+100 WHERE PLAYERID=#{playerId}
+	</update>
+
+</mapper>

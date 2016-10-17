@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingcity.dao.MusicMapper">
+	<resultMap id="MusicResultMap" type="MusicEntity">
+		<id column="musicId" jdbcType="INTEGER" property="musicId" />
+		<result column="musicName" jdbcType="VARCHAR" property="musicName" />
+		<result column="singerName" jdbcType="VARCHAR" property="singerName" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		musicId, musicName, singerName
+	</sql>
+	<select id="selectByMusicId" parameterType="java.lang.Integer"
+		resultMap="MusicResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from music
+		where musicId = #{musicId,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByMusicId" parameterType="java.lang.Integer">
+		delete from music
+		where musicId = #{musicId,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="MusicEntity">
+		insert into music (musicId,
+		musicName, singerName
+		)
+		values (#{musicId,jdbcType=INTEGER},
+		#{musicName,jdbcType=VARCHAR},
+		#{singerName,jdbcType=VARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective" parameterType="MusicEntity">
+	insert into music
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="musicId != null">
+				musicId,
+			</if>
+			<if test="musicName != null">
+				musicName,
+			</if>
+			<if test="singerName != null">
+				singerName,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="musicId != null">
+				#{musicId,jdbcType=INTEGER},
+			</if>
+			<if test="musicName != null">
+				#{musicName,jdbcType=VARCHAR},
+			</if>
+			<if test="singerName != null">
+				#{singerName,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByMusicIdSelective" parameterType="MusicEntity">
+		update music
+		<set>
+			<if test="musicName != null">
+				musicName = #{musicName,jdbcType=VARCHAR},
+			</if>
+			<if test="singerName != null">
+				singerName = #{singerName,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where musicId = #{musicId,jdbcType=INTEGER}
+	</update>
+	<update id="updateByMusicId" parameterType="MusicEntity">
+		update music
+		set
+		musicName = #{musicName,jdbcType=VARCHAR},
+		singerName =
+		#{singerName,jdbcType=VARCHAR}
+		where musicId =
+		#{musicId,jdbcType=INTEGER}
+	</update>
+</mapper>

@@ -1,0 +1,8 @@
+option java_package = "cpgame.demo.proto";
+option java_outer_classname = "MsgEntityProto";
+
+message LoginCheck {
+required int32 msgLength=1;
+required int32 cmdCode=2;
+required bytes data=3;
+}
