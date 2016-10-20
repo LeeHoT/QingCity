@@ -7,15 +7,29 @@ import com.qingcity.entity.UserEntity;
 @Repository
 public interface UserMapper {
 
-	int deleteByUserId(Integer userid);
+	public int deleteByUserId(Integer userid);
 
-	int insert(UserEntity user);
+	public int insert(UserEntity user);
 
-	int insertSelective(UserEntity user);
+	public int insertSelective(UserEntity user);
 
-	UserEntity selectByUserId(Integer userid);
+	/**
+	 * 根据用户ID获取用户所有信息
+	 * 
+	 * @param userId
+	 * @return
+	 */
+	public UserEntity selectByUserId(Integer userid);
+	
+	public UserEntity selectSelective(UserEntity user);
 
-	int updateByUserIdSelective(UserEntity user);
+	/**
+	 * 不可修改注册时间
+	 * 
+	 * @param user
+	 * @return
+	 */
+	public int updateByUserIdSelective(UserEntity user);
 
 	/**
 	 * 可修改注册时间
@@ -24,22 +38,6 @@ public interface UserMapper {
 	 * @return
 	 */
 	int updateByUserIdWithBLOBs(UserEntity user);
-
-	/**
-	 * 不可修改注册时间
-	 * 
-	 * @param user
-	 * @return
-	 */
-	int updateByUserId(UserEntity user);
-
-	/**
-	 * 根据用户ID获取用户所有信息
-	 * 
-	 * @param userId
-	 * @return
-	 */
-	public UserEntity getUserById(int userId);
 
 	/**
 	 * 根据email获取用户信息

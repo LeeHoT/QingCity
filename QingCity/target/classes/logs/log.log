@@ -4306,3 +4306,12 @@ Caused by: java.lang.ClassCastException: org.slf4j.impl.Log4jLoggerAdapter canno
 [2016-10-17 12:37:00,378][INFO, (ServerAdapter.java:51).channelRead0] 服务器已收到消息
 [2016-10-17 16:00:55,269][INFO, (NettyServerStart.java:44).run] load the spring config file
 [2016-10-17 16:00:57,490][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor
+[2016-10-17 16:08:08,143][INFO, (NettyServerStart.java:44).run] load the spring config file
+[2016-10-17 16:08:09,768][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor
+[2016-10-17 16:08:10,954][INFO, (ServerInitializer.java:27).init] init the ServerInitializer
+[2016-10-17 16:08:11,790][INFO, (NettyServer.java:34).<init>] register port :8080
+[2016-10-17 16:08:11,790][INFO, (NettyServer.java:39).setInitializer] setInitializer port :8080
+[2016-10-17 16:08:11,798][INFO, (NettyServer.java:50).run] socket server started at port 8080.
+[2016-10-17 16:08:11,798][INFO, (NettyServer.java:54).run] the server initialize request method is : socket
+[2016-10-17 16:08:22,077][INFO, (ServerInitializer.java:37).initChannel] init the channel of type : socket
+[2016-10-17 16:08:22,152][INFO, (ServerAdapter.java:52).channelRead0] 服务器已收到消息

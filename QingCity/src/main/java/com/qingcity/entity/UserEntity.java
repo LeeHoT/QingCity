@@ -23,7 +23,7 @@ public class UserEntity implements Serializable {
 
 	private String email;// 用户邮箱
 	private String phone; // 用户电话号码
-	private long regTime; // 注册时间
+	private Long regTime; // 注册时间
 	private String idCard;// 身份证号
 
 	public String getIdCard() {
@@ -34,11 +34,11 @@ public class UserEntity implements Serializable {
 		this.idCard = idCard;
 	}
 
-	public long getRegTime() {
+	public Long getRegTime() {
 		return regTime;
 	}
 
-	public void setRegTime(long regTime) {
+	public void setRegTime(Long regTime) {
 		this.regTime = regTime;
 	}
 

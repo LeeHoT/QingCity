@@ -10,13 +10,13 @@ import com.qingcity.entity.PlayerEntity;
 @Repository("playerMapper")
 public interface PlayerMapper {
 
-	int deleteByPlayerId(Integer playerid);
+	int deleteByPlayerId(Integer playerId);
 
 	int insert(PlayerEntity record);
 
 	int insertSelective(PlayerEntity record);
 
-	PlayerEntity selectByPlayerId(Integer playerid);
+	PlayerEntity selectByPlayerId(Integer playerId);
 
 	int updateByPlayerIdSelective(PlayerEntity player);
 

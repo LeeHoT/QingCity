@@ -5,12 +5,20 @@
         <typeAlias alias="UserEntity" type="com.qingcity.entity.UserEntity"/> 
         <typeAlias alias="PlayerEntity" type="com.qingcity.entity.PlayerEntity"/> 
         <typeAlias alias="MusicEntity" type="com.qingcity.entity.MusicEntity"/> 
-        <typeAlias alias="MusicScoreEntity" type="com.qingcity.entity.MusicScoreEntity"/>  
+        <typeAlias alias="MusicScoreEntity" type="com.qingcity.entity.MusicScoreEntity"/>
+        <typeAlias alias="Reward" type="com.qingcity.entity.Reward"/>
+        <typeAlias alias="RewardRecord" type="com.qingcity.entity.RewardRecord"/>
+        <typeAlias alias="Task" type="com.qingcity.entity.Task"/>
+        <typeAlias alias="TaskStatus" type="com.qingcity.entity.TaskStatus"/>  
     </typeAliases>  
     <mappers>  
         <mapper resource="com/qingcity/dao/mapper/PlayerMapper.xml" />  
         <mapper resource="com/qingcity/dao/mapper/UserMapper.xml" />
         <mapper resource="com/qingcity/dao/mapper/MusicMapper.xml" /> 
-        <mapper resource="com/qingcity/dao/mapper/MusicScoreMapper.xml" />   
+        <mapper resource="com/qingcity/dao/mapper/MusicScoreMapper.xml" />
+        <mapper resource="com/qingcity/dao/mapper/Reward.xml" />   
+        <mapper resource="com/qingcity/dao/mapper/RewardRecord.xml" />   
+        <mapper resource="com/qingcity/dao/mapper/Task.xml" />   
+        <mapper resource="com/qingcity/dao/mapper/TaskStatus.xml" />      
     </mappers>  
 </configuration>  

@@ -39,9 +39,6 @@ public class PowerTask extends TimerTask {
 		//logger.info("增加用户体力");
 		System.out.println(System.currentTimeMillis());
 		System.out.println("playerService is " + playerService);
-		System.out.println("更新前玩家" + playerId + "的体力为:" + playerService.getPower(playerId));
-		playerService.updatePower(playerId, POWER);
-		System.out.println("更新后玩家" + playerId + "的体力为:" + playerService.getPower(playerId));
 
 	}
 

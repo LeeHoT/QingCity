@@ -8,11 +8,14 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 	
 
 	<context id="generatorTables" targetRuntime="MyBatis3">
+		<!--  
 		<plugin type="org.mybatis.generator.plugins.MapperConfigPlugin">
 			<property name="fileName" value="mybatis-config.xml" />
-			<property name="targetPackage" value="/" />
-			<property name="targetProject" value="/config" />
+			<property name="targetPackage" value="" />
+			<property name="targetProject" value="QingCity/src/main/resources/config" />
 		</plugin>
+		
+		-->
 
 		<!-- 此处是将 Example 改名为 Criteria 想改成什么都行 -->
 		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
@@ -29,7 +32,7 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 		</commentGenerator>
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://127.0.0.1:3306/cpgame" userId="root"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/qingcity" userId="root"
 			password="root">
 		</jdbcConnection>
 
@@ -40,25 +43,25 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 		</javaTypeResolver>
 
 		<!-- javaModelGenerator是模型的生成信息，这里将指定这些Java model类的生成路径； -->
-		<javaModelGenerator targetPackage="cpgame.demo.entity"
-			targetProject="src/main/java">
+		<javaModelGenerator targetPackage="com.qingcity.entity2"
+			targetProject="QingCity/src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<!-- sqlMapGenerator是mybatis 的sqlMapper XML文件的生成信息，包括生成路径等； 先生成xml，在生成java -->
-		<sqlMapGenerator targetPackage="cpgame.demo.dao.mapper"
-			targetProject="src/main/resources">
+		<sqlMapGenerator targetPackage="com.qingcity.dao.mapper"
+			targetProject="QingCity/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
 		<!-- javaClientGenerator是应用接口的生成信息； -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.qingcity.dao" targetProject="src/main/java">
+			targetPackage="com.qingcity.dao" targetProject="QingCity/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<!-- table是用户指定的被生成相关信息的表，它必须在指定的jdbc连接中已经被建立。?是否可以多个 -->
+		<!-- table是用户指定的被生成相关信息的表，它必须在指定的jdbc连接中已经被建立。?是否可以多个
 
 		<table tableName="users" domainObjectName="UserEntity"
 			enableCountByExample="false" enableUpdateByExample="false"
@@ -73,9 +76,26 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 		<table tableName="music" domainObjectName="MusicEntity"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+		<table tableName="musicScore" domainObjectName="MusicScoreEntity"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>
 		
-		<table tableName="musicScore" domainObjectName="MusicScoreEntity"
+		 -->
+		<table tableName="task" domainObjectName="Task"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="taskStatus" domainObjectName="TaskStatus"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="reward" domainObjectName="Reward"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="rewardRecord" domainObjectName="RewardRecord"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>

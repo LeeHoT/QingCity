@@ -13,79 +13,76 @@ public class PlayerServiceImpl implements PlayerService {
 	@Autowired
 	private PlayerMapper playerMapper;
 
+	@Autowired
+	private PlayerEntity playerEntity;
+
 	public void setPlayerMapper(PlayerMapper playerMapper) {
 		this.playerMapper = playerMapper;
 	}
 
 	@Override
-	public int getDiamond(int playerId) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getPower(int playerId) {
-		System.out.println(playerMapper);
-		return playerMapper.getPower(playerId);
-	}
-
-	@Override
-	public int getGold(int playerId) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void updateDiamond(int playerId, int diamond) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void updatePower(int playerId, int power) {
-		playerMapper.updatePower(playerId, power);
-	}
-
-	@Override
-	public void updateGold(int playerId, int gold) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void deleteByPlayerId(int playerId) {
-		// TODO Auto-generated method stub
+		playerMapper.deleteByPlayerId(playerId);
 
 	}
 
 	@Override
 	public void insert(PlayerEntity player) {
-		// TODO Auto-generated method stub
+		playerMapper.insert(player);
 
 	}
 
 	@Override
 	public void insertSelective(PlayerEntity player) {
-		// TODO Auto-generated method stub
+		playerMapper.insertSelective(player);
 
 	}
 
 	@Override
 	public PlayerEntity selectByPlayerId(int playerId) {
-		// TODO Auto-generated method stub
-		return null;
+		playerEntity = playerMapper.selectByPlayerId(playerId);
+		return playerEntity;
 	}
 
 	@Override
-	public void updateByPlayerId(int playerId) {
-		// TODO Auto-generated method stub
+	public void updateByPlayerId(PlayerEntity player) {
+		playerMapper.updateByPlayerId(player);
 
 	}
 
 	@Override
-	public void updateByPlayerIdSelective(PlayerEntity player) {
-		// TODO Auto-generated method stub
+	public void updateByPlayerIdSelective(PlayerEntity playerEntity) {
+		playerMapper.updateByPlayerIdSelective(playerEntity);
 
+	}
+
+	@Override
+	public boolean isLevelUp(int playerId) {
+		playerEntity = selectByPlayerId(playerId);
+		int sumExperience = getSumExperience(playerEntity.getLevel());
+		if (playerEntity.getExperience() >= sumExperience) {
+			// 够升级了。。那就直接升了吧。
+			// 重新设置当前playEntity中存储的当前用户的信息，设定需要更新的内容。
+			playerEntity.setLevel(playerEntity.getLevel() + 1);
+			playerEntity.setExperience(playerEntity.getExperience() - sumExperience);
+			updateByPlayerIdSelective(playerEntity);
+			System.out.println("恭喜玩家 "+playerId+"成功升级");
+			return true;
+		} else {
+			System.out.println("经验还不足以升级。。继续努力吧！");
+		}
+		return false;
+	}
+
+	@Override
+	public int getSumExperience(int level) {
+		int sumExperience = 0;
+		if (level <= 10) {
+			sumExperience = level * 100;
+		} else {
+			sumExperience = 1300 + level * 100 / 2;
+		}
+		return sumExperience;
 	}
 
 }

@@ -12,6 +12,11 @@ import com.qingcity.entity.UserEntity;
  */
 @Service
 public interface UserService {
+	
+	
+	public boolean login(UserEntity user);
+	
+	public String register(UserEntity user);
 
     public void deleteByUserId(int userId);
 	
@@ -41,7 +46,7 @@ public interface UserService {
 	
 	public void insertUser(UserEntity msg);
 
-	public UserEntity getUserByName(String username);
+	public UserEntity getUserByNameAndPassword(String username,String password);
 
 	public UserEntity getUserById(int userId);
 	
@@ -91,6 +96,8 @@ public interface UserService {
 	 * @return
 	 */
 	public String getPhone(int userId);
+
+	public UserEntity getUserByName(String username);
 	
 
 }

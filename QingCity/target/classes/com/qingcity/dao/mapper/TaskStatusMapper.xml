@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcity.dao.TaskStatusMapper">
+	<resultMap id="BaseResultMap" type="TaskStatus">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="userId" property="userId" jdbcType="INTEGER" />
+		<result column="taskId" property="taskId" jdbcType="INTEGER" />
+		<result column="status" property="status" jdbcType="BIT" />
+		<result column="rewardStatus" property="rewardStatus" jdbcType="BIT" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, userId, taskId, status, rewardStatus
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from taskstatus
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from taskstatus
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="com.qingcity.entity.TaskStatus">
+		insert into taskstatus (id, userId, taskId,
+		status, rewardStatus)
+		values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER},
+		#{taskId,jdbcType=INTEGER},
+		#{status,jdbcType=BIT}, #{rewardStatus,jdbcType=BIT})
+	</insert>
+	<insert id="insertSelective" parameterType="com.qingcity.entity.TaskStatus">
+		insert into taskstatus
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="userid != null">
+				userId,
+			</if>
+			<if test="taskid != null">
+				taskId,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="rewardstatus != null">
+				rewardStatus,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="userid != null">
+				#{userId,jdbcType=INTEGER},
+			</if>
+			<if test="taskid != null">
+				#{taskId,jdbcType=INTEGER},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=BIT},
+			</if>
+			<if test="rewardstatus != null">
+				#{rewardStatus,jdbcType=BIT},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.qingcity.entity.TaskStatus">
+		update taskstatus
+		<set>
+			<if test="userid != null">
+				userId = #{userId,jdbcType=INTEGER},
+			</if>
+			<if test="taskid != null">
+				taskId = #{taskId,jdbcType=INTEGER},
+			</if>
+			<if test="status != null">
+				status = #{status,jdbcType=BIT},
+			</if>
+			<if test="rewardstatus != null">
+				rewardStatus = #{rewardStatus,jdbcType=BIT},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.qingcity.entity.TaskStatus">
+		update taskstatus
+		set userId = #{userId,jdbcType=INTEGER},
+		taskId = #{taskId,jdbcType=INTEGER},
+		status = #{status,jdbcType=BIT},
+		rewardStatus = #{rewardStatus,jdbcType=BIT}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

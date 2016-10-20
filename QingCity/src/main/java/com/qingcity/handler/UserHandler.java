@@ -1,5 +1,7 @@
 package com.qingcity.handler;
 
+import javax.management.relation.RelationServiceNotRegisteredException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,13 +29,13 @@ import com.qingcity.utils.TimerUtil;
  *
  */
 
-
 public class UserHandler implements CmdHandler {
 	protected Logger logger = LoggerFactory.getLogger(UserHandler.class);
 	@Autowired
 	private UserEntity userEntity;
 	@Autowired
 	private MsgEntity resEntity;// 回复信息
+
 	@Autowired
 	private UserService userService;
 
@@ -52,7 +54,7 @@ public class UserHandler implements CmdHandler {
 		switch (msgEntity.getCmdCode()) {// 根据命令码对应找到对应处理方法
 		case CmdConstant.USER_LOGIN_CHECK:
 			logger.info("一位玩家请求登录");
-			handleLoginCheck(msgEntity, response);
+			handlerLoginCheck(msgEntity, response);
 			break;
 		case CmdConstant.USER_REGISTER_CHECK:
 			logger.info("有用户正在请求进行注册");
@@ -65,11 +67,31 @@ public class UserHandler implements CmdHandler {
 			logger.info("有用户在添加邮箱信息");
 		case CmdConstant.USER_ADD_IDCARD:
 			logger.info("有用户在进行实名制认证");
-//		case CmdConstant.ADD_PHONE:
-//			logger.info("有用户在添加电话信息");
+			// case CmdConstant.ADD_PHONE:
+			// logger.info("有用户在添加电话信息");
 		default:
 			System.out.println("找不到对应的命令码");
 		}
+	}
+
+	/**
+	 * 验证用户名和密码格式和内容是否符合最低标准
+	 * 
+	 * @param user
+	 * @return
+	 */
+	public boolean validate(String username, String password) {
+		boolean flag = true; // 用户是否已登录成功
+		if (username.trim() == null && username.trim().length() <= 6) {
+			// 用户名为空或用户名过短，无法登录
+			System.out.println("用户名不能为空");
+			flag = false;
+		} else if (password.trim() == null) {
+			// 密码为空，无法登录
+			System.out.println("密码不能为空");
+			flag = false;
+		}
+		return flag;
 	}
 
 	/**
@@ -80,83 +102,74 @@ public class UserHandler implements CmdHandler {
 	 * @param response
 	 *            返回消息对象
 	 */
-	private void handleLoginCheck(MsgEntity msgEntity, GameResponse response) {
+	private void handlerLoginCheck(MsgEntity msgEntity, GameResponse response) {
 		LoginCheck login;
 		UsersCheckResp.Builder uCheck = UsersCheckResp.newBuilder();// 新建builder
 		try {
 			login = LoginCheck.parseFrom(msgEntity.getData());// 反序列化消息体
-			
-			if (login.getUsername() == null) {
-				System.out.println("用户名不能为空");
-			} else if (login.getPassword() == null) {
-				System.out.println("密码不能为空");
-			} else {
-				System.out.println("++++++++++++++++++++++++++" + userService);
-				userEntity = userService.getUserByName(login.getUsername());
-				if (userEntity == null) {
-					System.out.println("用户不存在，请核对后再登陆");
-					uCheck.setContent("用户不存在，请核对后再登陆");
-					UsersCheckResp check = uCheck.build();
-					byte[] b = check.toByteArray();
-					resEntity.setCmdCode(CmdConstant.LOGIN_FAIL);
-					resEntity.setData(b);
-					response.setRtMessage(resEntity);
-
-				} else if (!userEntity.getPasswordMd5().equals(login.getPassword())) {
-					System.out.println("密码错误，请重新输入");
-				} else {
-					System.out.println("恭喜您" + userEntity.getUsername() + "成功登录");
-					TimerUtil time = new TimerUtil();
-					time.GrowthTask(userEntity.getUserId());
-				}
-			}
+			userEntity.setUsername(login.getUsername());
+			userEntity.setPasswordMd5(login.getPassword());
 		} catch (InvalidProtocolBufferException e) {
-			logger.error(ExceptionUtils.getStackTrace(e));
+			e.printStackTrace();
 		}
+		if (validate(userEntity.getUsername(), userEntity.getPasswordMd5())) {
+			System.out.println("用户名或密码格式错误，请重新输入");
+			uCheck.setContent("登录失败，请核对用户名和密码后再登录");
+			UsersCheckResp check = uCheck.build();
+			byte[] b = check.toByteArray();
+			resEntity.setCmdCode(CmdConstant.ANY_FAIL);
+			resEntity.setData(b);	
+		} else if (!userService.login(userEntity)) {
+			System.out.println("登录失败");
+			uCheck.setContent("登录失败，请核对用户名和密码后再登录");
+			UsersCheckResp check = uCheck.build();
+			byte[] b = check.toByteArray();
+			resEntity.setCmdCode(CmdConstant.ANY_FAIL);
+			resEntity.setData(b);
+		} else {
+			System.out.println("恭喜您" + userEntity.getUsername() + "成功登录");
+			uCheck.setContent("登录失败，请核对用户名和密码后再登录");
+			UsersCheckResp check = uCheck.build();
+			byte[] b = check.toByteArray();
+			resEntity.setCmdCode(CmdConstant.ANY_FAIL);
+			resEntity.setData(b);
+		}
+		response.setRtMessage(resEntity);
 	}
+
+	/**
+	 * 处理用户注册请求
+	 * 
+	 * @param msgEntity
+	 * @param response
+	 */
 
 	private void handleRegisterCheck(MsgEntity msgEntity, GameResponse response) {
 		UsersCheckResp.Builder uCheck = UsersCheckResp.newBuilder();
 		byte[] b;
+		String result = null;
 		try {
 			RegisterCheck register = RegisterCheck.parseFrom(msgEntity.getData());
-			if (register.getUsername().trim() == null) {
-				System.out.println("用户名不能为空");
-			} else if (register.getPassword().trim() == null || register.getPassword2().trim() == null) {
-				System.out.println("密码不能为空");
-			} else if (!register.getPassword().equals(register.getPassword2())) {
+			if (!validate(register.getUsername(), register.getPassword())) {
+				System.out.println("用户名和密码格式不正确");
+			} else if (!register.getPassword().trim().equals(register.getPassword2().trim())) {
 				System.out.println("两次密码不一致");
 			} else {
-				if (userService.getUserByName(register.getUsername()) != null) {
-					System.out.println("用户名存在");
-					uCheck.setContent("注册失败");
-					UsersCheckResp u = uCheck.build();
-					b = u.toByteArray();
-					resEntity.setCmdCode(CmdConstant.REGISTER_FAIL);
-					resEntity.setData(b);
-					response.setRtMessage(b);
-				} else if (!userService.isExistEmail(register.getEmail())) {
-					System.out.println("邮箱已被注册");
-				} else {
-					userEntity.setUsername(register.getUsername());
-					userEntity.setPasswordMd5(register.getPassword());
-					userEntity.setEmail(register.getEmail());
-					userEntity.setRegTime(System.currentTimeMillis());
-					userService.insertUser(userEntity);
-					uCheck.setContent("注册成功");
-					UsersCheckResp u = uCheck.build();
-					System.out.println(register.getUsername() + "注册成功啦");
-					b = u.toByteArray();
-					resEntity.setCmdCode(CmdConstant.REGISTER_SUCCESS);
-					resEntity.setData(b);
-					response.setRtMessage(b);
-					
-				}
-				
+				userEntity.setUsername(register.getUsername());
+				userEntity.setPasswordMd5(register.getPassword2());
+				userEntity.setEmail(register.getEmail());
+				userEntity.setRegTime(System.currentTimeMillis());
+				result = userService.register(userEntity);
 			}
 		} catch (InvalidProtocolBufferException e) {
 			logger.error(ExceptionUtils.getStackTrace(e));
 		}
+		uCheck.setContent(result);
+		UsersCheckResp u = uCheck.build();
+		b = u.toByteArray();
+		resEntity.setCmdCode(CmdConstant.ANY_FAIL);
+		resEntity.setData(b);
+		response.setRtMessage(b);
 
 	}
 
@@ -197,8 +210,6 @@ public class UserHandler implements CmdHandler {
 	public void setResEntity(MsgEntity resEntity) {
 		this.resEntity = resEntity;
 	}
-	
-	
 
 	// private void handleNameCheck(MsgEntity msgEntity, List<MsgEntity>
 	// commandList) {

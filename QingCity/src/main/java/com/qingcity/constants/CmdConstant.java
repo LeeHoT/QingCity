@@ -12,12 +12,26 @@ public interface CmdConstant {
 			USER_ADD_EMAIL = 102, // 添加邮箱
 			USER_ADD_IDCARD = 103, // 添加身份证号
 			//ADD_PHONE = 104, // 添加电话号
+			COMMIT_RESULT= 2000,//提交游戏结果
+			
+			PAY_DIAMOND=2001,
+			PAY_GOLD=2002,
+			GET_ALL_MUSIC=2003,
+			GET_SEASON_RANK=2004,
+			GET_WEEK_RANK=2005,
+			GET_DAY_RANK=2006,
+			GET_SEASON_REWARD=2007,
+			GET_COMMON_REWARD=2008,
+			GET_INTERACT_REWARD=2009,//获取互动奖励
+			GET_RIVAL_SCORE=2010,//获取对手成绩
+			GET_PLAYSER_INFO=2011,
+			DIAMOND_BUY_GOLD=2012,
+			
+	        
+			
+			
 
-			LOGIN_FAIL = 150, // 登陆失败
-			REGISTER_FAIL = 151, // 注册失败
-			ADD_EMAIL_FAIL = 152, // 添加邮箱失败
-			ADD_IDCARD_FAIL = 153, // 添加身份证号失败
-			ADD_PHONE_FAIL = 154, // 添加电话号失败
+			ANY_FAIL=3000,
 
 			LOGIN_SUCCESS = 1501, // 登陆成功
 			REGISTER_SUCCESS = 1511, // 注册成功
