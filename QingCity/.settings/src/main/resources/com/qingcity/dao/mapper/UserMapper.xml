@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.3//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qingcity.dao.UserMapper">
+	<resultMap type="UserEntity" id="userResultMap">
+		<id property="userId" column="USERID" />
+		<result property="username" column="USERNAME" />
+		<result property="passwordMd5" column="PASSWORDMD5" />
+		<result property="email" column="EMAIL" />
+		<result property="phone" column="PHONE" />
+		<result property="idCard" column="IDCARD" />
+		<result property="regTime" column="REGTIME" />
+		<result property="isCharged" column="isCharged" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		userId, userName, passwordMd5, email, phone,
+		idCard,regTime,isCharged
+	</sql>
+	<insert id="insertUser" parameterType="UserEntity"
+		useGeneratedKeys="true" keyProperty="userId">
+		insert into users (
+		userName,
+		passwordMd5,
+		email, phone, idCard,
+		regTime,isCharged)
+		values
+		(
+		#{username,jdbcType=VARCHAR},
+		#{passwordMd5,jdbcType=VARCHAR},
+		#{email,jdbcType=VARCHAR},
+		#{phone,jdbcType=VARCHAR},
+		#{idCard,jdbcType=VARCHAR},
+		#{regTime,jdbcType=LONGVARCHAR}),#{isCharged,jdbcType=BIT}
+	</insert>
+	<insert id="insertUserSelective" parameterType="UserEntity"
+		useGeneratedKeys="true" keyProperty="userId">
+		INSERT INTO
+		USERS
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="username != null">
+				username,
+			</if>
+			<if test="passwordMd5 != null">
+				passwordMd5,
+			</if>
+			<if test="email != null">
+				email,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="idCard != null">
+				idCard,
+			</if>
+			<if test="regTime != null">
+				regTime,
+			</if>
+			<if test="isCharged != null">
+				isCharged,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="username != null">
+				#{username},
+			</if>
+			<if test="passwordMd5 != null">
+				#{passwordMd5},
+			</if>
+			<if test="email != null">
+				#{email},
+			</if>
+			<if test="phone != null">
+				#{phone},
+			</if>
+			<if test="idCard != null">
+				#{idCard},
+			</if>
+			<if test="regTime != null">
+				#{regTime},
+			</if>
+			<if test="isCharged != null">
+				#{isCharged}
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 根据用户id删除玩家基本信息 ，，该方法只有管理员可以使用 -->
+	<delete id="deleteByUserId" parameterType="java.lang.Integer">
+		delete from users
+		where userId = #{userId,jdbcType=INTEGER}
+	</delete>
+
+	<update id="updateByUserIdSelective" parameterType="UserEntity">
+		update users
+		<set>
+			<if test="username != null">
+				userName = #{username,jdbcType=VARCHAR},
+			</if>
+			<if test="passwordmd5 != null">
+				passwordMd5 = #{passwordMd5,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null">
+				email = #{email,jdbcType=VARCHAR},
+			</if>
+			<if test="phone != null">
+				phone = #{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="idcard != null">
+				idCard = #{idCard,jdbcType=VARCHAR},
+			</if>
+			<if test="isCharged != null">
+				isCharged = #{isCharged,jdbcType=BIT},
+			</if>
+		</set>
+		where userId = #{userId,jdbcType=INTEGER}
+	</update>
+	<update id="updateByUserId" parameterType="UserEntity">
+		update users
+		set
+		username = #{username,jdbcType=VARCHAR},
+		passwordMd5 =
+		#{passwordMd5,jdbcType=VARCHAR},
+		email = #{email,jdbcType=VARCHAR},
+		phone = #{phone,jdbcType=VARCHAR},
+		idCard = #{idCard,jdbcType=VARCHAR},
+		isCharged = #{isCharged,jdbcType=BIT}
+		where userId =
+		#{userId,jdbcType=INTEGER}
+	</update>
+	<!-- 根据用户id查询用户个人基本信息 -->
+	<select id="selectByUserId" parameterType="java.lang.Integer"
+		resultMap="userResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from users
+		where userId = #{userId,jdbcType=INTEGER}
+	</select>
+	<!-- 根据用户名字查询相关信息，主要用于登录时使用 -->
+	<select id="selectUserByName" parameterType="String" resultType="UserEntity">
+		select
+		<include refid="Base_Column_List" />
+		from users where username = #{username}
+	</select>
+	
+	<!-- users表充值问题设置 -->
+	<!-- 检查玩家是否已经充过值，若冲过，返回true -->
+	<select id="isCharged" parameterType="Integer" resultType="Boolean">
+		select isCharged from users where userId = #{userId}
+	</select>
+	<!-- 查询所有未充值的玩家 -->
+	<select id="selectNoChargeUser" resultType="UserEntity">
+	    select userId,username from users where isCharged = false 
+	</select>
+	<!-- 将玩家设置为已充值 -->
+	<update id="updateChargedByUserId" parameterType="Integer">
+		update users set isCharged = true where userId = #{userId}
+	</update>
+	
+	
+	<!-- 以下仅为方便，，不知速度如何 -->
+	<insert id="insertIdCard" parameterType="String">
+		insert into
+		users(idCard) values(#{idCard}) where userId =
+		#{userId}
+	</insert>
+	<insert id="insertEmail" parameterType="String">
+		insert into
+		users(email)
+		values(#{email}) where userId =
+		#{userId}
+	</insert>
+	<insert id="insertPhone" parameterType="String">
+		insert into
+		users(phone)
+		values(#{phone}) where userId =
+		#{userId}
+	</insert>
+	<select id="getIdCard" parameterType="INTEGER" resultType="STRING">
+		select idCard from users where userId = #{userId}
+	</select>
+	<select id="getEmail" parameterType="INTEGER" resultType="STRING">
+		select
+		email from users where userId = #{userId}
+	</select>
+	<select id="getPhone" parameterType="INTEGER" resultType="STRING">
+		select
+		phone from users where userId = #{userId}
+	</select>
+	<select id="isExistEmail" parameterType="String" resultType="String">
+		select email from users where email = #{email}
+	</select>
+	<select id="isExistIdCard" parameterType="String" resultType="String">
+		select idCard from users where idCard = #{idCard}
+	</select>
+	<select id="isExistPhone" parameterType="String" resultType="String">
+		select email from users where phone = #{phone}
+	</select>
+	<select id="isExistUsername" parameterType="String" resultType="String">
+		select username from users where username = #{username}
+	</select>
+
+
+</mapper>

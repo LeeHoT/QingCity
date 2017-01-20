@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcity.dao.MailBoxMapper" >
+  <resultMap id="BaseResultMap" type="MailBox" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="playerId" property="playerId" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="sendtime" property="sendtime" jdbcType="TIMESTAMP" />
+    <result column="overTime" property="overtime" jdbcType="TIMESTAMP" />
+    <result column="hyperlink" property="hyperlink" jdbcType="VARCHAR" />
+    <result column="isRead" property="isRead" jdbcType="BIT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="MailBox" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, playerId, title, sendtime, overTime, hyperlink, isRead
+  </sql>
+  <sql id="Blob_Column_List" >
+    content
+  </sql>
+  <select id="selectByPlayerId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from mailbox
+    where playerId = #{playerId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from mailbox
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="MailBox" >
+    insert into mailbox (id, playerId, title, 
+      sendtime, overTime, hyperlink, 
+      isRead, content)
+    values (#{id,jdbcType=INTEGER}, #{playerId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, 
+      #{sendtime,jdbcType=TIMESTAMP}, #{overtime,jdbcType=TIMESTAMP}, #{hyperlink,jdbcType=VARCHAR}, 
+      #{isRead,jdbcType=BIT}, #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="MailBox" >
+    insert into mailbox
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="playerId != null" >
+        playerId,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="sendtime != null" >
+        sendtime,
+      </if>
+      <if test="overtime != null" >
+        overTime,
+      </if>
+      <if test="hyperlink != null" >
+        hyperlink,
+      </if>
+      <if test="isRead != null" >
+        isRead,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="playerId != null" >
+        #{playerId,jdbcType=INTEGER},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="sendtime != null" >
+        #{sendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="overtime != null" >
+        #{overtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="hyperlink != null" >
+        #{hyperlink,jdbcType=VARCHAR},
+      </if>
+      <if test="isRead != null" >
+        #{isRead,jdbcType=BIT},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="MailBox" >
+    update mailbox
+    <set >
+      <if test="playerId != null" >
+        playerId = #{playerId,jdbcType=INTEGER},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="sendtime != null" >
+        sendtime = #{sendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="overtime != null" >
+        overTime = #{overtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="hyperlink != null" >
+        hyperlink = #{hyperlink,jdbcType=VARCHAR},
+      </if>
+      <if test="isRead != null" >
+        isRead = #{isRead,jdbcType=BIT},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="MailBox" >
+    update mailbox
+    set playerId = #{playerId,jdbcType=INTEGER},
+      title = #{title,jdbcType=VARCHAR},
+      sendtime = #{sendtime,jdbcType=TIMESTAMP},
+      overTime = #{overtime,jdbcType=TIMESTAMP},
+      hyperlink = #{hyperlink,jdbcType=VARCHAR},
+      isRead = #{isRead,jdbcType=BIT},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="MailBox" >
+	update mailbox
+	set playerId = #{playerId,jdbcType=INTEGER},
+	title = #{title,jdbcType=VARCHAR},
+	sendtime = #{sendtime,jdbcType=TIMESTAMP},
+	overTime = #{overtime,jdbcType=TIMESTAMP},
+	hyperlink = #{hyperlink,jdbcType=VARCHAR},
+	isRead = #{isRead,jdbcType=BIT}
+	where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

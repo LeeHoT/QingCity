@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.3//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingcity.dao.PlayerMapper">
+	<resultMap type="PlayerEntity" id="playerResultMap">
+		<id property="userId" column="userId" jdbcType="INTEGER" />
+		<result property="nickname" column="nickname" />
+		<result property="level" column="LEVEL" jdbcType="INTEGER" />
+		<result property="experience" column="EXPERIENCE" jdbcType="INTEGER" />
+		<result property="power" column="POWER" jdbcType="INTEGER" />
+		<result property="diamond" column="DIAMOND" jdbcType="INTEGER" />
+		<result property="gold" column="GOLD" jdbcType="INTEGER" />
+		<result property="lastPowUpdateTime" column="LASTPOWUPDATETIME"
+			jdbcType="TIMESTAMP" />
+		<result property="icon" column="ICON" jdbcType="VARCHAR" />
+		<result property="societyId" column="societyId" />
+		<result property="contribution" column="contribution" />
+		<result property="job" column="job" />
+	</resultMap>
+	<!-- 可复用SQL语句 -->
+	<sql id="Base_Column_List">
+		userId, level,experience, power, diamond,
+		gold,icon,lastPowUpdateTime,nickname,contribution,societyId,job
+	</sql>
+	<!--根据id查询玩家信息，包括玩家姓名 -->
+	<select id="selectByUserId" parameterType="java.lang.Integer"
+		resultMap="playerResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from player where p.userId = #{userId}
+	</select>
+	<!-- -->
+	<select id="selectPlayerByLevel" parameterType="Integer"
+		resultType="Integer">
+		select userId from player where level =
+		#{level,jdbcType=INTEGER}
+	</select>
+	<!-- before you use this method , please think carefully,your choice may 
+		do a importent problem -->
+	<delete id="deleteByUserId" parameterType="java.lang.Integer">
+		delete from player
+		where userId = #{userId,jdbcType=INTEGER}
+	</delete>
+	<!-- 玩家更换头像 -->
+	<update id="updateIcon"> update player set
+		icon = #{icon} where userId =
+		#{userId}
+	</update>
+	<!-- 获取玩家头像 -->
+	<select id="getIcon" parameterType="Integer" resultType="String"> select
+		icon from player where userId = #{userId}
+	</select>
+	<!-- this method is not recommened to use -->
+	<insert id="insertPlayer" parameterType="PlayerEntity"
+		useGeneratedKeys="true" keyProperty="userId">
+		insert into player
+		(userId,level,experience,
+		power, diamond,
+		gold,lastPowUpdateTime,icon,nickname
+		)
+		values
+		(#{userId,jdbcType=INTEGER},#{level,jdbcType=INTEGER},
+		#{experience,jdbcType=INTEGER},
+		#{power,jdbcType=INTEGER},
+		#{diamond,jdbcType=INTEGER},
+		#{gold,jdbcType=INTEGER},#{lastPowUpdateTime,jdbcType=TIMESTAMP},
+		#{icon,jdbcType=VARCHAR},#{nickname,jdbcType=VARCHAR}
+		)
+	</insert>
+	<!-- insert a player information optionally,this method just be used for 
+		registing,and please enture every property completely,or you can not regist -->
+	<insert id="insertSelective" parameterType="PlayerEntity"
+		useGeneratedKeys="true" keyProperty="userId">
+		insert into player
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="userId != null">
+				userId,
+			</if>
+			<if test="level != null">
+				level,
+			</if>
+			<if test="experience != null">
+				experience,
+			</if>
+			<if test="power != null &amp; lastPowUpdateTime != null">
+				power,lastPowUpdateTime,
+			</if>
+			<if test="diamond != null">
+				diamond,
+			</if>
+			<if test="gold != null">
+				gold,
+			</if>
+			<if test="icon != null">
+				icon,
+			</if>
+			<if test="societyId != null">
+				societyId,
+			</if>
+			<if test="contribution != null">
+				contribution,
+			</if>
+			<if test="nickname != null">
+				nickname,
+			</if>
+			<if test="job != null">
+				job,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="userId !=  null">
+				#{userId,jdbcType=INTEGER},
+			</if>
+			<if test="level != null">
+				#{level,jdbcType=INTEGER},
+			</if>
+			<if test="experience != null">
+				#{experience,jdbcType=INTEGER},
+			</if>
+			<if test="power != null &amp; lastPowUpdateTime != null">
+				#{power,jdbcType=INTEGER},#{lastPowUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="diamond != null">
+				#{diamond,jdbcType=INTEGER},
+			</if>
+			<if test="gold != null">
+				#{gold,jdbcType=INTEGER},
+			</if>
+			<if test="icon != null">
+				#{icon,jdbcType=VARCHAR},
+			</if>
+			<if test="societyId != null">
+				#{societyId,jdbcType=INTEGER},
+			</if>
+			<if test="contribution != null">
+				#{contribution,jdbcType=INTEGER},
+			</if>
+			<if test="nickname != null">
+				#{nickname,jdbcType=VARCHAR},
+			</if>
+			<if test="job != null">
+				#{job,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<!-- update player nickname -->
+	<update id="updateNickname">
+		update player set nickname =
+		#{nickname,jdbcType=VARCHAR} where userId =
+		#{userId,jdbcType=INTEGER}
+	</update>
+	<!-- update player information optionally ,in this method ,userId never 
+		can be change.When you update the power ,the property of lastPowUpdateTime 
+		must be not null and update with the power at the same time -->
+	<update id="updateByUserIdSelective" parameterType="PlayerEntity">
+		update player
+		<set>
+			<if test="level != null">
+				level = level + #{level,jdbcType=INTEGER},
+			</if>
+			<if test="experience != null">
+				experience = #{experience,jdbcType=INTEGER},
+			</if>
+			<if test="power != null &amp; lastPowUpdateTime != null">
+				power = power + #{power,jdbcType=INTEGER},
+				lastPowUpdateTime = #{lastPowUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="diamond != null">
+				diamond = diamond + #{diamond,jdbcType=INTEGER},
+			</if>
+			<if test="gold != null">
+				gold =gold + #{gold,jdbcType=INTEGER},
+			</if>
+			<if test="icon != null">
+				icon = #{icon,jdbcType=VARCHAR}
+			</if>
+			<if test="societyId != null">
+				societyId = #{societyId,jdbcType=INTEGER},
+			</if>
+			<if test="contribution != null">
+				contribution = #{contribution,jdbcType=INTEGER},
+			</if>
+			<if test="nickname != null">
+				nickname = #{nickname,jdbcType=VARCHAR},
+			</if>
+			<if test="job != null">
+				job = #{job,jdbcType=INTEGER},
+			</if>
+		</set>
+		where userId = #{userId,jdbcType=INTEGER}
+	</update>
+
+	<!-- update a player power number and his property of lastPowUpdateTime 
+		which is just a mark -->
+	<update id="updatePower">
+		UPDATE PLAYER SET
+		POWER=POWER+#{power,jdbcType=INTEGER},lastPowUpdateTime=#{lastPowUpdateTime,jdbcType=TIMESTAMP}
+		WHERE
+		userId=#{userId,jdbcType=INTEGER}
+	</update>
+	<!--update a player gold number -->
+	<update id="updateGold">
+		UPDATE PLAYER SET
+		GOLD=GOLD+#{gold} WHERE
+		userId=#{userId}
+	</update>
+	<!-- get a player power number -->
+	<select id="getPower" parameterType="int" resultType="int">
+		SELECT
+		POWER FROM PLAYER WHERE userId = #{userId}
+	</select>
+	<!-- get a time which is this player update his power latest -->
+	<select id="getLastPowUpdateTime" parameterType="INTEGER"
+		resultType="java.sql.Timestamp">
+		select lastPowUpdateTime from player where userId =
+		#{userId,jdbcType=INTEGER}
+	</select>
+	<!-- get a player gold number -->
+	<select id="getGold" parameterType="int" resultType="int">
+		SELECT
+		GOLD
+		FROM PLAYER WHERE userId = #{userId}
+	</select>
+	<!-- get a player diamond number -->
+	<select id="getDiamond" parameterType="int" resultType="int">
+		SELECT
+		DIAMOND FROM PLAYER WHERE userId = #{userId}
+	</select>
+	<!-- update a playe diamond number -->
+	<update id="updateDiamond" parameterType="Integer">
+		UPDATE PLAYER SET
+		DIAMOND=DIAMOND+#{diamond} WHERE userId=#{userId}
+	</update>
+
+
+	<!-- *******************下边部分为和公会相关的信息******************* -->
+	<!-- quit a society -->
+	<update id="quitSociety" parameterType="Integer">
+		update player set
+		societyId = -1,societyId = -1 where userId =
+		#{userId,jdbcType=INTEGER}
+	</update>
+	<!-- join a society 条件表达式中大于号小于号用 gt,lt <if test="id != 9">...</if> <if 
+		test="id gt 9">...</if> <if test="id lt 9">...</if> -->
+	<update id="joinSociety">
+		update player set societyId =
+		#{societyId,jdbcType=INTEGER}
+		where userId =
+		#{userId,jdbcType=INTEGER}
+	</update>
+	<!-- update player contribution -->
+	<update id="updateContribution" parameterType="Integer">
+		UPDATE PLAYER SET
+		contribution=contribution+#{contribution} WHERE userId=#{userId}
+	</update>
+	<update id="updateJob" parameterType="Integer">
+		UPDATE PLAYER SET
+		job=#{job} WHERE userId=#{userId}
+	</update>
+	<select id="getPlayerSocietyInfo" parameterType="Integer">
+		select
+		contribution,job,societyId from player where userId = #{userId}
+	</select>
+	<!-- *******************上边部分为和公会相关的信息******************* -->
+</mapper>

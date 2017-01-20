@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    
+	<typeAliases>
+		<typeAlias alias="UserEntity" type="com.qingcity.entity.UserEntity" />
+		<typeAlias alias="PlayerEntity" type="com.qingcity.entity.PlayerEntity" />
+		<typeAlias alias="Societys" type="com.qingcity.entity.Societys" />
+		<typeAlias alias="MailBox" type="com.qingcity.entity.MailBox" />
+		<typeAlias alias="Dress" type="com.qingcity.entity.Dress" />
+		<typeAlias alias="Backpack" type="com.qingcity.entity.Backpack" />
+		<typeAlias alias="PurchaseRecord" type="com.qingcity.entity.PurchaseRecord" />
+		<typeAlias alias="RechargeRecord" type="com.qingcity.entity.RechargeRecord" />
+		<!-- package music -->
+		<typeAlias alias="MusicEntity" type="com.qingcity.entity.music.MusicEntity" />
+		<typeAlias alias="MusicScoreEntity"
+			type="com.qingcity.entity.music.MusicScoreEntity" />
+		<typeAlias alias="PassRecord" type="com.qingcity.entity.music.PassRecord" />
+		<!-- package reward -->
+		<typeAlias alias="Reward" type="com.qingcity.entity.reward.Reward" />
+		<typeAlias alias="RewardRecord" type="com.qingcity.entity.reward.RewardRecord" />
+		<!-- package task -->
+		<typeAlias alias="Task" type="com.qingcity.entity.task.Task" />
+		<typeAlias alias="TaskStatus" type="com.qingcity.entity.task.TaskStatus" />
+		
+	</typeAliases>
+	<mappers>
+		<!-- base package -->
+		<mapper resource="com/qingcity/dao/mapper/PlayerMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/UserMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/MailBoxMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/DressMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/BackpackMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/PurchaseRecordMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/RechargeRecordMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/SocietysMapper.xml" />
+		<!-- package music -->
+		<mapper resource="com/qingcity/dao/mapper/MusicMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/MusicScoreMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/PassRecordMapper.xml" />
+		<!-- package reward -->
+		<mapper resource="com/qingcity/dao/mapper/RewardMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/RewardRecordMapper.xml" />
+		<!-- package task -->
+		<mapper resource="com/qingcity/dao/mapper/TaskMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/TaskStatusMapper.xml" />
+	</mappers>
+</configuration>  

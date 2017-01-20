@@ -1,0 +1,22 @@
+option java_package = "com.qingcity.proto";
+option java_outer_classname = "PkMsg";
+
+message PkInfo{
+   required int32 userId=1;
+   required int32 musicId=2;
+}
+
+message RivalInfo{
+   required int32 rivalId=1;
+   required int32 roomId=2;
+   required string rivalName=3;
+   required int32 rivalHigeScore=4;
+}
+
+message PkResult{
+  required int32 userId=1;
+  required int32 Grade=2;
+  required string isWinner=3;
+  required int32 rewardGold=4;
+  required int32 rewardDiamond=5;
+}

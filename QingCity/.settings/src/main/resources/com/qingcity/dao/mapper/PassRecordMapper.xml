@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcity.dao.PassRecordMapper">
+	<resultMap id="BaseResultMap" type="PassRecord">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="userId" property="userId" jdbcType="INTEGER" />
+		<result column="city" property="city" jdbcType="INTEGER" />
+		<result column="musicId" property="musicId" jdbcType="INTEGER" />
+		<result column="isComplete" property="isComplete" jdbcType="BIT" />
+		<result column="difficulty" property="difficulty" jdbcType="INTEGER" />
+	</resultMap>
+
+	<!-- 查询玩家打歌中所有解锁和未解锁的歌曲 -->
+	<resultMap type="PassRecord" id="queryForPassMusic">
+		<id column="musicId" jdbcType="INTEGER" property="musicId" />
+		<result column="isComplete" property="isComplete" jdbcType="BIT" />
+		<result column="difficulty" property="difficulty" jdbcType="INTEGER" />
+		<association property="musicEntity" javaType="MusicEntity">
+			<result column="city" jdbcType="INTEGER" property="city" />
+			<result column="musicName" jdbcType="VARCHAR" property="musicName" />
+			<result column="singerName" jdbcType="VARCHAR" property="singerName" />
+		</association>
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, userId, city, musicId, isComplete, difficulty
+	</sql>
+	<!-- 查询每个城所有难度通关和未通关的歌曲。没有数据的歌曲，没有的歌曲即为没有解锁的 -->
+	<select id="queryForPassMusic" parameterType="INTEGER"
+		resultMap="queryForPassMusic">
+		select
+		pr.musicId,pr.isComplete,pr.difficulty,m.city,m.musicName,
+		m.singerName from passrecord pr left join music m on pr.musicId =
+		m.musicId where userId = #{userId} and m.city = #{city}
+	</select>
+	<!-- 将玩家一条为通关的记录设置为已通关 -->
+	<update id="updatePassRecordToComplete">
+		update passrecord set isComplete = 1 where userId =
+		#{userId} and musicId =
+		#{musicId} and difficulty = #{difficulty}
+	</update>
+	<!-- 查询玩家某一城中某一难度的已经通关的歌曲数量 -->
+	<select id="selectPassNum" resultType="Integer" parameterType="Integer">
+		SELECT COUNT(*) FROM passrecord where userId =
+		#{userId} and city =
+		#{city} and difficulty = #{difficulty} and isComplete = 1
+	</select>
+	<!-- 查询玩家共闯过了多少关，用于主页 -->
+	<select id="selectCompleteNum" parameterType="Integer"
+		resultType="Integer">
+		SELECT COUNT(*) FROM passrecord WHERE userId = #{userId}
+		AND isComplete = 1;
+	</select>
+	<!-- 插入一条记录 -->
+	<insert id="insertSelective" parameterType="PassRecord">
+		insert into passrecord
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="userId != null">
+				userId,
+			</if>
+			<if test="city != null">
+				city,
+			</if>
+			<if test="musicId != null">
+				musicId,
+			</if>
+			<if test="isComplete != null">
+				isComplete,
+			</if>
+			<if test="difficulty != null">
+				difficulty,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="userId != null">
+				#{userId,jdbcType=INTEGER},
+			</if>
+			<if test="city != null">
+				#{city,jdbcType=INTEGER},
+			</if>
+			<if test="musicId != null">
+				#{musicId,jdbcType=INTEGER},
+			</if>
+			<if test="isComplete != null">
+				#{isComplete,jdbcType=BIT},
+			</if>
+			<if test="difficulty != null">
+				#{difficulty,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+</mapper>

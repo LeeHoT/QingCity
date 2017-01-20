@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+
+	<import resource="applicationContext-chatBean.xml" />
+	<!-- 加载数据文件 -->
+	<context:property-placeholder
+		location="classpath:config/properties/settings.properties"
+		ignore-unresolvable="true" />
+
+	<!-- 初始化Initializer -->
+	<bean id="chatServerInitializer" class="com.qingcity.chat.netty.ChatServerInitializer"
+		init-method="init">
+		<property name="chatMessageDispatcher" ref="chatMessageDispatcher" />
+		<property name="chatRequestType" value="${app.chat.requestType}" />
+	</bean>
+
+	<!-- Dispathcher 拦截器，抉择执行的handler -->
+	<bean id="chatMessageDispatcher" class="com.qingcity.chat.domain.ChatMessageDispatcher">
+		<property name="messageExecutor">
+			<bean class="com.qingcity.domain.FiexThreadPoolExecutor"
+				destroy-method="shutdown">
+				<constructor-arg value="${app.handler.pool.corePoolSize}" />
+				<constructor-arg value="${app.handler.pool.maximumPoolSize}" />
+				<constructor-arg value="${app.handler.pool.keepAliveSecond}" />
+				<constructor-arg value="${app.handler.pool.chat.name}" />
+			</bean>
+		</property>
+		<property name="sleepTime" value="${app.handler.sleepTime}" />
+	</bean>
+</beans>

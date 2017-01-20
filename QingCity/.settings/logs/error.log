@@ -1,0 +1,523 @@
+[2016-12-26 15:52:00,407][ERROR, (ChatServerHandler.java:57).exceptionCaught] [ChatClient]: /127.0.0.1:64786在Mon Dec 26 15:52:00 CST 2016发生连接异常
+[2017-01-15 18:30:49,160][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 18:30:49,162][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 18:30:49,163][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 18:30:49,164][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 18:30:49,166][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 18:30:49,171][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 18:30:49,173][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 18:30:49,202][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 18:30:49,203][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 18:30:49,205][ERROR, (UserHandler.java:164).handleRegisterCheck] com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: password2, email
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.qingcity.proto.GameMessage$RegisterCheck.parseFrom(GameMessage.java:1096)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:139)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:58)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:00:53,047][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:00:53,048][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:00:53,049][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:00:53,069][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:00:53,070][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:00:53,070][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:00:53,071][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:00:53,071][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:00:53,071][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:00:53,071][WARN, (HandlerDispatcher.java:163).handMessageQueue] 指令 [104]找不到
+[2017-01-15 19:19:15,891][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:15,898][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:15,914][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:15,909][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:15,890][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:15,890][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:15,944][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:15,944][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:15,977][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:15,984][ERROR, (HandlerDispatcher.java:160).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:126)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:54)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:158)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:142)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-01-15 19:19:20,363][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xda1e63fe, /127.0.0.1:56845 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:19:20,364][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x2aebcf09, /127.0.0.1:56839 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:19:20,364][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x1f11f3e5, /127.0.0.1:56837 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:19:20,364][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xa0a0ece4, /127.0.0.1:56843 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:19:20,365][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x2733aab7, /127.0.0.1:56840 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:19:20,365][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x69b124e4, /127.0.0.1:56846 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:19:20,365][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x1fcc2615, /127.0.0.1:56844 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:19:20,365][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xfcdc1b86, /127.0.0.1:56838 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:19:20,365][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x880b8b70, /127.0.0.1:56841 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:19:20,365][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x10d0e54f, /127.0.0.1:56842 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,092][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x845c651e, /127.0.0.1:57433 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,092][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x351adcee, /127.0.0.1:57432 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,093][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x351adcee, /127.0.0.1:57432 => /127.0.0.1:8080]] from channelMap!,玩家[491]掉线
+[2017-01-15 19:54:52,093][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xf827db92, /127.0.0.1:57429 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,093][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x6a96f683, /127.0.0.1:57430 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,093][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x2910f9ab, /127.0.0.1:57434 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,093][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xd21c8a91, /127.0.0.1:57426 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,093][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x8cd3973e, /127.0.0.1:57431 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,093][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x1f7f2a41, /127.0.0.1:57435 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,094][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xc3fc3203, /127.0.0.1:57428 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 19:54:52,094][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x140908d6, /127.0.0.1:57427 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:06,996][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x43aec87e, /127.0.0.1:57675 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:06,996][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x43aec87e, /127.0.0.1:57675 => /127.0.0.1:8080]] from channelMap!,玩家[488]掉线
+[2017-01-15 20:06:06,997][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x976a4028, /127.0.0.1:57676 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:06,997][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x976a4028, /127.0.0.1:57676 => /127.0.0.1:8080]] from channelMap!,玩家[493]掉线
+[2017-01-15 20:06:06,997][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x3ef2b084, /127.0.0.1:57677 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:06,997][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x3ef2b084, /127.0.0.1:57677 => /127.0.0.1:8080]] from channelMap!,玩家[491]掉线
+[2017-01-15 20:06:06,997][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x88b4064e, /127.0.0.1:57678 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:06,997][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x88b4064e, /127.0.0.1:57678 => /127.0.0.1:8080]] from channelMap!,玩家[496]掉线
+[2017-01-15 20:06:06,997][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xae6c4d37, /127.0.0.1:57673 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:06,997][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xae6c4d37, /127.0.0.1:57673 => /127.0.0.1:8080]] from channelMap!,玩家[497]掉线
+[2017-01-15 20:06:06,998][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xf7f5c3f8, /127.0.0.1:57674 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:06,999][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xf7f5c3f8, /127.0.0.1:57674 => /127.0.0.1:8080]] from channelMap!,玩家[490]掉线
+[2017-01-15 20:06:36,997][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x89967505, /127.0.0.1:57681 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:36,997][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x89967505, /127.0.0.1:57681 => /127.0.0.1:8080]] from channelMap!,玩家[495]掉线
+[2017-01-15 20:06:36,997][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x89d12872, /127.0.0.1:57682 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:36,997][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x89d12872, /127.0.0.1:57682 => /127.0.0.1:8080]] from channelMap!,玩家[494]掉线
+[2017-01-15 20:06:36,998][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xa554e63d, /127.0.0.1:57680 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:36,998][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xa554e63d, /127.0.0.1:57680 => /127.0.0.1:8080]] from channelMap!,玩家[489]掉线
+[2017-01-15 20:06:36,999][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xa3803e6b, /127.0.0.1:57679 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-15 20:06:36,999][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xa3803e6b, /127.0.0.1:57679 => /127.0.0.1:8080]] from channelMap!,玩家[492]掉线
+[2017-01-16 11:11:47,923][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x6e661696, /127.0.0.1:49318 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:11:47,937][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xb2d64556, /127.0.0.1:49320 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:11:47,937][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x27dea04c, /127.0.0.1:49319 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:11:47,937][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x97f83bfa, /127.0.0.1:49326 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:11:47,937][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x50d033e6, /127.0.0.1:49322 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:11:47,937][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xe7609127, /127.0.0.1:49321 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:11:47,937][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xe7609127, /127.0.0.1:49321 => /127.0.0.1:8080]] from channelMap!,玩家[495]掉线
+[2017-01-16 11:11:47,938][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xe28300ba, /127.0.0.1:49325 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:11:47,938][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x7c4ad630, /127.0.0.1:49327 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:11:47,938][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x186f00e2, /127.0.0.1:49324 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:11:47,938][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x63af0881, /127.0.0.1:49323 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:39,742][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49441在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,742][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49438在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,742][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49440在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,742][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49439在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,745][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49438掉线并将其移出服务器
+[2017-01-16 11:15:39,745][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49439掉线并将其移出服务器
+[2017-01-16 11:15:39,745][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49441掉线并将其移出服务器
+[2017-01-16 11:15:39,745][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49440掉线并将其移出服务器
+[2017-01-16 11:15:39,745][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xb3f3419d, /127.0.0.1:49439 :> /127.0.0.1:8080]] from channelMap!,玩家[490]掉线
+[2017-01-16 11:15:39,745][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xbb9f6929, /127.0.0.1:49438 :> /127.0.0.1:8080]] from channelMap!,玩家[488]掉线
+[2017-01-16 11:15:39,746][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x47321f2a, /127.0.0.1:49440 :> /127.0.0.1:8080]] from channelMap!,玩家[496]掉线
+[2017-01-16 11:15:39,745][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x1529c8db, /127.0.0.1:49441 :> /127.0.0.1:8080]] from channelMap!,玩家[497]掉线
+[2017-01-16 11:15:39,746][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49442在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,746][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49447在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,746][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49437在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,746][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49443在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,748][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49437掉线并将其移出服务器
+[2017-01-16 11:15:39,748][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49444在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,747][ERROR, (ServerAdapter.java:125).exceptionCaught] [Client]: /127.0.0.1:49450在Mon Jan 16 11:15:39 CST 2017发生连接异常
+[2017-01-16 11:15:39,749][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x1f336c83, /127.0.0.1:49437 :> /127.0.0.1:8080]] from channelMap!,玩家[492]掉线
+[2017-01-16 11:15:39,749][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49443掉线并将其移出服务器
+[2017-01-16 11:15:39,752][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49442掉线并将其移出服务器
+[2017-01-16 11:15:39,752][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49447掉线并将其移出服务器
+[2017-01-16 11:15:39,753][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x478ba252, /127.0.0.1:49443 :> /127.0.0.1:8080]] from channelMap!,玩家[491]掉线
+[2017-01-16 11:15:39,753][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x6b59dcf7, /127.0.0.1:49442 :> /127.0.0.1:8080]] from channelMap!,玩家[493]掉线
+[2017-01-16 11:15:39,753][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x8ee6c735, /127.0.0.1:49447 :> /127.0.0.1:8080]] from channelMap!,玩家[494]掉线
+[2017-01-16 11:15:39,754][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49450掉线并将其移出服务器
+[2017-01-16 11:15:39,754][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49444掉线并将其移出服务器
+[2017-01-16 11:15:39,754][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xfeca4960, /127.0.0.1:49450 :> /127.0.0.1:8080]] from channelMap!,玩家[495]掉线
+[2017-01-16 11:15:39,754][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x7e041dca, /127.0.0.1:49444 :> /127.0.0.1:8080]] from channelMap!,玩家[489]掉线
+[2017-01-16 11:15:53,389][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x1f336c83, /127.0.0.1:49437 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:53,390][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x1529c8db, /127.0.0.1:49441 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:53,390][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x8ee6c735, /127.0.0.1:49447 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:53,390][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xbb9f6929, /127.0.0.1:49438 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:53,391][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x47321f2a, /127.0.0.1:49440 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:53,391][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x478ba252, /127.0.0.1:49443 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:53,391][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xfeca4960, /127.0.0.1:49450 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:53,391][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xb3f3419d, /127.0.0.1:49439 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:53,391][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x7e041dca, /127.0.0.1:49444 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:15:53,391][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x6b59dcf7, /127.0.0.1:49442 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:21:40,414][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49581在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,414][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49588在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,414][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49584在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,414][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49585在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,417][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49584掉线并将其移出服务器
+[2017-01-16 11:21:40,417][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49585掉线并将其移出服务器
+[2017-01-16 11:21:40,417][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49581掉线并将其移出服务器
+[2017-01-16 11:21:40,417][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49588掉线并将其移出服务器
+[2017-01-16 11:21:40,418][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x3a1b3198, /127.0.0.1:49581 :> /127.0.0.1:8080]] from channelMap!,玩家[497]掉线
+[2017-01-16 11:21:40,418][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x25835926, /127.0.0.1:49588 :> /127.0.0.1:8080]] from channelMap!,玩家[491]掉线
+[2017-01-16 11:21:40,418][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x4b1da1e2, /127.0.0.1:49585 :> /127.0.0.1:8080]] from channelMap!,玩家[496]掉线
+[2017-01-16 11:21:40,418][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x25f4c7c2, /127.0.0.1:49584 :> /127.0.0.1:8080]] from channelMap!,玩家[490]掉线
+[2017-01-16 11:21:40,419][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49587在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,419][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49593在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,419][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49583在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,419][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49582在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,421][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49586在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,420][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49587掉线并将其移出服务器
+[2017-01-16 11:21:40,422][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:49590在Mon Jan 16 11:21:40 CST 2017发生连接异常
+[2017-01-16 11:21:40,421][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49583掉线并将其移出服务器
+[2017-01-16 11:21:40,422][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x5d221718, /127.0.0.1:49587 :> /127.0.0.1:8080]] from channelMap!,玩家[489]掉线
+[2017-01-16 11:21:40,423][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x794777ee, /127.0.0.1:49583 :> /127.0.0.1:8080]] from channelMap!,玩家[492]掉线
+[2017-01-16 11:21:40,422][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49593掉线并将其移出服务器
+[2017-01-16 11:21:40,423][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49582掉线并将其移出服务器
+[2017-01-16 11:21:40,424][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x868054cc, /127.0.0.1:49593 :> /127.0.0.1:8080]] from channelMap!,玩家[495]掉线
+[2017-01-16 11:21:40,424][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xf5093de6, /127.0.0.1:49582 :> /127.0.0.1:8080]] from channelMap!,玩家[488]掉线
+[2017-01-16 11:21:40,424][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49586掉线并将其移出服务器
+[2017-01-16 11:21:40,424][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:49590掉线并将其移出服务器
+[2017-01-16 11:21:40,425][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xe3ac6ecf, /127.0.0.1:49586 :> /127.0.0.1:8080]] from channelMap!,玩家[493]掉线
+[2017-01-16 11:21:40,425][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x2d2d86d1, /127.0.0.1:49590 :> /127.0.0.1:8080]] from channelMap!,玩家[494]掉线
+[2017-01-16 11:25:45,784][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x0c4da17c, /127.0.0.1:49696 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,785][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x0c4da17c, /127.0.0.1:49696 => /127.0.0.1:8080]] from channelMap!,玩家[496]掉线
+[2017-01-16 11:25:45,785][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xad8036c3, /127.0.0.1:49702 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,785][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xad8036c3, /127.0.0.1:49702 => /127.0.0.1:8080]] from channelMap!,玩家[495]掉线
+[2017-01-16 11:25:45,785][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xe3ab90b3, /127.0.0.1:49691 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,785][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xe3ab90b3, /127.0.0.1:49691 => /127.0.0.1:8080]] from channelMap!,玩家[488]掉线
+[2017-01-16 11:25:45,785][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xd10c50f5, /127.0.0.1:49695 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,786][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xd10c50f5, /127.0.0.1:49695 => /127.0.0.1:8080]] from channelMap!,玩家[493]掉线
+[2017-01-16 11:25:45,786][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x347db5f7, /127.0.0.1:49689 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,786][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x347db5f7, /127.0.0.1:49689 => /127.0.0.1:8080]] from channelMap!,玩家[489]掉线
+[2017-01-16 11:25:45,786][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0xe876457d, /127.0.0.1:49690 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,786][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xe876457d, /127.0.0.1:49690 => /127.0.0.1:8080]] from channelMap!,玩家[492]掉线
+[2017-01-16 11:25:45,786][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x234b80f0, /127.0.0.1:49692 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,786][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x234b80f0, /127.0.0.1:49692 => /127.0.0.1:8080]] from channelMap!,玩家[497]掉线
+[2017-01-16 11:25:45,786][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x2db81434, /127.0.0.1:49694 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,787][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x2db81434, /127.0.0.1:49694 => /127.0.0.1:8080]] from channelMap!,玩家[491]掉线
+[2017-01-16 11:25:45,787][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x0d96298a, /127.0.0.1:49688 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,787][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x0d96298a, /127.0.0.1:49688 => /127.0.0.1:8080]] from channelMap!,玩家[490]掉线
+[2017-01-16 11:25:45,787][WARN, (CheckChannelStatusTask.java:26).run] channel:[[id: 0x1875430a, /127.0.0.1:49700 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:25:45,787][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x1875430a, /127.0.0.1:49700 => /127.0.0.1:8080]] from channelMap!,玩家[494]掉线
+[2017-01-16 11:29:12,610][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x9ead0e5c, /127.0.0.1:49817 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,610][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x9ead0e5c, /127.0.0.1:49817 => /127.0.0.1:8080]] from channelMap!,玩家[489]掉线
+[2017-01-16 11:29:12,611][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0xaf9ed56d, /127.0.0.1:49814 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,611][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xaf9ed56d, /127.0.0.1:49814 => /127.0.0.1:8080]] from channelMap!,玩家[496]掉线
+[2017-01-16 11:29:12,611][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x463376d0, /127.0.0.1:49815 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,611][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x463376d0, /127.0.0.1:49815 => /127.0.0.1:8080]] from channelMap!,玩家[488]掉线
+[2017-01-16 11:29:12,611][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0xc588de2b, /127.0.0.1:49812 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,611][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xc588de2b, /127.0.0.1:49812 => /127.0.0.1:8080]] from channelMap!,玩家[490]掉线
+[2017-01-16 11:29:12,611][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x5178e79f, /127.0.0.1:49823 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,612][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x5178e79f, /127.0.0.1:49823 => /127.0.0.1:8080]] from channelMap!,玩家[494]掉线
+[2017-01-16 11:29:12,612][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x1d1f6da4, /127.0.0.1:49811 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,612][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x1d1f6da4, /127.0.0.1:49811 => /127.0.0.1:8080]] from channelMap!,玩家[497]掉线
+[2017-01-16 11:29:12,612][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0xd1f20fd9, /127.0.0.1:49818 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,612][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xd1f20fd9, /127.0.0.1:49818 => /127.0.0.1:8080]] from channelMap!,玩家[492]掉线
+[2017-01-16 11:29:12,612][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x19fe5915, /127.0.0.1:49813 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,612][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x19fe5915, /127.0.0.1:49813 => /127.0.0.1:8080]] from channelMap!,玩家[493]掉线
+[2017-01-16 11:29:12,612][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x1b0b0724, /127.0.0.1:49824 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,613][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x1b0b0724, /127.0.0.1:49824 => /127.0.0.1:8080]] from channelMap!,玩家[495]掉线
+[2017-01-16 11:29:12,613][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x6fa0155f, /127.0.0.1:49816 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-16 11:29:12,613][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x6fa0155f, /127.0.0.1:49816 => /127.0.0.1:8080]] from channelMap!,玩家[491]掉线
+[2017-01-19 14:38:46,800][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60258在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,800][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60250在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,800][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60251在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,800][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60252在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,809][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60258掉线并将其移出服务器
+[2017-01-19 14:38:46,809][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60252掉线并将其移出服务器
+[2017-01-19 14:38:46,809][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60250掉线并将其移出服务器
+[2017-01-19 14:38:46,809][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60251掉线并将其移出服务器
+[2017-01-19 14:38:46,810][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x7f7fab6e, /127.0.0.1:60250 :> /127.0.0.1:8080]] from channelMap!,玩家[496]掉线
+[2017-01-19 14:38:46,812][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xef70eb10, /127.0.0.1:60252 :> /127.0.0.1:8080]] from channelMap!,玩家[493]掉线
+[2017-01-19 14:38:46,813][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x20874efd, /127.0.0.1:60251 :> /127.0.0.1:8080]] from channelMap!,玩家[490]掉线
+[2017-01-19 14:38:46,814][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60256在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,814][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60257在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,815][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60256掉线并将其移出服务器
+[2017-01-19 14:38:46,816][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x31bdcc84, /127.0.0.1:60258 :> /127.0.0.1:8080]] from channelMap!,玩家[494]掉线
+[2017-01-19 14:38:46,816][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60255在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,816][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60253在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,817][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60257掉线并将其移出服务器
+[2017-01-19 14:38:46,817][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x24b614b2, /127.0.0.1:60256 :> /127.0.0.1:8080]] from channelMap!,玩家[492]掉线
+[2017-01-19 14:38:46,817][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60249在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,817][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60255掉线并将其移出服务器
+[2017-01-19 14:38:46,818][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60254在Thu Jan 19 14:38:46 CST 2017发生连接异常
+[2017-01-19 14:38:46,819][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x5744983e, /127.0.0.1:60257 :> /127.0.0.1:8080]] from channelMap!,玩家[495]掉线
+[2017-01-19 14:38:46,820][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60249掉线并将其移出服务器
+[2017-01-19 14:38:46,820][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x48091728, /127.0.0.1:60249 :> /127.0.0.1:8080]] from channelMap!,玩家[497]掉线
+[2017-01-19 14:38:46,820][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60253掉线并将其移出服务器
+[2017-01-19 14:38:46,821][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60254掉线并将其移出服务器
+[2017-01-19 14:38:46,821][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x530da390, /127.0.0.1:60255 :> /127.0.0.1:8080]] from channelMap!,玩家[489]掉线
+[2017-01-19 14:38:46,821][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x86ff66dd, /127.0.0.1:60253 :> /127.0.0.1:8080]] from channelMap!,玩家[488]掉线
+[2017-01-19 14:38:46,822][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x95777e1f, /127.0.0.1:60254 :> /127.0.0.1:8080]] from channelMap!,玩家[491]掉线
+[2017-01-19 14:40:20,078][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60410在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,079][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60412在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,079][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60411在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,078][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60409在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,082][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60411掉线并将其移出服务器
+[2017-01-19 14:40:20,083][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60409掉线并将其移出服务器
+[2017-01-19 14:40:20,082][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60410掉线并将其移出服务器
+[2017-01-19 14:40:20,082][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60412掉线并将其移出服务器
+[2017-01-19 14:40:20,084][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x73eb5df8, /127.0.0.1:60410 :> /127.0.0.1:8080]] from channelMap!,玩家[496]掉线
+[2017-01-19 14:40:20,084][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x1014f0df, /127.0.0.1:60411 :> /127.0.0.1:8080]] from channelMap!,玩家[497]掉线
+[2017-01-19 14:40:20,086][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x15651997, /127.0.0.1:60409 :> /127.0.0.1:8080]] from channelMap!,玩家[490]掉线
+[2017-01-19 14:40:20,088][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60417在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,088][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60418在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,090][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60413在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,090][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60415在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,089][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x8cb61b1b, /127.0.0.1:60412 :> /127.0.0.1:8080]] from channelMap!,玩家[493]掉线
+[2017-01-19 14:40:20,090][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60417掉线并将其移出服务器
+[2017-01-19 14:40:20,090][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60414在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,091][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60415掉线并将其移出服务器
+[2017-01-19 14:40:20,092][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60418掉线并将其移出服务器
+[2017-01-19 14:40:20,092][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x196e2b6f, /127.0.0.1:60415 :> /127.0.0.1:8080]] from channelMap!,玩家[489]掉线
+[2017-01-19 14:40:20,093][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xc0cbfeb8, /127.0.0.1:60418 :> /127.0.0.1:8080]] from channelMap!,玩家[494]掉线
+[2017-01-19 14:40:20,094][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60416在Thu Jan 19 14:40:20 CST 2017发生连接异常
+[2017-01-19 14:40:20,094][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60414掉线并将其移出服务器
+[2017-01-19 14:40:20,095][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60416掉线并将其移出服务器
+[2017-01-19 14:40:20,095][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x575f1ff2, /127.0.0.1:60417 :> /127.0.0.1:8080]] from channelMap!,玩家[495]掉线
+[2017-01-19 14:40:20,095][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x89f86dd9, /127.0.0.1:60414 :> /127.0.0.1:8080]] from channelMap!,玩家[491]掉线
+[2017-01-19 14:40:20,096][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60413掉线并将其移出服务器
+[2017-01-19 14:40:20,096][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x0f321872, /127.0.0.1:60413 :> /127.0.0.1:8080]] from channelMap!,玩家[488]掉线
+[2017-01-19 14:40:20,096][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x5a6791e9, /127.0.0.1:60416 :> /127.0.0.1:8080]] from channelMap!,玩家[492]掉线
+[2017-01-19 14:50:24,526][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60706在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,526][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60707在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,527][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60705在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,527][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60704在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,529][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60706掉线并将其移出服务器
+[2017-01-19 14:50:24,529][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60707掉线并将其移出服务器
+[2017-01-19 14:50:24,529][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60705掉线并将其移出服务器
+[2017-01-19 14:50:24,530][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xecdee02a, /127.0.0.1:60706 :> /127.0.0.1:8080]] from channelMap!,玩家[496]掉线
+[2017-01-19 14:50:24,529][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60704掉线并将其移出服务器
+[2017-01-19 14:50:24,531][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x6dadc8c4, /127.0.0.1:60705 :> /127.0.0.1:8080]] from channelMap!,玩家[497]掉线
+[2017-01-19 14:50:24,532][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x0447c7a5, /127.0.0.1:60707 :> /127.0.0.1:8080]] from channelMap!,玩家[491]掉线
+[2017-01-19 14:50:24,533][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x6ebf324a, /127.0.0.1:60704 :> /127.0.0.1:8080]] from channelMap!,玩家[493]掉线
+[2017-01-19 14:50:24,534][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60702在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,534][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60701在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,535][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60702掉线并将其移出服务器
+[2017-01-19 14:50:24,535][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60710在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,535][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xe708bf27, /127.0.0.1:60702 :> /127.0.0.1:8080]] from channelMap!,玩家[488]掉线
+[2017-01-19 14:50:24,536][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60712在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,536][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60703在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,536][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60701掉线并将其移出服务器
+[2017-01-19 14:50:24,538][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60703掉线并将其移出服务器
+[2017-01-19 14:50:24,537][ERROR, (ServerAdapter.java:127).exceptionCaught] [Client]: /127.0.0.1:60700在Thu Jan 19 14:50:24 CST 2017发生连接异常
+[2017-01-19 14:50:24,539][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x7c33f8dc, /127.0.0.1:60701 :> /127.0.0.1:8080]] from channelMap!,玩家[492]掉线
+[2017-01-19 14:50:24,539][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xe3ce1e2c, /127.0.0.1:60703 :> /127.0.0.1:8080]] from channelMap!,玩家[490]掉线
+[2017-01-19 14:50:24,539][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60712掉线并将其移出服务器
+[2017-01-19 14:50:24,540][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60710掉线并将其移出服务器
+[2017-01-19 14:50:24,541][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x532de17b, /127.0.0.1:60712 :> /127.0.0.1:8080]] from channelMap!,玩家[495]掉线
+[2017-01-19 14:50:24,542][ERROR, (ServerAdapter.java:50).channelInactive] [Client OutLine]:/127.0.0.1:60700掉线并将其移出服务器
+[2017-01-19 14:50:24,542][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0x6d494dc8, /127.0.0.1:60710 :> /127.0.0.1:8080]] from channelMap!,玩家[494]掉线
+[2017-01-19 14:50:24,542][WARN, (PlayerChannelManager.java:53).removeChannel] Remove channel:[[id: 0xe8c035d0, /127.0.0.1:60700 :> /127.0.0.1:8080]] from channelMap!,玩家[489]掉线
+[2017-01-19 14:51:03,576][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0xe8c035d0, /127.0.0.1:60700 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-19 14:51:03,576][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x6d494dc8, /127.0.0.1:60710 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-19 14:51:03,576][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0xe3ce1e2c, /127.0.0.1:60703 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-19 14:51:03,577][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x0447c7a5, /127.0.0.1:60707 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-19 14:51:03,577][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0xecdee02a, /127.0.0.1:60706 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-19 14:51:03,577][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x6ebf324a, /127.0.0.1:60704 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-19 14:51:03,577][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x532de17b, /127.0.0.1:60712 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-19 14:51:03,577][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x6dadc8c4, /127.0.0.1:60705 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-19 14:51:03,577][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0xe708bf27, /127.0.0.1:60702 :> /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-01-19 14:51:03,577][WARN, (CheckChannelStatusTask.java:27).run] channel:[[id: 0x7c33f8dc, /127.0.0.1:60701 :> /127.0.0.1:8080]] had outline,it's time to kick off

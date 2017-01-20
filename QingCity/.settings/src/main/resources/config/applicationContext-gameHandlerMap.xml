@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<!-- 不同key 对应不同的 Handler,处理不同的逻辑 -->
+	<bean id="gameHandlerMap" class="java.util.HashMap">
+		<constructor-arg>
+			<map>
+				<entry key="100" value-ref="userHandler">
+				</entry>
+				<entry key="101" value-ref="userHandler">
+				</entry>
+				<entry key="104" value-ref="userHandler">
+				</entry>
+				<entry key="201" value-ref="pkHandler">
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+</beans>

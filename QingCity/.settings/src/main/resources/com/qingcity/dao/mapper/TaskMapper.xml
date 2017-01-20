@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcity.dao.TaskMapper" >
+  <resultMap id="BaseResultMap" type="Task" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="rewardId" property="rewardId" jdbcType="INTEGER" />
+    <result column="season" property="season" jdbcType="INTEGER" />
+    <result column="condition" property="condition" jdbcType="VARCHAR" />
+    <result column="joinCondition" property="joinCondition" jdbcType="VARCHAR" />
+    <result column="begin" property="begin" jdbcType="VARCHAR" />
+    <result column="end" property="end" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, rewardId, season, condition, joinCondition, begin, end
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from task
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from task
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="Task" >
+    insert into task (id, rewardId, season, 
+      condition, joinCondition, begin, 
+      end)
+    values (#{id,jdbcType=INTEGER}, #{rewardId,jdbcType=INTEGER}, #{season,jdbcType=INTEGER}, 
+      #{condition,jdbcType=VARCHAR}, #{joinCondition,jdbcType=VARCHAR}, #{begin,jdbcType=VARCHAR}, 
+      #{end,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="Task" >
+    insert into task
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="rewardid != null" >
+        rewardId,
+      </if>
+      <if test="season != null" >
+        season,
+      </if>
+      <if test="condition != null" >
+        condition,
+      </if>
+      <if test="joincondition != null" >
+        joinCondition,
+      </if>
+      <if test="begin != null" >
+        begin,
+      </if>
+      <if test="end != null" >
+        end,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="rewardid != null" >
+        #{rewardId,jdbcType=INTEGER},
+      </if>
+      <if test="season != null" >
+        #{season,jdbcType=INTEGER},
+      </if>
+      <if test="condition != null" >
+        #{condition,jdbcType=VARCHAR},
+      </if>
+      <if test="joincondition != null" >
+        #{joinCondition,jdbcType=VARCHAR},
+      </if>
+      <if test="begin != null" >
+        #{begin,jdbcType=VARCHAR},
+      </if>
+      <if test="end != null" >
+        #{end,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="Task" >
+    update task
+    <set >
+      <if test="rewardId != null" >
+        rewardId = #{rewardid,jdbcType=INTEGER},
+      </if>
+      <if test="season != null" >
+        season = #{season,jdbcType=INTEGER},
+      </if>
+      <if test="condition != null" >
+        condition = #{condition,jdbcType=VARCHAR},
+      </if>
+      <if test="joinCondition != null" >
+        joinCondition = #{joincondition,jdbcType=VARCHAR},
+      </if>
+      <if test="begin != null" >
+        begin = #{begin,jdbcType=VARCHAR},
+      </if>
+      <if test="end != null" >
+        end = #{end,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="Task" >
+	update task
+	set rewardId = #{rewarId,jdbcType=INTEGER},
+	season = #{season,jdbcType=INTEGER},
+	condition = #{condition,jdbcType=VARCHAR},
+	joinCondition = #{joinCondition,jdbcType=VARCHAR},
+	begin = #{begin,jdbcType=VARCHAR},
+	end = #{end,jdbcType=VARCHAR}
+	where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

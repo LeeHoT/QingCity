@@ -1,0 +1,12 @@
+option java_package = "cpgame.demo.proto";
+option java_outer_classname = "Login";
+
+message LoginRequest {
+	required int32 id = 1;
+	required string name = 2;
+	optional string email = 3;
+}
+
+message LoginResponse {
+	required int32 id = 1;
+}

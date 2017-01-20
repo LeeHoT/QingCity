@@ -1,0 +1,9 @@
+option java_package = "com.qingcity.proto";
+option java_outer_classname = "ChatProto";
+
+message ChatMessage{
+	optional uint32 uId = 1;
+	optional string username = 2;
+	optional uint32 target = 3;
+	optional string content = 4;
+}

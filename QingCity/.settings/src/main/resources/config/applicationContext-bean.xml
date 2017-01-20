@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="timer" class="java.util.Timer" scope="prototype"></bean>
+
+	<!--实体类 bean -->
+	<bean id="userEntity" class="com.qingcity.entity.UserEntity"
+		scope="prototype"></bean>
+
+	<bean id="msgEntity" class="com.qingcity.entity.MsgEntity" scope="prototype"></bean>
+
+	<bean id="playerEntity" class="com.qingcity.entity.PlayerEntity"
+		scope="prototype"></bean>
+
+	<bean id="musicEntity" class="com.qingcity.entity.music.MusicEntity"
+		scope="prototype"></bean>
+
+	<bean id="musicScoreEntity" class="com.qingcity.entity.music.MusicScoreEntity"
+		scope="prototype"></bean>
+
+	<bean id="passRecord" class="com.qingcity.entity.music.PassRecord"></bean>
+
+	<bean id="Reward" class="com.qingcity.entity.reward.Reward" scope="prototype"></bean>
+
+	<bean id="task" class="com.qingcity.entity.task.Task"></bean>
+
+	<bean id="taskStatus" class="com.qingcity.entity.task.TaskStatus"></bean>
+
+	<bean id="rewardRecord" class="com.qingcity.entity.reward.RewardRecord"></bean>
+
+	<bean id="mailBox" class="com.qingcity.entity.MailBox"></bean>
+
+	<bean id="backpack" class="com.qingcity.entity.Backpack"></bean>
+
+	<bean id="dress" class="com.qingcity.entity.Dress"></bean>
+
+	<bean id="purchaseRecord" class="com.qingcity.entity.PurchaseRecord"></bean>
+
+	<bean id="rechargeRecord" class="com.qingcity.entity.RechargeRecord"></bean>
+
+	<bean id="societys" class="com.qingcity.entity.Societys"></bean>
+
+</beans>
