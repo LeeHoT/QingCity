@@ -18,11 +18,11 @@
     delete from reward
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.qingcity.entity.Reward" >
+  <insert id="insert" parameterType="Reward" >
     insert into reward (id, content)
     values (#{id,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.qingcity.entity.Reward" >
+  <insert id="insertSelective" parameterType="Reward" >
     insert into reward
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -41,7 +41,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.qingcity.entity.Reward" >
+  <update id="updateByPrimaryKeySelective" parameterType="Reward" >
     update reward
     <set >
       <if test="content != null" >
@@ -50,7 +50,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.qingcity.entity.Reward" >
+  <update id="updateByPrimaryKey" parameterType="Reward" >
     update reward
     set content = #{content,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}

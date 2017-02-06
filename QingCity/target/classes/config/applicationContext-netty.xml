@@ -4,18 +4,22 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
+
+	
 	<!-- 导入bean资源 -->
 	<import resource="applicationContext-bean.xml" />
+	<import resource="applicationContext-gameHandlerMap.xml" />
 	<!-- 加载数据文件 -->
 	<context:property-placeholder
-		location="src/main/resources/config/properties/settings.properties" ignore-unresolvable="true"/>
+		location="classpath:config/properties/settings.properties"
+		ignore-unresolvable="true" />
 
 	<!-- 初始化Initializer -->
 	<bean id="serverInitializer" class="com.qingcity.netty.ServerInitializer"
 		init-method="init">
-		<property name="timeout" value="${app.channel.readtimeout}" />
 		<property name="handlerDispatcher" ref="handlerDispatcher" />
-		<property name="requestType" value="${app.requestType}" />
+		<property name="chatMessageDispatcher" ref="chatMessageDispatcher" />
+		<property name="requestType" value="${app.game.requestType}" />
 	</bean>
 
 	<!-- Dispathcher 拦截器，抉择执行的handler -->
@@ -26,22 +30,26 @@
 				<constructor-arg value="${app.handler.pool.corePoolSize}" />
 				<constructor-arg value="${app.handler.pool.maximumPoolSize}" />
 				<constructor-arg value="${app.handler.pool.keepAliveSecond}" />
-				<constructor-arg value="${app.handler.pool.name}" />
+				<constructor-arg value="${app.handler.pool.game.name}" />
 			</bean>
 		</property>
 		<property name="sleepTime" value="${app.handler.sleepTime}" />
 		<property name="handlerMap" ref="gameHandlerMap" />
 	</bean>
 
-	<!-- 不同key 对应不同的 Handler,处理不同的逻辑 -->
-	<bean id="gameHandlerMap" class="java.util.HashMap">
-		<constructor-arg>
-			<map>
-				<entry key="100" value-ref="userHandler">
-				</entry>
-				<entry key="101" value-ref="userHandler">
-				</entry>
-			</map>
-		</constructor-arg>
+	<!-- Dispathcher 拦截器，抉择执行的handler -->
+	<bean id="chatMessageDispatcher" class="com.qingcity.dispatcher.ChatMessageDispatcher">
+		<property name="messageExecutor">
+			<bean class="com.qingcity.domain.FiexThreadPoolExecutor"
+				destroy-method="shutdown">
+				<constructor-arg value="${app.handler.pool.corePoolSize}" />
+				<constructor-arg value="${app.handler.pool.maximumPoolSize}" />
+				<constructor-arg value="${app.handler.pool.keepAliveSecond}" />
+				<constructor-arg value="${app.handler.pool.chat.name}" />
+			</bean>
+		</property>
+		<property name="sleepTime" value="${app.handler.sleepTime}" />
 	</bean>
+
+
 </beans>

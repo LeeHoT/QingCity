@@ -10,6 +10,11 @@ import com.qingcity.entity.MsgEntity;
 
 /**
  * 定长解码器
+ * 消息格式
+ * +--------+-----+------+---------+----------------+      +-----+------+---------+----------------+
+ * | Length1| CMD | TYPE | Length2 | Actual Content |----->| CMD | TYPE | Length2 | Actual Content |
+ * |   2字节    | 1字节 | 2字节    |   4字节       | "HELLO, WORLD" |      | 1字节 | 2字节    |   4字节       | "HELLO, WORLD" |
+ * +--------+-----+------+---------+----------------+      +-----+------+---------+----------------+
  */
 public class NettyMsgDecoder extends LengthFieldBasedFrameDecoder {
 
@@ -20,7 +25,7 @@ public class NettyMsgDecoder extends LengthFieldBasedFrameDecoder {
 	 * @param lengthFieldOffset
 	 *            开始计算长度位置,这里使用0代表放置到最开始
 	 * @param lengthFieldLength
-	 *            描述长度所用字节数
+	 *            描述长度所用字节数 encode时使用的是short型
 	 * @param lengthAdjustment
 	 *            长度补偿,这里由于命令码使用2个字节.需要将原来长度计算加2
 	 * @param initialBytesToStrip
@@ -49,17 +54,22 @@ public class NettyMsgDecoder extends LengthFieldBasedFrameDecoder {
 			return null;
 		}
 		System.out.println("after decoder readableBytes :" + frame.readableBytes());
-		short cmd = frame.readShort();// 先读取两个字节命令码
-		byte protoType = frame.readByte();// 协议类型
-		int msgLen = frame.readInt();// 再读取四个字节消息长
+		short cmd = frame.readShort();// 先读取两个字节长度命令码
+		byte protoType = frame.readByte();// 一个字节长度协议类型
+		int msgLen = frame.readInt();// 再读取四个字节长度消息长
 		System.out.println("协议号: " + cmd);
 		System.out.println("消息长度: " + msgLen);
+		System.out.println("消息类型: " + protoType);
 		System.out.println("数据消息的实际接收长度: " + frame.readableBytes());
 		byte[] data = new byte[frame.readableBytes()];// 其它数据为实际数据
 		frame.readBytes(data);
-//		for (int i = 0; i < data.length; i++) {
-//			System.out.print(data[i] + " ");
-//		}
+		if (msgLen != data.length) {
+			System.out.println("消息实际长度和原始长度不一致。。请重新发送");
+			return null;
+		}
+		// for (int i = 0; i < data.length; i++) {
+		// System.out.print(data[i] + " ");
+		// }
 		MsgEntity msgVO = new MsgEntity();
 		msgVO.setMsgLength(msgLen);
 		msgVO.setCmdCode(cmd);

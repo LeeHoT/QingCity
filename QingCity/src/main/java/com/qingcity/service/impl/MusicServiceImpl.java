@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.qingcity.dao.MusicMapper;
-import com.qingcity.entity.MusicEntity;
+import com.qingcity.entity.music.MusicEntity;
 import com.qingcity.service.MusicService;
 
 @Service("musicService")
 public class MusicServiceImpl implements MusicService {
-	
+
 	@Autowired
 	private MusicMapper musicMapper;
 
@@ -19,28 +19,43 @@ public class MusicServiceImpl implements MusicService {
 	}
 
 	@Override
-	public int insert(MusicEntity music) {
-		return musicMapper.insert(music);
+	public int insertMusic(MusicEntity music) {
+		return musicMapper.insertMusic(music);
 	}
 
 	@Override
-	public int insertSelective(MusicEntity music) {
-		return musicMapper.insertSelective(music);
+	public int insertMusicSelective(MusicEntity music) {
+		return musicMapper.insertMusicSelective(music);
 	}
-
 	@Override
-	public MusicEntity selectByMusicId(Integer musicId) {
-		return musicMapper.selectByMusicId(musicId);
-	}
-
-	@Override
-	public int updateByMusicIdSelective(MusicEntity music) {
-		return musicMapper.updateByMusicIdSelective(music);
+	public int updateByMusicName(MusicEntity music) {
+		return musicMapper.updateMusicByMusicName(music);
 	}
 
 	@Override
 	public int updateByMusicId(MusicEntity music) {
-		return musicMapper.updateByMusicId(music);
+		return musicMapper.updateMusicByMusicId(music);
 	}
+	
+	@Override
+	public int selectMusicNum(int city) {
+		return musicMapper.selectMusicNum(city);
+	}
+
+	@Override
+	public int selectMusicIdByPreCondition(int preCondition) {
+		return musicMapper.selectMusicIdByPreCondition(preCondition);
+	}
+
+	@Override
+	public MusicEntity selectByMusicId(Integer musicId) {
+		return musicMapper.selectMusicByMusicId(musicId);
+	}
+
+	@Override
+	public int updatePreCondition(int musicId, int preCondition) {
+		return musicMapper.updatePreCondition(musicId, preCondition);
+	}
+
 
 }

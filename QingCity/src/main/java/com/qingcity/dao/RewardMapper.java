@@ -1,7 +1,10 @@
 package com.qingcity.dao;
 
-import com.qingcity.entity.Reward;
+import org.springframework.stereotype.Repository;
 
+import com.qingcity.entity.reward.Reward;;
+
+@Repository
 public interface RewardMapper {
     int deleteByPrimaryKey(Integer id);
 

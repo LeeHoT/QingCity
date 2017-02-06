@@ -9,6 +9,6 @@ import com.qingcity.entity.MsgEntity;
  * @author leehot
  *
  */
-public abstract interface CmdHandler {
+public interface CmdHandler {
 	public void handleMsg(MsgEntity msgEntity, GameResponse response) throws Exception;
 }

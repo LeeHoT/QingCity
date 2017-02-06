@@ -9,7 +9,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 	<context:property-placeholder
-		location="src/main/resources/config/properties/redis.properties" />
+		location="classpath:config/properties/redis.properties" />
 
 	<!-- 配置redis 池，依次为最大实例数，最大空闲实例数，(创建实例时)最大等待时间  (创建实例时)是否验证-->
 	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">

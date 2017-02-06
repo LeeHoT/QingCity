@@ -3,13 +3,26 @@
 <mapper namespace="com.qingcity.dao.MusicMapper">
 	<resultMap id="MusicResultMap" type="MusicEntity">
 		<id column="musicId" jdbcType="INTEGER" property="musicId" />
+		<result column="city" jdbcType="INTEGER" property="city" />
 		<result column="musicName" jdbcType="VARCHAR" property="musicName" />
 		<result column="singerName" jdbcType="VARCHAR" property="singerName" />
+		<result column="preCondition" jdbcType="VARCHAR" property="preCondition" />
 	</resultMap>
-
 	<sql id="Base_Column_List">
-		musicId, musicName, singerName
+		musicId, musicName, city, singerName, preCondition
 	</sql>
+	<!-- 查询任何一个城的歌曲的总数量 -->
+	<select id="selectMusicNum" parameterType="Integer" resultType="Integer">
+		select count(*) from music where city = #{city,jdbcType=INTEGER} group
+		by city
+	</select>
+	<!-- 根据前置条件查询音乐id -->
+	<select id="selectMusicIdByPreCondition" parameterType="Integer"
+		resultType="Integer">
+		select musicId from music where preCondition =
+		#{preCondition}
+	</select>
+	<!-- 根据音乐Id查询音乐信息 -->
 	<select id="selectByMusicId" parameterType="java.lang.Integer"
 		resultMap="MusicResultMap">
 		select
@@ -17,63 +30,96 @@
 		from music
 		where musicId = #{musicId,jdbcType=INTEGER}
 	</select>
+	<!-- 根据id删除一首音乐，不推荐使用 -->
 	<delete id="deleteByMusicId" parameterType="java.lang.Integer">
 		delete from music
 		where musicId = #{musicId,jdbcType=INTEGER}
 	</delete>
-	<insert id="insert" parameterType="MusicEntity">
-		insert into music (musicId,
-		musicName, singerName
-		)
-		values (#{musicId,jdbcType=INTEGER},
-		#{musicName,jdbcType=VARCHAR},
-		#{singerName,jdbcType=VARCHAR}
+	<insert id="insertMusic" parameterType="MusicEntity">
+		insert into music
+		(musicName,city,singerName,preCondition)
+		values(#{musicName,jdbcType=VARCHAR},
+		#{city,jdbcType=INTEGER},
+		#{singerName,jdbcType=VARCHAR},
+		#{preCondition,jdbcType=VARCHAR}
 		)
 	</insert>
-	<insert id="insertSelective" parameterType="MusicEntity">
-	insert into music
+	<insert id="insertMusicSelective" parameterType="MusicEntity"
+		useGeneratedKeys="true" keyProperty="musicId">
+		insert into music
 		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<if test="musicId != null">
-				musicId,
-			</if>
 			<if test="musicName != null">
 				musicName,
+			</if>
+			<if test="city != null">
+				city,
 			</if>
 			<if test="singerName != null">
 				singerName,
 			</if>
+			<if test="preCondition!=null">
+				preCondition,
+			</if>
 		</trim>
 		<trim prefix="values (" suffix=")" suffixOverrides=",">
-			<if test="musicId != null">
-				#{musicId,jdbcType=INTEGER},
-			</if>
 			<if test="musicName != null">
 				#{musicName,jdbcType=VARCHAR},
+			</if>
+			<if test="city != null">
+				#{city,jdbcType=INTEGER},
 			</if>
 			<if test="singerName != null">
 				#{singerName,jdbcType=VARCHAR},
 			</if>
+			<if test="preCondition!=null">
+				#{preCondition,jdbcType=VARCHAR},
+			</if>
 		</trim>
 	</insert>
-	<update id="updateByMusicIdSelective" parameterType="MusicEntity">
+	<!-- update a music information by musicId -->
+	<update id="updateMusicByMusicId" parameterType="MusicEntity"
+		keyProperty="musicId" useGeneratedKeys="true">
 		update music
 		<set>
 			<if test="musicName != null">
 				musicName = #{musicName,jdbcType=VARCHAR},
 			</if>
+			<if test="city != null">
+				city = #{city,jdbcType=INTEGER},
+			</if>
 			<if test="singerName != null">
 				singerName = #{singerName,jdbcType=VARCHAR},
+			</if>
+			<if test="preCondition != null">
+				preCondition = #{preCondition,jdbcType=VARCHAR},
 			</if>
 		</set>
 		where musicId = #{musicId,jdbcType=INTEGER}
 	</update>
-	<update id="updateByMusicId" parameterType="MusicEntity">
+	<!-- update a music preCondition by musicName -->
+	<update id="updateMusicByMusicName" parameterType="MusicEntity">
 		update music
-		set
-		musicName = #{musicName,jdbcType=VARCHAR},
-		singerName =
-		#{singerName,jdbcType=VARCHAR}
-		where musicId =
-		#{musicId,jdbcType=INTEGER}
+		<set>
+			<if test="musicName != null">
+				musicName = #{musicName,jdbcType=VARCHAR},
+			</if>
+			<if test="city != null">
+				city = #{city,jdbcType=INTEGER},
+			</if>
+			<if test="singerName != null">
+				singerName = #{singerName,jdbcType=VARCHAR},
+			</if>
+			<if test="preCondition != null">
+				preCondition = #{preCondition,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where musicName = #{musicName,jdbcType=VARCHAR}
+	</update>
+	<!-- 更新歌曲的前置解锁条件 -->
+	<update id="updatePreCondition" parameterType="Integer"
+		useGeneratedKeys="true" keyProperty="musicId">
+		update music set preCondition =
+		#{preCondition,jdbcType=INTEGER} where musicId =
+		#{musicId.jdbcType=INTEGER}
 	</update>
 </mapper>

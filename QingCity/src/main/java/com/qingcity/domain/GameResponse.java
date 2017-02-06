@@ -2,8 +2,6 @@ package com.qingcity.domain;
 
 import java.util.List;
 
-import com.qingcity.utils.ResponseJsonUtils;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
@@ -86,16 +84,19 @@ public class GameResponse {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
-	public String getWebSocketRespone() {
-		return ResponseJsonUtils.list2json((List<Object>) rtMessage);
-	}
-//
-//	public FullHttpResponse getResp() {
-//		ByteBuf content = Unpooled.copiedBuffer(rtMessage.toString(), CharsetUtil.UTF_8);
-//		FullHttpResponse resp = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, content);
-//		resp.headers().set(HttpHeaders.Names.CONTENT_TYPE, "text/html; charset=UTF-8");
-//		HttpHeaders.setContentLength(resp, content.readableBytes());
-//		return resp;
-//	}
+	// @SuppressWarnings("unchecked")
+	// public String getWebSocketRespone() {
+	// return ResponseJsonUtils.list2json((List<Object>) rtMessage);
+	// }
+	//
+	// public FullHttpResponse getResp() {
+	// ByteBuf content = Unpooled.copiedBuffer(rtMessage.toString(),
+	// CharsetUtil.UTF_8);
+	// FullHttpResponse resp = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
+	// HttpResponseStatus.OK, content);
+	// resp.headers().set(HttpHeaders.Names.CONTENT_TYPE, "text/html;
+	// charset=UTF-8");
+	// HttpHeaders.setContentLength(resp, content.readableBytes());
+	// return resp;
+	// }
 }

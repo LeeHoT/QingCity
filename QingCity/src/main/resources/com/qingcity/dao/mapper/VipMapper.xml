@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcity.dao.VipMapper" >
+  <resultMap id="BaseResultMap" type="Vip" >
+    <id column="playerId" property="playerId" jdbcType="INTEGER" />
+    <result column="level" property="level" jdbcType="INTEGER" />
+    <result column="experience" property="experience" jdbcType="INTEGER" />
+    <result column="privilege" property="privilege" jdbcType="VARCHAR" />
+    <result column="begin" property="begin" jdbcType="TIMESTAMP" />
+    <result column="mature" property="mature" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    playerId, level, experience, privilege, begin, mature
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from vip
+    where playerId = #{playerId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from vip
+    where playerId = #{playerId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="Vip" >
+    insert into vip (playerId, level, experience, 
+      privilege, begin, mature
+      )
+    values (#{playerId,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, #{experience,jdbcType=INTEGER}, 
+      #{privilege,jdbcType=VARCHAR}, #{begin,jdbcType=TIMESTAMP}, #{mature,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="Vip" >
+    insert into vip
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="playerId != null" >
+        playerId,
+      </if>
+      <if test="level != null" >
+        level,
+      </if>
+      <if test="experience != null" >
+        experience,
+      </if>
+      <if test="privilege != null" >
+        privilege,
+      </if>
+      <if test="begin != null" >
+        begin,
+      </if>
+      <if test="mature != null" >
+        mature,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="playerId != null" >
+        #{playerId,jdbcType=INTEGER},
+      </if>
+      <if test="level != null" >
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="experience != null" >
+        #{experience,jdbcType=INTEGER},
+      </if>
+      <if test="privilege != null" >
+        #{privilege,jdbcType=VARCHAR},
+      </if>
+      <if test="begin != null" >
+        #{begin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mature != null" >
+        #{mature,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="Vip" >
+    update vip
+    <set >
+      <if test="level != null" >
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="experience != null" >
+        experience = #{experience,jdbcType=INTEGER},
+      </if>
+      <if test="privilege != null" >
+        privilege = #{privilege,jdbcType=VARCHAR},
+      </if>
+      <if test="begin != null" >
+        begin = #{begin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mature != null" >
+        mature = #{mature,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where playerId = #{playerId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="Vip" >
+    update vip
+    set level = #{level,jdbcType=INTEGER},
+      experience = #{experience,jdbcType=INTEGER},
+      privilege = #{privilege,jdbcType=VARCHAR},
+      begin = #{begin,jdbcType=TIMESTAMP},
+      mature = #{mature,jdbcType=TIMESTAMP}
+    where playerId = #{playerId,jdbcType=INTEGER}
+  </update>
+</mapper>

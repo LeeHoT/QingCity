@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcity.dao.MailBoxMapper">
+	<resultMap id="BaseResultMap" type="MailBox">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="userId" property="userId" jdbcType="INTEGER" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+		<result column="content" property="content" jdbcType="VARCHAR" />
+		<result column="sendTime" property="sendtime" jdbcType="TIMESTAMP" />
+		<result column="overTime" property="overtime" jdbcType="TIMESTAMP" />
+		<result column="isRead" property="isRead" jdbcType="BIT" />
+		<result column="itemId" property="itemId" jdbcType="INTEGER" />
+		<result column="itemNum" property="itemNum" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, userId, title, content, sendTime, overTime, isRead,
+		itemId, itemNum
+	</sql>
+
+	<!-- 查看邮件 -->
+	<select id="selectMail" parameterType="Integer" resultType="MailBox">
+		select
+		<include refid="Base_Column_List"></include>
+		from mailbox where userId = #{userId,jdbcType=INTEGER}
+	</select>
+	<!-- 查看邮件详情 -->
+	<select id="selectMailDetail" parameterType="Integer"
+		resultType="MailBox">
+		select
+		<include refid="Base_Column_List"></include>
+		from mailbox where id = #{id,jdbcType=INTEGER}
+	</select>
+	<!-- 删除邮件 -->
+	<delete id="deleteMailById" parameterType="Integer">
+		delete from mailBox
+		where id = #{id} and userId = #{userId}
+	</delete>
+	<!-- 从邮箱领取奖励 -->
+	<update id="getItemFromMailBox" parameterType="Integer">
+		{call
+		getItemFromMailBox(#{mailId,jdbcType=INTEGER,mode=IN})}
+	</update>
+	<!-- 设置邮件为已读 -->
+	<update id="updateMailReaded" parameterType="Integer">
+		update mailbox set
+		isRead = 1 where id = #{id}
+	</update>
+	<!-- 发送邮件 -->
+	<insert id="sendMail" parameterType="MailBox">
+		insert into mailbox
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="userId != null">
+				userId,
+			</if>
+			<if test="title != null">
+				title,
+			</if>
+			<if test="content != null">
+				content,
+			</if>
+			<if test="sendtime != null">
+				sendTime,
+			</if>
+			<if test="overtime != null">
+				overTime,
+			</if>
+			<if test="isRead != null">
+				isRead,
+			</if>
+			<if test="itemId != null">
+				itemId,
+			</if>
+			<if test="itemNum != null">
+				itemNum,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="userId != null">
+				#{userId,jdbcType=INTEGER},
+			</if>
+			<if test="title != null">
+				#{title,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=VARCHAR},
+			</if>
+			<if test="sendtime != null">
+				#{sendtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="overtime != null">
+				#{overtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="isRead != null">
+				#{isRead,jdbcType=BIT},
+			</if>
+			<if test="itemId != null">
+				#{itemId,jdbcType=INTEGER},
+			</if>
+			<if test="itemNum != null">
+				#{itemNum,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+</mapper>

@@ -13,17 +13,15 @@ import com.qingcity.domain.GameRequest;
 import com.qingcity.domain.GameResponse;
 import com.qingcity.domain.MessageQueue;
 import com.qingcity.handler.CmdHandler;
-import com.qingcity.utils.ExceptionUtils;
+import com.qingcity.util.ExceptionUtils;
 
 import io.netty.channel.Channel;
 
 /**
- * HandlerDispatcher 根据handlerMap 抉择处理方式，
  * 
- * 同时可处理消息，包括添加队列、移除队列等等
- * 
- * @author leehot
- *
+ * @author leehotin
+ * @Date 2017年2月6日 下午5:35:15
+ * @Description HandlerDispatcher 根据handlerMap 抉择处理方式， 同时可处理消息，包括添加队列、移除队列等等
  */
 @Controller
 public class HandlerDispatcher implements Runnable {
@@ -34,7 +32,7 @@ public class HandlerDispatcher implements Runnable {
 	private Map<Integer, CmdHandler> handlerMap;
 	private boolean running;
 	private long sleepTime;
-	private int msgNum = 0;// 消息队列中未处理消息数
+	private volatile int msgNum = 0;// 消息队列中未处理消息数
 
 	public HandlerDispatcher() {
 		this.sessionMsgQ = new ConcurrentHashMap<Integer, MessageQueue>();
@@ -58,6 +56,10 @@ public class HandlerDispatcher implements Runnable {
 		this.sessionMsgQ.put(channelId, messageQueue);
 	}
 
+	public Map<Integer, MessageQueue> getMessageQueue() {
+		return this.sessionMsgQ;
+	}
+
 	public void removeMessageQueue(Channel channel) {
 		MessageQueue queue = (MessageQueue) this.sessionMsgQ.remove(channel);
 		if (queue != null)
@@ -68,20 +70,20 @@ public class HandlerDispatcher implements Runnable {
 	 * 添加消息进入队列
 	 * 
 	 * @param request
-	 *            游戏请求 cpgame.demo.domain.GameRequest
+	 *            游戏请求 com.qingcity.domain.GameRequest
 	 */
 	public void addMessage(GameRequest request) {
 		try {
 			logger.info("添加消息进入消息队列，当前队列中有" + msgNum + "条消息!");
 			MessageQueue messageQueue = (MessageQueue) this.sessionMsgQ
-					.get(Integer.valueOf(request.getMsg().getCmdCode()));
-
+					.get(Integer.valueOf(request.getChannel().hashCode()));
 			if (messageQueue == null) {
 				// 消息为空，创建新的消息队列
 				messageQueue = new MessageQueue(new ConcurrentLinkedQueue<GameRequest>());
-				this.sessionMsgQ.put(Integer.valueOf(request.getMsg().getCmdCode()), messageQueue);
-				messageQueue.add(request);// 添加消息进入队列
-				msgNum++;
+				this.sessionMsgQ.put(Integer.valueOf(request.getChannel().hashCode()), messageQueue);
+				logger.info("hashCode[{}]", Integer.valueOf(request.getChannel().hashCode()));
+				messageQueue.add(request);// 添加请求消息进入队列
+				msgNum++;// 消息增加一条
 			} else {
 				messageQueue.add(request);// 添加消息进入队列
 				msgNum++;
@@ -98,10 +100,12 @@ public class HandlerDispatcher implements Runnable {
 					if ((messageQueue != null) && (messageQueue.size() > 0) && (!messageQueue.isRunning())) {
 						MessageWorker messageWorker = new MessageWorker(messageQueue);
 						this.messageExecutor.execute(messageWorker);
+						logger.info("messageExecutir[{}]", this.messageExecutor);
 					}
 			} catch (Exception e) {
 				HandlerDispatcher.logger.error(ExceptionUtils.getStackTrace(e));
 			}
+			// 等待200毫秒后继续
 			try {
 				Thread.sleep(this.sleepTime);
 			} catch (InterruptedException e) {
@@ -132,6 +136,7 @@ public class HandlerDispatcher implements Runnable {
 			try {
 				// 处理消息队列中的消息
 				msgNum--;
+				logger.info("当前队列中还有[{}]条消息", msgNum);
 				handMessageQueue();
 			} catch (Exception e) {
 				HandlerDispatcher.logger.error(ExceptionUtils.getStackTrace(e));
@@ -147,6 +152,7 @@ public class HandlerDispatcher implements Runnable {
 			CmdHandler handler = (CmdHandler) HandlerDispatcher.this.handlerMap.get(Integer.valueOf(messageId));
 			if (handler != null)
 				try {
+					System.out.println(request.getChannel());
 					handler.handleMsg(this.request.getMsg(), response);
 				} catch (Exception e) {
 					HandlerDispatcher.logger.error(ExceptionUtils.getStackTrace(e));
@@ -154,13 +160,6 @@ public class HandlerDispatcher implements Runnable {
 			else {
 				HandlerDispatcher.logger.warn("指令 [{}]找不到", messageId);
 			}
-
-			// switch (request.getRequestType()) {
-			// case SOCKET:
-			// case WEBSOCKET_BINARY:
-			response.getChannel().writeAndFlush(response.getRtMessage());
-			// break;
-			// }
 		}
 	}
 }

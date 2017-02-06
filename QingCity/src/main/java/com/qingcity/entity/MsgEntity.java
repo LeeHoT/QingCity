@@ -9,10 +9,18 @@ import java.io.Serializable;
 public class MsgEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private int msgLength; // 消息长度
+	private int msgLength;
 	private short cmdCode;// 储存命令码
 	private byte protocalType;// 协议类型 ProtocolType
 	private byte[] data;// 存放实际数据,用于protobuf解码成对应message
+
+	public int getMsgLength() {
+		return msgLength;
+	}
+
+	public void setMsgLength(int msgLength) {
+		this.msgLength = msgLength;
+	}
 
 	public byte getProtocalType() {
 		return protocalType;
@@ -21,15 +29,7 @@ public class MsgEntity implements Serializable {
 	public void setProtocalType(byte protocalType) {
 		this.protocalType = protocalType;
 	}
-
-	public int getMsgLength() {
-		return msgLength;
-	}
-
-	public void setMsgLength(int msgLen) {
-		this.msgLength = msgLen;
-	}
-
+	
 	public short getCmdCode() {
 		return cmdCode;
 	}

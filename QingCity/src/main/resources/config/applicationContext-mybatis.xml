@@ -9,7 +9,7 @@
 
 	<!-- 加载数据文件 -->
 	<context:property-placeholder
-		location="src/main/resources/config/properties/db.properties"
+		location="classpath:config/properties/db.properties"
 		ignore-unresolvable="true" />
 
 	<!-- 配置DBCP数据源 -->
@@ -19,6 +19,7 @@
 		<property name="password" value="${jdbc.password}"></property>
 		<property name="driverClassName" value="${jdbc.driverClassName}"></property>
 		<property name="url" value="${jdbc.url}"></property>
+		
 		<property name="initialSize" value="30"></property>
 		<!-- 同一时间可以从池分配的最多连接数量。设置为0时表示无限制。 <property name="maxActive" value="20" 
 			/> -->
@@ -34,11 +35,9 @@
 			name="maxWait" value="100" /> -->
 	</bean>
 
-
-
 	<!-- spring and mybatis 整合 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="configLocation" value="src/main/resources/config/mybatis-config.xml" />
+		<property name="configLocation" value="classpath:config/mybatis-config.xml" />
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	<!-- 配置事务管理器 -->

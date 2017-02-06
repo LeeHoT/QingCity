@@ -25,7 +25,7 @@
 		</filter>
 	</appender>
 	<appender name="FILE" class="org.apache.log4j.RollingFileAppender">
-		<param name="File" value="src/main/resources/logs/log.log" />
+		<param name="File" value="logs/log.log" />
 		<param name="Threshold" value="INFO" />
 		<param name="MaxFileSize" value="100MB" />
 		<param name="MaxBackupIndex" value="10" />
@@ -34,7 +34,7 @@
 		</layout>
 	</appender>
 	<appender name="error.file" class="org.apache.log4j.RollingFileAppender">
-		<param name="File" value="src/main/resources/logs/error.log" />
+		<param name="File" value="logs/error.log" />
 		<param name="Threshold" value="WARN" />
 		<param name="MaxFileSize" value="100MB" />
 		<param name="MaxBackupIndex" value="10" />
@@ -54,7 +54,7 @@
 	<logger name="org.apache.commons">
 		<level value="ERROR" />
 	</logger>
-	<logger name="cpgame.demo">
+	<logger name="com.qingcity">
 		<level value="debug" />
 	</logger>
 	<root>

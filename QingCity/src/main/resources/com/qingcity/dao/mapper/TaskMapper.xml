@@ -23,7 +23,7 @@
     delete from task
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.qingcity.entity.Task" >
+  <insert id="insert" parameterType="Task" >
     insert into task (id, rewardId, season, 
       condition, joinCondition, begin, 
       end)
@@ -31,7 +31,7 @@
       #{condition,jdbcType=VARCHAR}, #{joinCondition,jdbcType=VARCHAR}, #{begin,jdbcType=VARCHAR}, 
       #{end,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.qingcity.entity.Task" >
+  <insert id="insertSelective" parameterType="Task" >
     insert into task
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -80,7 +80,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.qingcity.entity.Task" >
+  <update id="updateByPrimaryKeySelective" parameterType="Task" >
     update task
     <set >
       <if test="rewardId != null" >
@@ -104,7 +104,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.qingcity.entity.Task" >
+  <update id="updateByPrimaryKey" parameterType="Task" >
 	update task
 	set rewardId = #{rewarId,jdbcType=INTEGER},
 	season = #{season,jdbcType=INTEGER},

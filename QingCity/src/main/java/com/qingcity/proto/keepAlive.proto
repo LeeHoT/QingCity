@@ -1,0 +1,6 @@
+option java_package = "com.qingcity.proto";
+option java_outer_classname = "KeepAlive";
+
+message KeepAliveMsg{
+  optional string content=1;	
+}

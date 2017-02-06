@@ -20,13 +20,13 @@
     delete from rewardRecord
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.qingcity.entity.RewardRecord" >
+  <insert id="insert" parameterType="RewardRecord" >
     insert into rewardRecord (id, userId, rewardId, 
       isComplete)
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{rewardId,jdbcType=INTEGER}, 
       #{isComplete,jdbcType=BIT})
   </insert>
-  <insert id="insertSelective" parameterType="com.qingcity.entity.RewardRecord" >
+  <insert id="insertSelective" parameterType="RewardRecord" >
     insert into rewardRecord
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.qingcity.entity.RewardRecord" >
+  <update id="updateByPrimaryKeySelective" parameterType="RewardRecord" >
     update rewardRecord
     <set >
       <if test="userid != null" >
@@ -72,7 +72,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.qingcity.entity.RewardRecord" >
+  <update id="updateByPrimaryKey" parameterType="RewardRecord" >
     update rewardrecord
     set userId = #{userId,jdbcType=INTEGER},
       rewardId = #{rewardId,jdbcType=INTEGER},

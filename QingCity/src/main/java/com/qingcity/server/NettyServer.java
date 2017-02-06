@@ -1,12 +1,15 @@
 package com.qingcity.server;
 
 import java.net.InetSocketAddress;
+import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.qingcity.domain.ERequestType;
 import com.qingcity.netty.ServerInitializer;
+import com.qingcity.task.CheckChannelStatusTask;
+import com.qingcity.util.ExecutorServiceUtil;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -44,13 +47,13 @@ public class NettyServer {
 		try {
 			ServerBootstrap b = new ServerBootstrap();
 			b.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class).childHandler(this.initializer)
-					.option(ChannelOption.TCP_NODELAY, true).option(ChannelOption.SO_KEEPALIVE, true);
-
+					.option(ChannelOption.TCP_NODELAY, true).option(ChannelOption.SO_KEEPALIVE, true)
+					.option(ChannelOption.SO_BACKLOG, 128);
 			ChannelFuture cf = null;
 			this.logger.info(ERequestType.parse(this.initializer.getRequestType()).getValue()
 					+ " server started at port " + this.port + '.');
 
-			if (ERequestType.SOCKET.equals(ERequestType.parse(this.initializer.getRequestType()))) {
+			if (ERequestType.HTTP.equals(ERequestType.parse(this.initializer.getRequestType()))) {
 				this.logger.info("the server initialize request method is : " + this.initializer.getRequestType());
 				// 绑定端口 port
 				cf = b.bind(this.port).sync();
@@ -60,9 +63,11 @@ public class NettyServer {
 				// 绑定端口 port
 				cf = b.bind(new InetSocketAddress(this.port)).sync();
 			}
+			ExecutorServiceUtil.run(new CheckChannelStatusTask(), 0, CheckChannelStatusTask.CLIENT_OUTLINE_TIME,
+					TimeUnit.MILLISECONDS);
 			cf.channel().closeFuture().sync();
 		} finally {
-			//温柔的关闭 boss worker
+			// 温柔的关闭 boss worker
 			bossGroup.shutdownGracefully();
 			workerGroup.shutdownGracefully();
 		}

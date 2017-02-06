@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcity.dao.SocietysMapper">
+	<resultMap id="BaseResultMap" type="Societys">
+		<id column="societyId" property="societyId" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="integration" property="integration" jdbcType="INTEGER" />
+		<result column="notice" property="notice" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<resultMap id="queryForMemberList" type="Societys">
+		<id column="societyId" property="societyId" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="integration" property="integration" jdbcType="INTEGER" />
+		<result column="notice" property="notice" jdbcType="VARCHAR" />
+		<collection property="pList" ofType="PlayerEntity">
+			<id property="userId" column="userId" jdbcType="INTEGER" />
+			<result property="nickname" column="nickname" jdbcType="VARCHAR" />
+			<result column="job" property="job" jdbcType="INTEGER" />
+			<result column="level" property="level" jdbcType="INTEGER" />
+			<result column="contribution" property="contribution"
+				jdbcType="INTEGER" />
+		</collection>
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		societyId, name, integration, notice
+	</sql>
+
+	<!-- 根据玩家id查询玩家 -->
+	<select id="queryForMemberList" parameterType="Integer"
+		resultMap="queryForMemberList" statementType="CALLABLE">
+		{call
+		queryForMemberList(#{userId_in, jdbcType=INTEGER,
+		mode=IN},#{societyId_in, jdbcType=INTEGER,
+		mode=IN})}
+	</select>
+
+	<!-- 更新公会公告 -->
+	<update id="updateSocietyNotice">
+		update societys set notice =
+		#{notice,jdbcType=VARCHAR} where societyId =
+		#{societyId,jdbcType=INTEGER}
+	</update>
+
+	<!-- 更新公会名字 -->
+	<update id="updateSocietyName">
+		update societys set name =
+		#{name,jdbcType=VARCHAR}
+		where societyId =
+		#{societyId,jdbcType=INTEGER}
+	</update>
+
+	<!-- 创建新的公会 -->
+	<insert id="createSociety" parameterType="Societys"
+		useGeneratedKeys="true" keyProperty="societyId">
+		insert into
+		societys(name,integration,notice)
+		values(#{name,jdbcType=VARCHAR},#{integration,jdbcType=INTEGER},#{notice,jdbcType=VARCHAR})
+	</insert>
+
+	<!-- 根据名字查询是否由已经建立的公会名字 -->
+	<select id="selectSocietyName" parameterType="String"
+		resultType="Integer">
+		select societyId from societys where name = #{name}
+	</select>
+
+</mapper>

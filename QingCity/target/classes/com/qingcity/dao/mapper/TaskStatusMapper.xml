@@ -22,14 +22,14 @@
 		delete from taskstatus
 		where id = #{id,jdbcType=INTEGER}
 	</delete>
-	<insert id="insert" parameterType="com.qingcity.entity.TaskStatus">
+	<insert id="insert" parameterType="TaskStatus">
 		insert into taskstatus (id, userId, taskId,
 		status, rewardStatus)
 		values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER},
 		#{taskId,jdbcType=INTEGER},
 		#{status,jdbcType=BIT}, #{rewardStatus,jdbcType=BIT})
 	</insert>
-	<insert id="insertSelective" parameterType="com.qingcity.entity.TaskStatus">
+	<insert id="insertSelective" parameterType="TaskStatus">
 		insert into taskstatus
 		<trim prefix="(" suffix=")" suffixOverrides=",">
 			<if test="id != null">
@@ -66,7 +66,7 @@
 			</if>
 		</trim>
 	</insert>
-	<update id="updateByPrimaryKeySelective" parameterType="com.qingcity.entity.TaskStatus">
+	<update id="updateByPrimaryKeySelective" parameterType="TaskStatus">
 		update taskstatus
 		<set>
 			<if test="userid != null">
@@ -84,7 +84,7 @@
 		</set>
 		where id = #{id,jdbcType=INTEGER}
 	</update>
-	<update id="updateByPrimaryKey" parameterType="com.qingcity.entity.TaskStatus">
+	<update id="updateByPrimaryKey" parameterType="TaskStatus">
 		update taskstatus
 		set userId = #{userId,jdbcType=INTEGER},
 		taskId = #{taskId,jdbcType=INTEGER},

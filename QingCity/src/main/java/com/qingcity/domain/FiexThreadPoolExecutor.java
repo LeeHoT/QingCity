@@ -26,7 +26,7 @@ public class FiexThreadPoolExecutor extends ThreadPoolExecutor {
 	public FiexThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveSecond, String poolName) {
 		super(corePoolSize, maximumPoolSize, keepAliveSecond, TimeUnit.SECONDS,
 				new LinkedBlockingQueue<Runnable>(10 * corePoolSize), Executors.defaultThreadFactory());
-		logger.info(" FiexThreadPoolExecutor");
+		logger.info(" FiexThreadPoolExecutor1");
 		this.poolName = poolName;
 		setRejectedExecutionHandler(new DiscardPolicy() {
 			@Override
@@ -42,7 +42,7 @@ public class FiexThreadPoolExecutor extends ThreadPoolExecutor {
 	public FiexThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveSecond) {
 		super(corePoolSize, maximumPoolSize, keepAliveSecond, TimeUnit.SECONDS,
 				new LinkedBlockingQueue<Runnable>(10 * corePoolSize));
-		logger.info(" FiexThreadPoolExecutor");
+		logger.info(" FiexThreadPoolExecutor2");
 		setRejectedExecutionHandler(new DiscardPolicy() {
 			@Override
 			public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {

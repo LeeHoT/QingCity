@@ -296,7 +296,7 @@ public final class MessageError {
                 com.qingcity.proto.MessageError.Error.class, com.qingcity.proto.MessageError.Error.Builder.class);
       }
 
-      // Construct using cpgame.demo.proto.MessageError.Error.newBuilder()
+      // Construct using com.qingcity.proto.MessageError.Error.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -502,8 +502,8 @@ public final class MessageError {
   static {
     java.lang.String[] descriptorData = {
       "\n\022MessageError.proto\"\030\n\005Error\022\017\n\007content" +
-      "\030\001 \002(\tB!\n\021cpgame.demo.protoB\014MessageErro" +
-      "r"
+      "\030\001 \002(\tB\"\n\022com.qingcity.protoB\014MessageErr" +
+      "or"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

@@ -1,6 +1,7 @@
 package com.qingcity.entity;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
@@ -13,18 +14,20 @@ import org.springframework.stereotype.Repository;
  * @author leehot(李慧婷)
  *
  */
-@Repository(value="userEntity")
-@Scope(value="prototype")
+@Repository(value = "userEntity")
+@Scope(value = "prototype")
 public class UserEntity implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2231387140651533156L;
 	private Integer userId; // 用户ID
 	private String username; // 用户名
 	private String passwordMd5; // 用户密码,用MD5 格式存储
 
 	private String email;// 用户邮箱
 	private String phone; // 用户电话号码
-	private Long regTime; // 注册时间
+	private Timestamp regTime; // 注册时间
 	private String idCard;// 身份证号
+
+	private boolean isCharged;
 
 	public String getIdCard() {
 		return idCard;
@@ -34,11 +37,11 @@ public class UserEntity implements Serializable {
 		this.idCard = idCard;
 	}
 
-	public Long getRegTime() {
+	public Timestamp getRegTime() {
 		return regTime;
 	}
 
-	public void setRegTime(Long regTime) {
+	public void setRegTime(Timestamp regTime) {
 		this.regTime = regTime;
 	}
 
@@ -80,6 +83,14 @@ public class UserEntity implements Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public boolean isCharged() {
+		return isCharged;
+	}
+
+	public void setCharged(boolean isCharged) {
+		this.isCharged = isCharged;
 	}
 
 }

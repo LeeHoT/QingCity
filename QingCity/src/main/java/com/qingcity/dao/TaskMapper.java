@@ -1,7 +1,10 @@
 package com.qingcity.dao;
 
-import com.qingcity.entity.Task;
+import org.springframework.stereotype.Repository;
 
+import com.qingcity.entity.task.Task;
+
+@Repository
 public interface TaskMapper {
     int deleteByPrimaryKey(Integer id);
 

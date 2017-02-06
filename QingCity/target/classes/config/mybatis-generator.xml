@@ -14,7 +14,6 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 			<property name="targetPackage" value="" />
 			<property name="targetProject" value="QingCity/src/main/resources/config" />
 		</plugin>
-		
 		-->
 
 		<!-- 此处是将 Example 改名为 Criteria 想改成什么都行 -->
@@ -42,13 +41,13 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 
-		<!-- javaModelGenerator是模型的生成信息，这里将指定这些Java model类的生成路径； -->
-		<javaModelGenerator targetPackage="com.qingcity.entity2"
+		<!-- javaModelGenerator是模型的生成信息，这里将指定这些Java model类的生成路径；	 -->
+		<javaModelGenerator targetPackage="com.qingcity.entity"
 			targetProject="QingCity/src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
-
+	
 		<!-- sqlMapGenerator是mybatis 的sqlMapper XML文件的生成信息，包括生成路径等； 先生成xml，在生成java -->
 		<sqlMapGenerator targetPackage="com.qingcity.dao.mapper"
 			targetProject="QingCity/src/main/java">
@@ -60,29 +59,53 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 			targetPackage="com.qingcity.dao" targetProject="QingCity/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-
-		<!-- table是用户指定的被生成相关信息的表，它必须在指定的jdbc连接中已经被建立。?是否可以多个
-
+		
+		  
+		<table tableName="mailBox" domainObjectName="MailBox"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+        <!-- table是用户指定的被生成相关信息的表，它必须在指定的jdbc连接中已经被建立。?是否可以多个
+        <table tableName="society" domainObjectName="Society"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+        <table tableName="vip" domainObjectName="Vip"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="vipTime" domainObjectName="VipTime"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="rechargeRecord" domainObjectName="RechargeRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="purchaseRecord" domainObjectName="PurchaseRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="dress" domainObjectName="Dress"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+         <table tableName="musicScore" domainObjectName="MusicScoreEntity"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
 		<table tableName="users" domainObjectName="UserEntity"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>
-		
 		<table tableName="player" domainObjectName="PlayerEntity"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>
-
 		<table tableName="music" domainObjectName="MusicEntity"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>	
-		<table tableName="musicScore" domainObjectName="MusicScoreEntity"
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false"></table>
-		
-		 -->
 		<table tableName="task" domainObjectName="Task"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
@@ -98,10 +121,8 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 		<table tableName="rewardRecord" domainObjectName="RewardRecord"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false"></table>
-		<!-- <table tableName="app_bind_status" domainObjectName="AppBindStatus" 
-			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
-			enableSelectByExample="false" selectByExampleQueryId="false"></table> -->
+			selectByExampleQueryId="false"></table> 
+			-->
 
 	</context>
 </generatorConfiguration>   

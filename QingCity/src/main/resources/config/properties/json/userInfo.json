@@ -1,0 +1,20 @@
+[
+	{
+		"userId":45,
+		"username":"djfsd",
+		"passwordMd5":"sdfsdfds",
+		"idCard":"swerwe",
+		"phone":"ewwerwe",
+		"email":"werwe",
+		"regTime":"2016-12-09 15:44:45"
+	},
+	{
+		"userId":67,
+		"username":"323",
+		"passwordMd5":"343",
+		"idCard":"rer",
+		"phone":"fdfd",
+		"email":"sfd",
+		"regTime":"2016-12-09 15:44:46"
+	}
+]

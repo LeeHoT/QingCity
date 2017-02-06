@@ -1,8 +1,12 @@
 package com.qingcity.dao;
 
-import com.qingcity.entity.TaskStatus;
+import org.springframework.stereotype.Repository;
 
+import com.qingcity.entity.task.TaskStatus;
+
+@Repository
 public interface TaskStatusMapper {
+	
     int deleteByPrimaryKey(Integer id);
 
     int insert(TaskStatus record);

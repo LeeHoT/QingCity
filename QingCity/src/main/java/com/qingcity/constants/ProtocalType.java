@@ -14,5 +14,7 @@ public interface ProtocalType {
 	     //protobuf C#
 	     PBC = 2, 
 	     
-	     SPROTO = 3;
+	     SPROTO = 3,
+	     
+	     HEARTBEAT = 4;
 }
