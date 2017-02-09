@@ -19,7 +19,7 @@ public interface PassRecordService {
 	 *            难度 1 2 3
 	 * @return 解锁歌曲列表
 	 */
-	public List<PassRecord> queryForPassMusic(int userId, int city, int difficulty);
+	List<PassRecord> queryForPassMusic(int userId, int city, int difficulty);
 
 	/**
 	 * 添加一条通关记录，
@@ -28,7 +28,7 @@ public interface PassRecordService {
 	 *            通关记录内容，同时记录了相关解锁信息和通关信息
 	 * @return 新增记录的行数
 	 */
-	public int insertPassRecord(PassRecord passRecord);
+	int insertPassRecord(PassRecord passRecord);
 
 	/**
 	 * 将玩家的该关卡设置为通关，并解锁下一关: 查询目前难度已通关数(此处注意是已通关数而不是解锁数)是否达到解锁下一难度的数量，
@@ -37,7 +37,7 @@ public interface PassRecordService {
 	 * 
 	 * @return -2 表示数据更新成功且玩家已通过所有关卡，1 则表明数据更新成功
 	 */
-	public int updatePassRecordToComplete(PassRecord passRecord);
+	int updatePassRecordToComplete(PassRecord passRecord);
 
 	/**
 	 * 获取玩家当前城下制定难度解锁歌曲的数量
@@ -50,7 +50,7 @@ public interface PassRecordService {
 	 *            难度
 	 * @return 已经通关的歌曲数量
 	 */
-	public int selectPassNum(@Param("userId") int userId, @Param("city") int city, @Param("difficulty") int difficulty);
+	int selectPassNum(@Param("userId") int userId, @Param("city") int city, @Param("difficulty") int difficulty);
 
 	/**
 	 * 查询该玩家所有通关歌曲的数量
@@ -59,6 +59,6 @@ public interface PassRecordService {
 	 *            玩家id
 	 * @return 通关总数
 	 */
-	public int selectCompleteNum(int userId);
+	int selectCompleteNum(int userId);
 
 }

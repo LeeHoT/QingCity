@@ -20,7 +20,7 @@ public interface SocietysMapper {
 	 *            只有当userId_in的值小于0时societyId_in的值有效
 	 * @return
 	 */
-	public Societys queryForMemberList(@Param("userId_in") Integer userId_in,
+	 Societys queryForMemberList(@Param("userId_in") Integer userId_in,
 			@Param("societyId_in") Integer societyId_in);
 
 	/**
@@ -31,7 +31,7 @@ public interface SocietysMapper {
 	 * @param notice
 	 *            新的公告信息，最多50个汉字，所以在使用前一定检查新公告的长度，不可高于50
 	 */
-	public void updateSocietyNotice(@Param("societyId") Integer societyId, @Param("notice") String notice);
+	 void updateSocietyNotice(@Param("societyId") Integer societyId, @Param("notice") String notice);
 
 	/**
 	 * 更新公会名字
@@ -41,7 +41,7 @@ public interface SocietysMapper {
 	 * @param name
 	 *            新的公告名字，不得超过五个字
 	 */
-	public void updateSocietyName(@Param("societyId") Integer societyId, @Param("name") String name);
+	 void updateSocietyName(@Param("societyId") Integer societyId, @Param("name") String name);
 
 	/**
 	 * 创建公会，常见成功后会返回当前工会的Id
@@ -49,7 +49,7 @@ public interface SocietysMapper {
 	 * @param societys
 	 *            新建公会对象
 	 */
-	public void createSociety(Societys societys);
+	 void createSociety(Societys societys);
 
 	/**
 	 * 根据名字查询该名字是否已经被占用，因为在公会名不存在是，返回的结果为空，会抛出异常，所以使用时需要捕获异常
@@ -58,5 +58,5 @@ public interface SocietysMapper {
 	 *            新的公会名
 	 * @return 已经存在的公会id
 	 */
-	public int selectSocietyName(String name) throws Exception;
+	 int selectSocietyName(String name) throws Exception;
 }

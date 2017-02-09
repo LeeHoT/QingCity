@@ -16,7 +16,7 @@ public interface MusicScoreService {
 	 * @param season
 	 * @return
 	 */
-	public List<MusicScoreEntity> selectSumGrade(int userId, int season);
+	List<MusicScoreEntity> selectSumGrade(int userId, int season);
 
 	/**
 	 * 一定要转换成json后再往出取，，出来排行榜界面后需要修改
@@ -31,7 +31,7 @@ public interface MusicScoreService {
 	 *            小于0表示不考虑城市
 	 * @return 大小为number+1或者number的map,包含前number个玩家的排名信息
 	 */
-	public Map<Integer, RankVO> queryForRankMap(int userId, int number, int season, int city);
+	Map<Integer, RankVO> queryForRankMap(int userId, int number, int season, int city);
 
 	/**
 	 * 查询玩家某一城下当前赛季的歌曲及成绩列表
@@ -44,21 +44,21 @@ public interface MusicScoreService {
 	 *            查询的城类型
 	 * @return
 	 */
-	public LinkedList<MusicScoreEntity> queryForMusicList(int userId, int season, int city);
+	LinkedList<MusicScoreEntity> queryForMusicList(int userId, int season, int city);
 
-	public int deleteByMusicIdAndUserId(int musicId, int userId);
+	int deleteByMusicIdAndUserId(int musicId, int userId);
 
-	public int insert(MusicScoreEntity musicScore);
+	int insert(MusicScoreEntity musicScore);
 
-	public int insertSelective(MusicScoreEntity musicScore);
-	
+	int insertSelective(MusicScoreEntity musicScore);
+
 	/**
 	 * 
 	 * @param userId
 	 * @param musicId
 	 * @return
 	 */
-	public MusicScoreEntity selectByMusicIdAndUserId(int userId,int musicId);
+	MusicScoreEntity selectByMusicIdAndUserId(int userId, int musicId);
 
 	/**
 	 * 根据玩家id查询玩家某首音乐的平均成绩，，可在无人pk时处理结果时使用
@@ -69,7 +69,7 @@ public interface MusicScoreService {
 	 *            玩家id
 	 * @return 查询到的成绩信息
 	 */
-	public int selectScoreByMusicIdAndUserId(int musicId, int userId);
+	int selectScoreByMusicIdAndUserId(int musicId, int userId);
 
 	/**
 	 * 根据音乐id和玩家等级范围查询来查询玩家，用于很少玩家进行PK时使用
@@ -84,10 +84,10 @@ public interface MusicScoreService {
 	 *            等级上限
 	 * @return 符合要求的玩家列表
 	 */
-	public List<Integer> selectPlayerByMusicIdAndLevel(int musicId, int levelOff, int levelEnd);
+	List<Integer> selectPlayerByMusicIdAndLevel(int musicId, int levelOff, int levelEnd);
 
-	public int updateByMusicIdAndUserIdSelective(MusicScoreEntity musicScore);
+	int updateByMusicIdAndUserIdSelective(MusicScoreEntity musicScore);
 
-	public int updateByMusicIdAndUserId(MusicScoreEntity musicScore);
+	int updateByMusicIdAndUserId(MusicScoreEntity musicScore);
 
 }

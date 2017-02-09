@@ -72,6 +72,10 @@ public class UserServiceImpl implements UserService {
 				playerEntity.setPower(INITPOWER);
 				playerEntity.setLastPowUpdateTime(TimeUtil.Date2Timestamp(new Date()));
 				playerEntity.setIcon("icon");
+				playerEntity.setSocietyId(-1);
+				playerEntity.setJob(0);
+				playerEntity.setContribution(0);
+				playerEntity.setNickname(user.getUsername());
 				playerMapper.insertSelective(playerEntity);
 				return "注册成功";
 			}

@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.qingcity.dao.RechargeRecordMapper" >
-  <resultMap id="BaseResultMap" type="RechargeRecord" >
-    <id column="rechargeId" property="rechargeId" jdbcType="INTEGER" />
-    <result column="userId" property="userId" jdbcType="INTEGER" />
+<mapper namespace="com.qingcity.dao.BillMapper" >
+  <resultMap id="BaseResultMap" type="Bill" >
+    <id column="orderId" property="orderId" jdbcType="INTEGER" />
     <result column="pid" property="pid" jdbcType="INTEGER" />
     <result column="time" property="time" jdbcType="TIMESTAMP" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="pNumber" property="pNumber" jdbcType="INTEGER" />
     <result column="totlalPrice" property="totlalPrice" jdbcType="DOUBLE" />
+    <result column="userId" property="userId" jdbcType="INTEGER" />
   </resultMap>
+  
+  
+  
   <sql id="Base_Column_List" >
-    rechargeId, userId, pid, time, status, pNumber, totlalPrice
+    orderId, pid, time, status, pNumber, totlalPrice, userId
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from rechargerecord
-    where rechargeId = #{rechargeId,jdbcType=INTEGER}
+    from bill
+    where orderId = #{orderId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from rechargerecord
-    where rechargeId = #{rechargeId,jdbcType=INTEGER}
+    delete from bill
+    where orderId = #{orderId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="RechargeRecord" >
-    insert into rechargerecord (rechargeId, userId, pid, 
-      time, status, pNumber, 
-      totlalPrice)
-    values (#{rechargeId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{pid,jdbcType=INTEGER}, 
-      #{time,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{pNumber,jdbcType=INTEGER}, 
-      #{totlalPrice,jdbcType=DOUBLE})
+  <insert id="insert" parameterType="Bill" >
+    insert into bill (orderId, pid, time, 
+      status, pNumber, totlalPrice, 
+      userId)
+    values (#{orderId,jdbcType=INTEGER}, #{pid,jdbcType=INTEGER}, #{time,jdbcType=TIMESTAMP}, 
+      #{status,jdbcType=INTEGER}, #{pNumber,jdbcType=INTEGER}, #{totlalPrice,jdbcType=DOUBLE}, 
+      #{userId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="RechargeRecord" >
-    insert into rechargerecord
+  <insert id="insertSelective" parameterType="Bill" >
+    insert into bill
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="rechargeId != null" >
-        rechargeId,
-      </if>
-      <if test="userId != null" >
-        userId,
+      <if test="orderId != null" >
+        orderId,
       </if>
       <if test="pid != null" >
         pid,
@@ -55,13 +55,13 @@
       <if test="totlalPrice != null" >
         totlalPrice,
       </if>
+      <if test="userId != null" >
+        userId,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="rechargeId != null" >
-        #{rechargeId,jdbcType=INTEGER},
-      </if>
-      <if test="userId != null" >
-        #{userId,jdbcType=INTEGER},
+      <if test="orderId != null" >
+        #{orderId,jdbcType=INTEGER},
       </if>
       <if test="pid != null" >
         #{pid,jdbcType=INTEGER},
@@ -78,14 +78,14 @@
       <if test="totlalPrice != null" >
         #{totlalPrice,jdbcType=DOUBLE},
       </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="RechargeRecord" >
-    update rechargerecord
+  <update id="updateByPrimaryKeySelective" parameterType="Bill" >
+    update bill
     <set >
-      <if test="userId != null" >
-        userId = #{userId,jdbcType=INTEGER},
-      </if>
       <if test="pid != null" >
         pid = #{pid,jdbcType=INTEGER},
       </if>
@@ -101,17 +101,20 @@
       <if test="totlalPrice != null" >
         totlalPrice = #{totlalPrice,jdbcType=DOUBLE},
       </if>
+      <if test="userId != null" >
+        userId = #{userId,jdbcType=INTEGER},
+      </if>
     </set>
-    where rechargeId = #{rechargeId,jdbcType=INTEGER}
+    where orderId = #{orderId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="RechargeRecord" >
-    update rechargerecord
-    set userId = #{userId,jdbcType=INTEGER},
-      pid = #{pid,jdbcType=INTEGER},
-      time = #{time,jdbcType=TIMESTAMP},
-      status = #{status,jdbcType=INTEGER},
-      pNumber = #{pNumber,jdbcType=INTEGER},
-      totlalPrice = #{totlalPrice,jdbcType=DOUBLE}
-    where rechargeId = #{rechargeId,jdbcType=INTEGER}
+  <update id="updateByPrimaryKey" parameterType="Bill" >
+	update bill
+	set pid = #{pid,jdbcType=INTEGER},
+	time = #{time,jdbcType=TIMESTAMP},
+	status = #{status,jdbcType=INTEGER},
+	pNumber = #{pNumber,jdbcType=INTEGER},
+	totlalPrice = #{totlalPrice,jdbcType=DOUBLE},
+	userId = #{userId,jdbcType=INTEGER}
+	where orderId = #{orderId,jdbcType=INTEGER}
   </update>
 </mapper>

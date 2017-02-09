@@ -61,7 +61,11 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 		</javaClientGenerator>
 		
 		  
-		<table tableName="mailBox" domainObjectName="MailBox"
+		<table tableName="bill" domainObjectName="Bill"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="rechargeRecord" domainObjectName="RechargeRecord"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>

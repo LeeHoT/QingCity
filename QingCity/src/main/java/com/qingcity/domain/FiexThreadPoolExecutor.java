@@ -63,4 +63,9 @@ public class FiexThreadPoolExecutor extends ThreadPoolExecutor {
 					+ (super.getCorePoolSize() * 10 - this.getQueue().remainingCapacity()));
 		}
 	}
+	
+	@Override
+	public void shutdown() {
+		super.shutdown();
+	}
 }

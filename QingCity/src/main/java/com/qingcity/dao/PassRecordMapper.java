@@ -21,7 +21,7 @@ public interface PassRecordMapper {
 	 *            通关难度
 	 * @return
 	 */
-	public int updatePassRecordToComplete(@Param("userId") int userId, @Param("musicId") int musicId,
+	int updatePassRecordToComplete(@Param("userId") int userId, @Param("musicId") int musicId,
 			@Param("difficulty") int difficulty);
 
 	/**
@@ -35,7 +35,7 @@ public interface PassRecordMapper {
 	 *            难度
 	 * @return 已经通关的歌曲数量
 	 */
-	public int selectPassNum(@Param("userId") int userId, @Param("city") int city, @Param("difficulty") int difficulty);
+	int selectPassNum(@Param("userId") int userId, @Param("city") int city, @Param("difficulty") int difficulty);
 
 	/**
 	 * 查询该玩家所有通关歌曲的数量
@@ -44,7 +44,7 @@ public interface PassRecordMapper {
 	 *            玩家id
 	 * @return 通关总数
 	 */
-	public int selectCompleteNum(int userId);
+	int selectCompleteNum(int userId);
 
 	/**
 	 * 根据玩家id 和city查询该玩家所有难度通关与未通关的歌曲
@@ -55,7 +55,7 @@ public interface PassRecordMapper {
 	 *            城市
 	 * @return 解锁歌曲列表
 	 */
-	public List<PassRecord> queryForPassMusic(@Param("userId") int userId, @Param("city") int city);
+	List<PassRecord> queryForPassMusic(@Param("userId") int userId, @Param("city") int city);
 
 	/**
 	 * 插入一条记录，该首歌曲可能已通关或还未通关
@@ -63,6 +63,6 @@ public interface PassRecordMapper {
 	 * @param record
 	 * @return 插入数量
 	 */
-	public int insertSelective(PassRecord record);
+	int insertSelective(PassRecord record);
 
 }

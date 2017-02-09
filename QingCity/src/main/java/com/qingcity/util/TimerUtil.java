@@ -28,6 +28,8 @@ public class TimerUtil {
 	public static final int DAYTIME = 24 * 60 * 60 * 1000; // 一天的时间
 	public static final int WEEK = 7 * DAYTIME; // 一周的时间
 
+	private static final String DATE_FORMAT = "yyyy-MM-dd";
+
 	@Autowired
 	private Timer timer;
 
@@ -90,7 +92,7 @@ public class TimerUtil {
 	 * @return
 	 */
 	public Timestamp String2Timestamp(String t) {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
 		Timestamp ts = null;
 		try {
 			ts = new Timestamp(sdf.parse(t).getTime());
@@ -104,28 +106,29 @@ public class TimerUtil {
 
 	/**
 	 * Timestamp 转化为 yyyy-MM-dd 格式字符串
+	 * 
 	 * @param ts
 	 * @return
 	 */
 	public String Timestamp2String(Timestamp ts) {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
 		return sdf.format(ts);
 	}
-	
-	public Date Timestamp2Date(Timestamp ts){
+
+	public Date Timestamp2Date(Timestamp ts) {
 		return String2Date(Timestamp2String(ts));
 	}
-	
-	/** 
-	 * Date 类型转化我Timestamp 、
-	 * 父类无法直接转为子类，听过先转为String 转为时间戳
+
+	/**
+	 * Date 类型转化我Timestamp 、 父类无法直接转为子类，听过先转为String 转为时间戳
+	 * 
 	 * @param date
 	 * @return
 	 */
-	public Timestamp Date2Timestamp(Date date){
+	public Timestamp Date2Timestamp(Date date) {
 		String d = Date2String(date);
 		return String2Timestamp(d);
-		
+
 	}
 
 	/**
@@ -166,8 +169,8 @@ public class TimerUtil {
 	 * @return
 	 */
 	public String Date2String(Date date) {
-		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		// SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
+		SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
 		String time = sdf.format(date);
 		return time;
 	}
@@ -179,7 +182,7 @@ public class TimerUtil {
 	 * @return
 	 */
 	public Date String2Date(String time) {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
 		Date date = new Date();
 		try {
 			date = sdf.parse(time);
@@ -228,10 +231,10 @@ public class TimerUtil {
 	 */
 	public int getDay() {
 		Date date = new Date();
-		String  d = "2016-11-20";
+		String d = "2016-11-20";
 		System.out.println(String2Date(d).getTime());
-		System.out.println("+++++++"+date.getTime());
-		
+		System.out.println("+++++++" + date.getTime());
+
 		Calendar now = new GregorianCalendar();
 		int day = now.get(Calendar.DAY_OF_MONTH);
 		return day;
@@ -240,7 +243,7 @@ public class TimerUtil {
 	public static void main(String[] args) {
 		TimerUtil time = getInstance();
 		Date date = new Date();
-		System.out.println("............."+time.Date2Timestamp(date));
+		System.out.println("............." + time.Date2Timestamp(date));
 		System.out.println(time.Date2String(date)); // test Date2String
 		System.out.println("当前是第" + time.getSeason(date) + "赛季"); // test
 																	// getSeason
@@ -249,15 +252,14 @@ public class TimerUtil {
 		String d = "2016-11-20";
 		date = time.String2Date(d); // test String2Date
 		System.out.println(date);
-		System.out.println("Date 转化为字符串 "+time.Date2String(date));
+		System.out.println("Date 转化为字符串 " + time.Date2String(date));
 		Timestamp ts = time.Date2Timestamp(date);
 		System.out.println("Date 转化为Timestamp " + ts);
 		System.out.println("String 转化为Timestamp " + time.String2Timestamp(d));
 		System.out.println("Timestamp 转化为 Date " + time.Timestamp2Date(ts));
 		System.out.println("Timestamp 转化为String " + time.Timestamp2String(ts));
 		System.out.println("String 转化为 Date " + time.String2Date(d));
-		System.out.println(time.Date2Timestamp(date)==time.String2Timestamp(d));
-		
+		System.out.println(time.Date2Timestamp(date) == time.String2Timestamp(d));
 
 	}
 

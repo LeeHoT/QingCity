@@ -14,7 +14,7 @@ public interface UserMapper {
 	 * 
 	 * @return 玩家列表，里边仅包含玩家的userId和玩家用户名
 	 */
-	public List<UserEntity> selectNoChargeUser();
+	 List<UserEntity> selectNoChargeUser();
 
 	/**
 	 * 将当前玩家设置为已充值，即不再是首充玩家
@@ -22,7 +22,7 @@ public interface UserMapper {
 	 * @param userId
 	 *            玩家id
 	 */
-	public void updateChargedByUserId(int userId);
+	 void updateChargedByUserId(int userId);
 
 	/**
 	 * 检查玩家是否是首次充值，如果是第一次则返回
@@ -30,14 +30,14 @@ public interface UserMapper {
 	 * @param userId
 	 * @return
 	 */
-	public boolean isCharged(int userId);
+	 boolean isCharged(int userId);
 
 	/**
 	 * 添加用户信息
 	 * 
 	 * @param userEntity
 	 */
-	public int insertUser(UserEntity userEntity);
+	 int insertUser(UserEntity userEntity);
 
 	/**
 	 * 可选择行的插入用户信息，例如仅增加电话号码等等
@@ -45,7 +45,7 @@ public interface UserMapper {
 	 * @param user
 	 * @return
 	 */
-	public int insertUserSelective(UserEntity user);
+	 int insertUserSelective(UserEntity user);
 
 	/**
 	 * 根据用户ID获取用户所有信息
@@ -53,7 +53,7 @@ public interface UserMapper {
 	 * @param userId
 	 * @return
 	 */
-	public UserEntity selectByUserId(Integer userid);
+	 UserEntity selectByUserId(Integer userid);
 
 	/**
 	 * 根据用户id删除玩家基本信息 ，，该方法只有管理员可以使用
@@ -61,7 +61,7 @@ public interface UserMapper {
 	 * @param userid
 	 * @return
 	 */
-	public int deleteByUserId(Integer userid);
+	 int deleteByUserId(Integer userid);
 
 	/**
 	 * 不可修改注册时间
@@ -69,7 +69,7 @@ public interface UserMapper {
 	 * @param user
 	 * @return
 	 */
-	public int updateByUserIdSelective(UserEntity user);
+	 int updateByUserIdSelective(UserEntity user);
 
 	/**
 	 * 不可修改注册时间
@@ -77,7 +77,7 @@ public interface UserMapper {
 	 * @param user
 	 * @return
 	 */
-	public int updateByUserId(UserEntity user);
+	 int updateByUserId(UserEntity user);
 
 	/**
 	 * 根据用户id查询用户个人基本信息
@@ -85,7 +85,7 @@ public interface UserMapper {
 	 * @param user
 	 * @return
 	 */
-	public UserEntity selectByUserId(UserEntity user);
+	 UserEntity selectByUserId(UserEntity user);
 
 	/**
 	 * 根据用户名查询相关信息，可用于登录使用
@@ -93,14 +93,14 @@ public interface UserMapper {
 	 * @param username
 	 * @return
 	 */
-	public UserEntity selectUserByName(String username);
+	 UserEntity selectUserByName(String username);
 
 	/**
 	 * 插入用户身份证号
 	 * 
 	 * @param idCard
 	 */
-	public int insertIdCard(@Param("idCard") String idCard, @Param("userId") int userId);
+	 int insertIdCard(@Param("idCard") String idCard, @Param("userId") int userId);
 
 	/**
 	 * 获取身份证号
@@ -108,14 +108,14 @@ public interface UserMapper {
 	 * @param userId
 	 * @return
 	 */
-	public String getIdCard(int userId);
+	 String getIdCard(int userId);
 
 	/**
 	 * 插入用户email
 	 * 
 	 * @param email
 	 */
-	public int insertEmail(@Param("email") String email, @Param("userId") int userId);
+	 int insertEmail(@Param("email") String email, @Param("userId") int userId);
 
 	/**
 	 * 获取用户EMAIL
@@ -124,14 +124,14 @@ public interface UserMapper {
 	 * @return
 	 */
 
-	public String getEmail(int userId);
+	 String getEmail(int userId);
 
 	/**
 	 * 插入用户电话号
 	 * 
 	 * @param phone
 	 */
-	public int insertPhone(@Param("phone") String phone, @Param("userId") int userId);
+	 int insertPhone(@Param("phone") String phone, @Param("userId") int userId);
 
 	/**
 	 * 获取用户电话号
@@ -139,7 +139,7 @@ public interface UserMapper {
 	 * @param userId
 	 * @return
 	 */
-	public String getPhone(int userId);
+	 String getPhone(int userId);
 
 	/**
 	 * 查询该用户名username是否被注册
@@ -147,7 +147,7 @@ public interface UserMapper {
 	 * @param username
 	 * @return 返回使用该用户名的用户username
 	 */
-	public String isExistUsername(String username);
+	 String isExistUsername(String username);
 
 	/**
 	 * 查询是否注册了该idCard
@@ -155,7 +155,7 @@ public interface UserMapper {
 	 * @param idCard
 	 * @return 返回拥有该idCard的用户idCard
 	 */
-	public String isExistIdCard(String idCard);
+	 String isExistIdCard(String idCard);
 
 	/**
 	 * 查询是否注册了该email
@@ -163,7 +163,7 @@ public interface UserMapper {
 	 * @param idCard
 	 * @return 返回拥有该idCard的用户email
 	 */
-	public String isExistEmail(String email);
+	 String isExistEmail(String email);
 
 	/**
 	 * 查询是否注册了该phone
@@ -171,6 +171,6 @@ public interface UserMapper {
 	 * @param idCard
 	 * @return 返回拥有该idCard的用户id
 	 */
-	public String isExistPhone(String phone);
+	 String isExistPhone(String phone);
 
 }

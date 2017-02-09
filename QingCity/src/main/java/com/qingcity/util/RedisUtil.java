@@ -1,50 +1,155 @@
 package com.qingcity.util;
 
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
-public final class RedisUtil {
+import org.springframework.cache.Cache;
+import org.springframework.cache.support.SimpleValueWrapper;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.core.RedisCallback;
+import org.springframework.data.redis.core.RedisTemplate;
 
-	// Redis服务器IP
-	private static String ADDR = "192.168.168.105";
+public class RedisUtil implements Cache {
 
-	// Redis的端口号
-	private static int PORT = 6379;
+	private RedisTemplate<String, Object> redisTemplate;
+	private String name;
 
-	// 访问密码
-	private static String AUTH = "root";
+	public RedisTemplate<String, Object> getRedisTemplate() {
+		return redisTemplate;
+	}
 
-	// 可用连接实例的最大数目，默认值为8;
-	// 如果赋值为-1 ，则表示不限制;如果pool已经分配了maxActive个jedis实例，则此时pool的状态exhausted(耗尽)
-	private static int MAX_ACTIVE = 1024;
+	public void setRedisTemplate(RedisTemplate<String, Object> redisTemplate) {
+		this.redisTemplate = redisTemplate;
+	}
 
-	// 控制一个pool最多有对少个状态为idle(空闲的)的jedis实例,默认值也是8
-	private static int MAX_IDLE = 200;
+	public void setName(String name) {
+		this.name = name;
+	}
 
-	// 等待可用连接的最大时间、单位毫秒，默认值为-1，表示永远不超时，如果超过等待时间，则直接抛出JedisConnectionException
-	private static int MAX_WAIT = 10000;
+	@Override
+	public String getName() {
+		return this.name;
+	}
 
-	private static int TIMEOUT = 10000;
-
-	// 在borrow一个jedis实例，是否提前进行validate操作;如果为true 则得到的jedis实例均是可用的;
-	private static boolean TEST_ON_BORROW = true;
-
-	private static JedisPool jedisPool = null;
+	@Override
+	public Object getNativeCache() {
+		return this.redisTemplate;
+	}
 
 	/**
-	 * 初始化Redis连接池
+	 * 从缓存中获取key
 	 */
-	static {
-		try {
-			JedisPoolConfig config = new JedisPoolConfig();
-			config.setMaxIdle(MAX_IDLE);
-			// config.setMaxActive(MAX_ACTIVE);
-			//config.setMaxWait(MAX_WAIT);
-			
-
-		} catch (Exception e) {
-			ExceptionUtils.getStackTrace(e);
-
-		}
+	@Override
+	public ValueWrapper get(Object key) {
+		System.out.println("get key");
+		final String keyf = key.toString();
+		Object object = null;
+		object = redisTemplate.execute(new RedisCallback<Object>() {
+			public Object doInRedis(RedisConnection connection) throws DataAccessException {
+				byte[] key = keyf.getBytes();
+				byte[] value = connection.get(key);
+				if (value == null) {
+					return null;
+				}
+				return toObject(value);
+			}
+		});
+		return (object != null ? new SimpleValueWrapper(object) : null);
 	}
+
+	/**
+	 * 将一个新的key保存到缓存中 先拿到需要缓存key名称和对象，然后将其转成ByteArray
+	 */
+	@Override
+	public void put(Object key, Object value) {
+		System.out.println("put key");
+		final String keyf = key.toString();
+		final Object valuef = value;
+		final long liveTime = 86400;
+		redisTemplate.execute(new RedisCallback<Long>() {
+			public Long doInRedis(RedisConnection connection) throws DataAccessException {
+				byte[] keyb = keyf.getBytes();
+				byte[] valueb = toByteArray(valuef);
+				connection.set(keyb, valueb);
+				if (liveTime > 0) {
+					connection.expire(keyb, liveTime);
+				}
+				return 1L;
+			}
+		});
+	}
+
+	private byte[] toByteArray(Object obj) {
+		byte[] bytes = null;
+		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+		try {
+			ObjectOutputStream oos = new ObjectOutputStream(bos);
+			oos.writeObject(obj);
+			oos.flush();
+			bytes = bos.toByteArray();
+			oos.close();
+			bos.close();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		return bytes;
+	}
+
+	private Object toObject(byte[] bytes) {
+		Object obj = null;
+		try {
+			ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
+			ObjectInputStream ois = new ObjectInputStream(bis);
+			obj = ois.readObject();
+			ois.close();
+			bis.close();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		} catch (ClassNotFoundException ex) {
+			ex.printStackTrace();
+		}
+		return obj;
+	}
+
+	/**
+	 * 删除key
+	 */
+	@Override
+	public void evict(Object key) {
+		System.out.println("del key");
+		final String keyf = key.toString();
+		redisTemplate.execute(new RedisCallback<Long>() {
+			public Long doInRedis(RedisConnection connection) throws DataAccessException {
+				return connection.del(keyf.getBytes());
+			}
+		});
+	}
+
+	/**
+	 * 清空key
+	 */
+	@Override
+	public void clear() {
+		System.out.println("clear key");
+		redisTemplate.execute(new RedisCallback<String>() {
+			public String doInRedis(RedisConnection connection) throws DataAccessException {
+				connection.flushDb();
+				return "ok";
+			}
+		});
+	}
+
+	@Override
+	public <T> T get(Object key, Class<T> type) {
+		return null;
+	}
+
+	public ValueWrapper putIfAbsent(Object key, Object value) {
+		return null;
+	}
+
 }

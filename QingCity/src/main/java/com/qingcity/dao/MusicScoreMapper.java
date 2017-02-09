@@ -25,7 +25,7 @@ public interface MusicScoreMapper {
 	 * @param season
 	 * @return
 	 */
-	public List<MusicScoreEntity> selectSumGrade(@Param("userId") int userId, @Param("season") int season);
+	List<MusicScoreEntity> selectSumGrade(@Param("userId") int userId, @Param("season") int season);
 
 	/**
 	 * 根据玩家id 和音乐id获取该玩家的平均成绩，用于没有人进行pk的时候
@@ -36,7 +36,7 @@ public interface MusicScoreMapper {
 	 *            音乐id
 	 * @return 玩家的最高成绩
 	 */
-	public int selectScoreByMusicIdAnduserId(@Param("userId") int userId, @Param("musicId") int musicId);
+	int selectScoreByMusicIdAnduserId(@Param("userId") int userId, @Param("musicId") int musicId);
 
 	/**
 	 * 一定要转换成json后再往出取,用于查看排名
@@ -44,7 +44,7 @@ public interface MusicScoreMapper {
 	 * @param season
 	 * @return
 	 */
-	public List<Map<String, RankVO>> queryForRankMap(@Param("season") int season, @Param("city") int city);
+	List<Map<String, RankVO>> queryForRankMap(@Param("season") int season, @Param("city") int city);
 
 	/**
 	 * 查询玩家某一城下当前赛季的歌曲及成绩列表 ,用于闯关
@@ -57,7 +57,7 @@ public interface MusicScoreMapper {
 	 *            查询的城类型
 	 * @return
 	 */
-	public LinkedList<MusicScoreEntity> queryForMusicList(@Param("userId") int userId, @Param("season") int season,
+	LinkedList<MusicScoreEntity> queryForMusicList(@Param("userId") int userId, @Param("season") int season,
 			@Param("city") int city);
 
 	/**
@@ -67,7 +67,7 @@ public interface MusicScoreMapper {
 	 *            成绩对象
 	 * @return 新插入数据的id
 	 */
-	public int insertScoreSelective(MusicScoreEntity musicScore);
+	int insertScoreSelective(MusicScoreEntity musicScore);
 
 	/**
 	 * 更新玩家歌曲成绩信息 可选择更新其中任意一项或几项
@@ -76,7 +76,7 @@ public interface MusicScoreMapper {
 	 *            成绩对象
 	 * @return 更新的行数
 	 */
-	public int updateByMusicIdAndUserIdSelective(MusicScoreEntity musicScore);
+	int updateByMusicIdAndUserIdSelective(MusicScoreEntity musicScore);
 
 	/**
 	 * 更新成绩所有信息。。所有数据均需完整才可以。不推荐使用
@@ -85,7 +85,7 @@ public interface MusicScoreMapper {
 	 *            成绩对象
 	 * @return 更新行数
 	 */
-	public int updateByMusicIdAndUserId(MusicScoreEntity musicScore);
+	int updateByMusicIdAndUserId(MusicScoreEntity musicScore);
 
 	/**
 	 * 根据玩家id和音乐id删除玩家本手音乐的所有成绩，，不推荐使用
@@ -96,7 +96,7 @@ public interface MusicScoreMapper {
 	 *            玩家id
 	 * @return 删除的行数
 	 */
-	public int deleteByMusicIdAndUserId(@Param("musicId") int musicId);
+	int deleteByMusicIdAndUserId(@Param("musicId") int musicId);
 
 	/**
 	 * 根据玩家id查询玩家某首音乐的平均成绩，，可在无人pk时处理结果时使用
@@ -107,7 +107,7 @@ public interface MusicScoreMapper {
 	 *            玩家id
 	 * @return 查询到的成绩信息
 	 */
-	public int selectScoreByMusicIdAndUserId(@Param("musicId") int musicId, @Param("userId") int userId);
+	int selectScoreByMusicIdAndUserId(@Param("musicId") int musicId, @Param("userId") int userId);
 
 	/**
 	 * 根据音乐id和玩家等级范围查询来查询玩家，用于很少玩家进行PK时使用
@@ -117,7 +117,7 @@ public interface MusicScoreMapper {
 	 * @param musicId
 	 * @return
 	 */
-	public List<Integer> selectPlayerByMusicIdAndLevel(@Param("musicId") int musicId, @Param("levelOff") int levelOff,
+	List<Integer> selectPlayerByMusicIdAndLevel(@Param("musicId") int musicId, @Param("levelOff") int levelOff,
 			@Param("levelEnd") int levelEnd);
 
 	/**
@@ -135,7 +135,7 @@ public interface MusicScoreMapper {
 	 *            当天12点 TimeUtil.getEndTime()
 	 * @return 不存在则返回空，否则返回符合要求的那条记录信息
 	 */
-	public MusicScoreEntity selectTodayRecord(@Param("userId") int userId, @Param("musicId") int musicId,
+	MusicScoreEntity selectTodayRecord(@Param("userId") int userId, @Param("musicId") int musicId,
 			@Param("difficulty") int difficulty, @Param("zero") Date zero, @Param("twelve") Date twelve);
 
 	/**
@@ -145,8 +145,8 @@ public interface MusicScoreMapper {
 	 *            成绩信息，， 包含day grade score和id
 	 * @return 返回更新的行数
 	 */
-	public int updateRecord(MusicScoreEntity musicScoreEntity);
+	int updateRecord(MusicScoreEntity musicScoreEntity);
 
-	public MusicScoreEntity selectByMusicIdAndUserId(@Param("userId") int userId, @Param("musicId") int musicId);
+	MusicScoreEntity selectByMusicIdAndUserId(@Param("userId") int userId, @Param("musicId") int musicId);
 
 }
