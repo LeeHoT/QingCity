@@ -6,21 +6,22 @@ import java.util.Date;
 /**
  * 
  * @author leehotin
- * @Date 2017年2月9日 下午4:12:45
- * @Description 充值记录
+ * @Date 2017年2月9日 下午4:02:31
+ * @Description 订单实体类
  */
-public class RechargeRecord implements Serializable {
+public class Bill implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private Integer rechargeId; // 充值账单id
-	private Integer userId; // 玩家id
-	private Integer pid; // 充值物品id
-	private Date time; // 充值时间
-	private Integer status; // 充值状态
-	private Integer pNumber; // 充值物品的数量
-	private Double totalPrice; // 本次充值总价
+	private Integer orderId; // 订单号 : "System.currentTimeMillis()/1000"+userId
+	private Integer pid; // 物品id
+	private Date time; // 购买时间
+	private Integer status; // 付款状态 1.已付款 2.待付款
+	private Integer pNumber; // 购买数量
+	private Double totalPrice; // 订单总价
+	private Integer userId; // 购买玩家id
 
 	public Integer getPid() {
 		return pid;
+
 	}
 
 	public void setPid(Integer pid) {
@@ -43,20 +44,12 @@ public class RechargeRecord implements Serializable {
 		this.status = status;
 	}
 
-	public Integer getRechargeId() {
-		return rechargeId;
+	public Integer getOrderId() {
+		return orderId;
 	}
 
-	public void setRechargeId(Integer rechargeId) {
-		this.rechargeId = rechargeId;
-	}
-
-	public Integer getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setOrderId(Integer orderId) {
+		this.orderId = orderId;
 	}
 
 	public Integer getpNumber() {
@@ -73,6 +66,14 @@ public class RechargeRecord implements Serializable {
 
 	public void setTotalPrice(Double totalPrice) {
 		this.totalPrice = totalPrice;
+	}
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 
 }

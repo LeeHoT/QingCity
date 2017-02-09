@@ -14334,3 +14334,1035 @@
 [2017-02-06 17:08:53,317][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xfe81e81f, /127.0.0.1:56658 => /127.0.0.1:8080]] from channelMap!,玩家[66]掉线
 [2017-02-06 17:08:53,317][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x495ef130, /127.0.0.1:56659 => /127.0.0.1:8080]] had outline,it's time to kick off
 [2017-02-06 17:08:53,317][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x495ef130, /127.0.0.1:56659 => /127.0.0.1:8080]] from channelMap!,玩家[65]掉线
+[2017-02-07 19:01:23,143][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 19:01:28,504][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 19:01:28,594][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 19:02:02,975][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 19:02:08,747][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 19:02:08,842][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:20:09,795][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 20:20:30,828][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 20:20:35,326][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:20:35,425][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:25:02,823][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 20:25:07,408][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:25:07,539][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:33:13,497][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 20:33:17,981][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:33:18,056][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:36:02,354][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 20:36:07,091][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:36:07,236][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:36:11,904][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-07 20:36:12,472][INFO, (NettyServer.java:37).<init>] register port :8080
+[2017-02-07 20:36:12,472][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8080
+[2017-02-07 20:36:12,472][INFO, (NettyServerStart.java:54).run] GameServer Starting...
+[2017-02-07 20:36:12,484][INFO, (NettyServer.java:53).run] socket server started at port 8080.
+[2017-02-07 20:36:12,484][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-07 20:37:19,604][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,604][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,604][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,604][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,620][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,620][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,620][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,620][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,622][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,622][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,624][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,623][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,623][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,624][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,626][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,627][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,628][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,628][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,629][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,629][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:37:19,739][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:37:19,739][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:37:19,740][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-1714057056]
+[2017-02-07 20:37:19,740][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-236660124]
+[2017-02-07 20:37:19,763][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:37:19,781][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@16b33078[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:37:19,781][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-07 20:37:19,782][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:37:19,798][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@16b33078[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:37:19,818][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-07 20:37:19,820][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:37:19,824][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:37:23,079][INFO, (UserServiceImpl.java:68).register] 玩家[llal李慧婷0]的基本信息填写完成,玩家id为[498]
+[2017-02-07 20:37:23,711][ERROR, (HandlerDispatcher.java:158).handMessageQueue] org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL)
+### The error may involve com.qingcity.dao.PlayerMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into player    ( userId,             level,             experience,             power,lastPowUpdateTime,             diamond,             gold,             icon,             societyId,             contribution,             nickname,             job )     values ( ?,             ?,             ?,             ?,?,             ?,             ?,             ?,             ?,             ?,             ?,             ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL)
+; SQL []; Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL); nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL)
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:243)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy16.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:52)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy19.insertSelective(Unknown Source)
+	at com.qingcity.service.impl.UserServiceImpl.register(UserServiceImpl.java:77)
+	at com.qingcity.service.impl.UserServiceImpl$$FastClassByCGLIB$$f21e129a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:713)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:646)
+	at com.qingcity.service.impl.UserServiceImpl$$EnhancerByCGLIB$$180960e6.register(<generated>)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:178)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:64)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy29.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:45)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 25 more
+
+[2017-02-07 20:37:23,756][INFO, (UserServiceImpl.java:68).register] 玩家[llal李慧婷1]的基本信息填写完成,玩家id为[499]
+[2017-02-07 20:37:23,835][ERROR, (HandlerDispatcher.java:158).handMessageQueue] org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL)
+### The error may involve com.qingcity.dao.PlayerMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into player    ( userId,             level,             experience,             power,lastPowUpdateTime,             diamond,             gold,             icon,             societyId,             contribution,             nickname,             job )     values ( ?,             ?,             ?,             ?,?,             ?,             ?,             ?,             ?,             ?,             ?,             ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL)
+; SQL []; Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL); nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL)
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:243)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy16.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:52)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy19.insertSelective(Unknown Source)
+	at com.qingcity.service.impl.UserServiceImpl.register(UserServiceImpl.java:77)
+	at com.qingcity.service.impl.UserServiceImpl$$FastClassByCGLIB$$f21e129a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:713)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:646)
+	at com.qingcity.service.impl.UserServiceImpl$$EnhancerByCGLIB$$180960e6.register(<generated>)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:178)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:64)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`qingcity`.`player`, CONSTRAINT `player_ibfk_2` FOREIGN KEY (`societyId`) REFERENCES `societys` (`societyId`) ON DELETE SET NULL ON UPDATE SET NULL)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy29.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:45)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 25 more
+
+[2017-02-07 20:41:36,454][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 20:41:39,790][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:41:39,887][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:41:43,071][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-07 20:41:43,697][INFO, (NettyServer.java:37).<init>] register port :8080
+[2017-02-07 20:41:43,697][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8080
+[2017-02-07 20:41:43,697][INFO, (NettyServerStart.java:54).run] GameServer Starting...
+[2017-02-07 20:41:43,705][INFO, (NettyServer.java:53).run] socket server started at port 8080.
+[2017-02-07 20:41:43,705][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-07 20:41:52,662][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,662][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,662][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,662][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,677][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,676][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,676][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,677][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,678][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,678][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,680][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,680][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,679][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,680][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,682][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,681][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,683][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,683][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,684][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,684][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:41:52,894][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:41:52,895][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[1440776241]
+[2017-02-07 20:41:52,897][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有1条消息!
+[2017-02-07 20:41:52,897][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[696833240]
+[2017-02-07 20:41:52,913][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:41:52,924][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@68716552[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:41:52,923][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-07 20:41:52,926][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:41:52,930][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@68716552[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:41:52,930][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-07 20:41:52,940][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:41:52,940][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:41:54,465][INFO, (UserServiceImpl.java:68).register] 玩家[llal李慧婷1]的基本信息填写完成,玩家id为[500]
+[2017-02-07 20:41:54,697][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷1]成功注册
+[2017-02-07 20:41:54,698][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-07 20:41:54,702][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-07 20:41:54,833][INFO, (UserServiceImpl.java:68).register] 玩家[llal李慧婷0]的基本信息填写完成,玩家id为[501]
+[2017-02-07 20:41:54,896][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷0]成功注册
+[2017-02-07 20:41:54,896][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-07 20:41:54,897][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-07 20:42:35,528][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,528][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,532][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,534][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,539][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,542][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,542][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,545][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,547][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,547][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,550][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,553][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,554][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,554][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,555][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,562][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,562][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,563][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,564][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,566][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:35,784][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:42:35,784][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:42:35,784][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-20953169]
+[2017-02-07 20:42:35,785][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-1913479903]
+[2017-02-07 20:42:35,793][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:42:35,794][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@68716552[Running, pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]]
+[2017-02-07 20:42:35,794][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:42:35,794][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@68716552[Running, pool size = 4, active threads = 2, queued tasks = 0, completed tasks = 2]]
+[2017-02-07 20:42:35,797][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-07 20:42:35,798][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:42:35,799][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-07 20:42:35,800][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:42:35,814][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷]成功注册
+[2017-02-07 20:42:35,814][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-07 20:42:35,814][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-07 20:42:35,939][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷]成功注册
+[2017-02-07 20:42:35,939][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-07 20:42:35,940][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-07 20:42:50,185][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,185][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,185][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,185][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,187][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,187][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,187][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,187][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,195][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,195][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,195][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,195][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,197][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,197][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,197][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,197][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,198][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,198][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,200][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,199][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:42:50,405][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:42:50,404][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:42:50,405][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[414181673]
+[2017-02-07 20:42:50,405][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[2111449100]
+[2017-02-07 20:42:50,431][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:42:50,431][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@68716552[Running, pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]]
+[2017-02-07 20:42:50,431][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:42:50,431][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@68716552[Running, pool size = 6, active threads = 2, queued tasks = 0, completed tasks = 4]]
+[2017-02-07 20:42:50,452][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-07 20:42:50,453][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:42:50,456][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-07 20:42:50,458][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:42:50,470][INFO, (UserServiceImpl.java:68).register] 玩家[llal李慧婷]的基本信息填写完成,玩家id为[502]
+[2017-02-07 20:42:50,560][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷]成功注册
+[2017-02-07 20:42:50,560][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-07 20:42:50,560][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-07 20:42:50,577][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷]成功注册
+[2017-02-07 20:42:50,577][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-07 20:42:50,577][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-07 20:47:59,890][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 20:48:02,720][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:48:02,780][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:48:06,353][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-07 20:48:06,667][INFO, (NettyServer.java:37).<init>] register port :8080
+[2017-02-07 20:48:06,668][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8080
+[2017-02-07 20:48:06,668][INFO, (NettyServerStart.java:54).run] GameServer Starting...
+[2017-02-07 20:48:06,678][INFO, (NettyServer.java:53).run] socket server started at port 8080.
+[2017-02-07 20:48:06,678][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-07 20:48:23,453][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,453][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,454][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,462][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,468][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,468][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,468][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,472][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,473][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,475][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,475][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,478][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,478][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,480][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,481][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,487][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,489][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,490][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,491][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,494][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:48:23,589][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:48:23,589][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[1314313558]
+[2017-02-07 20:48:23,589][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:48:23,591][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-200400875]
+[2017-02-07 20:48:23,628][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:48:23,635][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-07 20:48:23,646][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@388901be[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:48:23,647][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:48:23,647][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@388901be[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:48:23,649][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:48:23,652][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-07 20:48:23,652][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:48:23,789][ERROR, (HandlerDispatcher.java:158).handMessageQueue] java.lang.IllegalArgumentException: non-empty cache name is required
+	at org.springframework.util.Assert.hasText(Assert.java:162)
+	at org.springframework.data.redis.cache.RedisCache.<init>(RedisCache.java:68)
+	at org.springframework.data.redis.cache.RedisCacheManager.createCache(RedisCacheManager.java:217)
+	at org.springframework.data.redis.cache.RedisCacheManager.createAndAddCache(RedisCacheManager.java:210)
+	at org.springframework.data.redis.cache.RedisCacheManager.getCache(RedisCacheManager.java:100)
+	at org.springframework.cache.interceptor.CacheAspectSupport.getCaches(CacheAspectSupport.java:156)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CacheOperationContext.<init>(CacheAspectSupport.java:369)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CacheOperationContexts.<init>(CacheAspectSupport.java:337)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:176)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:60)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:646)
+	at com.qingcity.service.impl.UserServiceImpl$$EnhancerByCGLIB$$527d9041.register(<generated>)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:178)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:64)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-02-07 20:48:23,789][ERROR, (HandlerDispatcher.java:158).handMessageQueue] java.lang.IllegalArgumentException: non-empty cache name is required
+	at org.springframework.util.Assert.hasText(Assert.java:162)
+	at org.springframework.data.redis.cache.RedisCache.<init>(RedisCache.java:68)
+	at org.springframework.data.redis.cache.RedisCacheManager.createCache(RedisCacheManager.java:217)
+	at org.springframework.data.redis.cache.RedisCacheManager.createAndAddCache(RedisCacheManager.java:210)
+	at org.springframework.data.redis.cache.RedisCacheManager.getCache(RedisCacheManager.java:100)
+	at org.springframework.cache.interceptor.CacheAspectSupport.getCaches(CacheAspectSupport.java:156)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CacheOperationContext.<init>(CacheAspectSupport.java:369)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CacheOperationContexts.<init>(CacheAspectSupport.java:337)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:176)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:60)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:646)
+	at com.qingcity.service.impl.UserServiceImpl$$EnhancerByCGLIB$$527d9041.register(<generated>)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:178)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:64)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-02-07 20:51:10,271][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 20:51:14,248][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:51:14,340][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:51:17,993][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-07 20:51:18,246][INFO, (NettyServer.java:37).<init>] register port :8080
+[2017-02-07 20:51:18,246][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8080
+[2017-02-07 20:51:18,247][INFO, (NettyServerStart.java:54).run] GameServer Starting...
+[2017-02-07 20:51:18,256][INFO, (NettyServer.java:53).run] socket server started at port 8080.
+[2017-02-07 20:51:18,256][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-07 20:51:22,597][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,597][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,597][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,597][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,612][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,612][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,611][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,611][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,614][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,614][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,614][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,616][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,615][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,615][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,617][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,624][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,625][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,626][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,627][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,630][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:51:22,757][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:51:22,757][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:51:22,757][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[897105183]
+[2017-02-07 20:51:22,758][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-948911719]
+[2017-02-07 20:51:22,780][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-07 20:51:22,769][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:51:22,783][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@5f01c9b3[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:51:22,783][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:51:22,783][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@5f01c9b3[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:51:22,791][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:51:22,807][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-07 20:51:22,810][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:51:23,876][ERROR, (HandlerDispatcher.java:158).handMessageQueue] java.lang.ClassCastException: com.qingcity.entity.UserEntity cannot be cast to java.lang.String
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:32)
+	at org.springframework.data.redis.cache.RedisCacheKey.serializeKeyElement(RedisCacheKey.java:74)
+	at org.springframework.data.redis.cache.RedisCacheKey.getKeyBytes(RedisCacheKey.java:49)
+	at org.springframework.data.redis.cache.RedisCacheElement.getKeyBytes(RedisCacheElement.java:50)
+	at org.springframework.data.redis.cache.RedisCache$BinaryRedisCacheElement.<init>(RedisCache.java:404)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:173)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:157)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:442)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:216)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:176)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:60)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:646)
+	at com.qingcity.service.impl.UserServiceImpl$$EnhancerByCGLIB$$527d9041.register(<generated>)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:178)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:64)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-02-07 20:51:24,129][INFO, (UserServiceImpl.java:70).register] 玩家[llal李慧婷2]的基本信息填写完成,玩家id为[503]
+[2017-02-07 20:51:24,187][ERROR, (HandlerDispatcher.java:158).handMessageQueue] java.lang.ClassCastException: com.qingcity.entity.UserEntity cannot be cast to java.lang.String
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:32)
+	at org.springframework.data.redis.cache.RedisCacheKey.serializeKeyElement(RedisCacheKey.java:74)
+	at org.springframework.data.redis.cache.RedisCacheKey.getKeyBytes(RedisCacheKey.java:49)
+	at org.springframework.data.redis.cache.RedisCacheElement.getKeyBytes(RedisCacheElement.java:50)
+	at org.springframework.data.redis.cache.RedisCache$BinaryRedisCacheElement.<init>(RedisCache.java:404)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:173)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:157)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:442)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:216)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:176)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:60)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:646)
+	at com.qingcity.service.impl.UserServiceImpl$$EnhancerByCGLIB$$527d9041.register(<generated>)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:178)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:64)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-02-07 20:52:47,685][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-07 20:52:50,461][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:52:50,524][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-07 20:52:53,875][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-07 20:52:54,222][INFO, (NettyServer.java:37).<init>] register port :8080
+[2017-02-07 20:52:54,222][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8080
+[2017-02-07 20:52:54,222][INFO, (NettyServerStart.java:54).run] GameServer Starting...
+[2017-02-07 20:52:54,232][INFO, (NettyServer.java:53).run] socket server started at port 8080.
+[2017-02-07 20:52:54,232][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-07 20:52:58,046][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,046][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,046][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,046][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,063][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,063][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,062][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,063][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,065][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,064][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,066][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,066][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,066][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,066][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,068][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,068][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,069][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,070][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,070][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,070][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-07 20:52:58,167][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:52:58,167][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-07 20:52:58,167][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-215421864]
+[2017-02-07 20:52:58,167][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[613911291]
+[2017-02-07 20:52:58,182][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:52:58,214][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@7d273a6[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:52:58,214][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-07 20:52:58,215][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@7d273a6[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]]
+[2017-02-07 20:52:58,215][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-07 20:52:58,232][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:52:58,250][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-07 20:52:58,252][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-07 20:52:59,030][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷2]成功注册
+[2017-02-07 20:52:59,030][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-07 20:52:59,035][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-07 20:52:59,083][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷2]成功注册
+[2017-02-07 20:52:59,083][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-07 20:52:59,083][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-08 10:30:33,990][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-08 10:30:39,711][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-08 10:30:39,831][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-08 10:30:46,194][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-08 10:30:47,113][INFO, (NettyServer.java:37).<init>] register port :8080
+[2017-02-08 10:30:47,113][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8080
+[2017-02-08 10:30:47,113][INFO, (NettyServerStart.java:54).run] GameServer Starting...
+[2017-02-08 10:30:47,144][INFO, (NettyServer.java:53).run] socket server started at port 8080.
+[2017-02-08 10:30:47,144][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-08 10:31:08,535][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,535][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,535][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,535][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,554][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,553][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,555][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,555][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,557][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,556][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,559][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,560][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,559][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,561][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,563][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,562][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,564][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,566][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,566][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,567][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:31:08,724][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-08 10:31:08,724][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-668103008]
+[2017-02-08 10:31:08,726][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有1条消息!
+[2017-02-08 10:31:08,726][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[1354579905]
+[2017-02-08 10:31:08,772][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-08 10:31:08,781][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-08 10:31:08,782][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@1d0f0b90[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]]
+[2017-02-08 10:31:08,782][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-08 10:31:08,782][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@1d0f0b90[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]]
+[2017-02-08 10:31:08,784][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-08 10:31:08,816][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-08 10:31:08,819][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-08 10:31:10,787][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷2]成功注册
+[2017-02-08 10:31:10,787][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-08 10:31:10,803][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-08 10:31:10,847][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷2]成功注册
+[2017-02-08 10:31:10,847][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-08 10:31:10,848][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-08 10:32:00,944][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,965][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,967][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,969][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,971][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,972][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,979][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,981][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,983][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,984][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,987][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,988][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,990][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,992][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:00,993][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:01,003][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:01,008][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:01,008][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:01,013][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:01,016][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:01,220][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-08 10:32:01,220][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-08 10:32:01,220][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[236214130]
+[2017-02-08 10:32:01,221][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[1605200159]
+[2017-02-08 10:32:01,228][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-08 10:32:01,228][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@1d0f0b90[Running, pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]]
+[2017-02-08 10:32:01,228][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-08 10:32:01,228][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@1d0f0b90[Running, pool size = 4, active threads = 2, queued tasks = 0, completed tasks = 2]]
+[2017-02-08 10:32:01,260][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-08 10:32:01,260][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-08 10:32:01,280][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷3]成功注册
+[2017-02-08 10:32:01,280][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-08 10:32:01,280][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-08 10:32:01,354][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-08 10:32:01,369][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-08 10:32:01,416][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷3]成功注册
+[2017-02-08 10:32:01,417][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-08 10:32:01,417][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-08 10:32:56,713][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,714][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,714][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,717][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,729][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,730][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,731][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,747][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,749][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,753][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,762][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,763][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,765][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,784][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,799][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,814][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,814][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,816][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,818][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:56,822][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-08 10:32:57,120][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-08 10:32:57,120][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-08 10:32:57,121][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[1296855314]
+[2017-02-08 10:32:57,121][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-390123993]
+[2017-02-08 10:32:57,130][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-08 10:32:57,137][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@1d0f0b90[Running, pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]]
+[2017-02-08 10:32:57,138][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-08 10:32:57,138][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@1d0f0b90[Running, pool size = 6, active threads = 2, queued tasks = 0, completed tasks = 4]]
+[2017-02-08 10:32:57,140][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-08 10:32:57,141][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-08 10:32:57,164][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-08 10:32:57,165][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-08 10:32:57,532][INFO, (UserServiceImpl.java:69).register] 玩家[llal李慧婷3]的基本信息填写完成,玩家id为[504]
+[2017-02-08 10:32:57,640][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷3]成功注册
+[2017-02-08 10:32:57,641][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-08 10:32:57,643][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-08 10:32:57,667][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷3]成功注册
+[2017-02-08 10:32:57,668][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-08 10:32:57,668][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-09 09:29:47,595][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:29:47,745][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:54493掉线并将其移出服务器
+[2017-02-09 09:30:40,302][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-09 09:30:42,773][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 09:30:42,822][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 09:30:45,195][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 09:30:45,671][INFO, (NettyServer.java:37).<init>] register port :200
+[2017-02-09 09:30:45,671][INFO, (NettyServer.java:42).setInitializer] setInitializer port :200
+[2017-02-09 09:30:45,671][INFO, (NettyServerStart.java:54).run] GameServer Starting...
+[2017-02-09 09:30:45,679][INFO, (NettyServer.java:53).run] socket server started at port 200.
+[2017-02-09 09:30:45,679][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-09 09:31:14,062][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,062][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,062][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,062][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,078][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,077][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,077][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,078][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,079][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,079][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,081][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,081][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,080][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,081][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,083][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,082][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,084][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,084][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,085][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,086][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:31:14,151][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-09 09:31:14,152][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[1302348520]
+[2017-02-09 09:31:14,153][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有1条消息!
+[2017-02-09 09:31:14,154][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-595429261]
+[2017-02-09 09:31:14,156][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-09 09:31:14,157][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@57cb69cb[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]]
+[2017-02-09 09:31:14,157][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-09 09:31:14,158][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@57cb69cb[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]]
+[2017-02-09 09:31:14,158][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-09 09:31:14,171][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-09 09:31:14,174][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-09 09:31:14,183][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-09 09:31:15,151][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷4]成功注册
+[2017-02-09 09:31:15,152][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-09 09:31:15,155][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-09 09:31:15,343][INFO, (UserServiceImpl.java:69).register] 玩家[llal李慧婷4]的基本信息填写完成,玩家id为[505]
+[2017-02-09 09:31:15,403][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷4]成功注册
+[2017-02-09 09:31:15,403][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-09 09:31:15,403][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-09 09:32:24,602][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,602][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,602][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,602][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,604][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,604][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,605][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,609][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,609][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,611][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,612][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,612][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,612][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,614][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,616][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,621][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,622][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,622][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,621][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,623][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:24,688][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-09 09:32:24,688][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-09 09:32:24,688][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-1377263273]
+[2017-02-09 09:32:24,688][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-1383384096]
+[2017-02-09 09:32:24,696][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-09 09:32:24,697][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@57cb69cb[Running, pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]]
+[2017-02-09 09:32:24,697][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-09 09:32:24,698][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@57cb69cb[Running, pool size = 4, active threads = 2, queued tasks = 0, completed tasks = 2]]
+[2017-02-09 09:32:24,699][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-09 09:32:24,709][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-09 09:32:24,709][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-09 09:32:24,713][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-09 09:32:25,047][ERROR, (HandlerDispatcher.java:158).handMessageQueue] org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'email' at row 1
+### The error may involve com.qingcity.dao.UserMapper.insertUserSelective-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO   USERS    ( username,             passwordMd5,             email,                     regTime,             isCharged )     values ( ?,             ?,             ?,                     ?,             ? )
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'email' at row 1
+; SQL []; Data truncation: Data too long for column 'email' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'email' at row 1
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:102)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy16.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:52)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy17.insertUserSelective(Unknown Source)
+	at com.qingcity.service.impl.UserServiceImpl.insertSelective(UserServiceImpl.java:194)
+	at com.qingcity.service.impl.UserServiceImpl.register(UserServiceImpl.java:65)
+	at com.qingcity.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$f21e129a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.qingcity.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$435b29f.register(<generated>)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:178)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:64)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'email' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3876)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy31.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:45)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 26 more
+
+[2017-02-09 09:32:25,074][ERROR, (HandlerDispatcher.java:158).handMessageQueue] org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'email' at row 1
+### The error may involve com.qingcity.dao.UserMapper.insertUserSelective-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO   USERS    ( username,             passwordMd5,             email,                     regTime,             isCharged )     values ( ?,             ?,             ?,                     ?,             ? )
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'email' at row 1
+; SQL []; Data truncation: Data too long for column 'email' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'email' at row 1
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:102)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy16.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:52)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy17.insertUserSelective(Unknown Source)
+	at com.qingcity.service.impl.UserServiceImpl.insertSelective(UserServiceImpl.java:194)
+	at com.qingcity.service.impl.UserServiceImpl.register(UserServiceImpl.java:65)
+	at com.qingcity.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$f21e129a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.qingcity.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$435b29f.register(<generated>)
+	at com.qingcity.handler.UserHandler.handleRegisterCheck(UserHandler.java:178)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:64)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'email' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3876)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy31.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:45)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 26 more
+
+[2017-02-09 09:32:46,177][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,178][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,178][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,177][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,180][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,180][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,180][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,182][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,184][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,184][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,184][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,186][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,187][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,187][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,187][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,192][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,194][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,196][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,203][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,206][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 09:32:46,267][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-09 09:32:46,267][INFO, (HandlerDispatcher.java:77).addMessage] 添加消息进入消息队列，当前队列中有0条消息!
+[2017-02-09 09:32:46,267][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[-1591283279]
+[2017-02-09 09:32:46,267][INFO, (HandlerDispatcher.java:84).addMessage] hashCode[387048821]
+[2017-02-09 09:32:46,271][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-09 09:32:46,271][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[1]条消息
+[2017-02-09 09:32:46,271][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@57cb69cb[Running, pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]]
+[2017-02-09 09:32:46,271][INFO, (FiexThreadPoolExecutor.java:60).execute]  FiexThreadPoolExecutor execute
+[2017-02-09 09:32:46,271][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-09 09:32:46,272][INFO, (HandlerDispatcher.java:139).run] 当前队列中还有[0]条消息
+[2017-02-09 09:32:46,272][INFO, (HandlerDispatcher.java:103).run] messageExecutir[com.qingcity.domain.FiexThreadPoolExecutor@57cb69cb[Running, pool size = 6, active threads = 2, queued tasks = 0, completed tasks = 4]]
+[2017-02-09 09:32:46,272][INFO, (UserHandler.java:63).handleMsg] 有用户正在请求进行注册
+[2017-02-09 09:32:46,283][INFO, (UserServiceImpl.java:69).register] 玩家[llal李慧婷5]的基本信息填写完成,玩家id为[506]
+[2017-02-09 09:32:46,418][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷5]成功注册
+[2017-02-09 09:32:46,418][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-09 09:32:46,419][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-09 09:32:46,436][INFO, (UserHandler.java:181).handleRegisterCheck] 用户[llal李慧婷5]成功注册
+[2017-02-09 09:32:46,436][INFO, (HandlerMsg.java:48).handlerResMsg] 发送消息
+[2017-02-09 09:32:46,437][INFO, (HandlerMsg.java:51).handlerResMsg] 发送消息的命令码为[3001]
+[2017-02-09 10:47:38,732][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-09 10:48:01,410][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-09 10:48:05,147][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 10:48:05,227][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 10:51:04,116][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-09 10:51:07,797][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 10:51:07,915][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 10:51:55,570][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-09 10:51:58,944][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 10:51:59,009][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 10:52:01,783][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 10:52:02,851][INFO, (NettyServer.java:37).<init>] register port :200
+[2017-02-09 10:52:02,852][INFO, (NettyServer.java:42).setInitializer] setInitializer port :200
+[2017-02-09 10:52:02,852][INFO, (NettyServerStart.java:54).run] GameServer Starting...
+[2017-02-09 10:52:02,861][INFO, (NettyServer.java:53).run] socket server started at port 200.
+[2017-02-09 10:52:02,862][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-09 11:18:01,638][INFO, (NettyServerStart.java:46).run] load the spring config file
+[2017-02-09 11:18:06,837][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:18:06,905][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:18:10,240][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 11:18:11,505][INFO, (NettyServer.java:37).<init>] register port :200
+[2017-02-09 11:18:11,507][INFO, (NettyServer.java:42).setInitializer] setInitializer port :200
+[2017-02-09 11:18:11,507][INFO, (NettyServerStart.java:55).run] GameServer Starting...
+[2017-02-09 11:18:11,521][INFO, (NettyServer.java:53).run] socket server started at port 200.
+[2017-02-09 11:18:11,522][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-09 11:19:03,046][INFO, (NettyServerStart.java:47).run] load the spring config file
+[2017-02-09 11:19:06,354][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:19:06,419][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:19:08,967][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 11:19:09,678][INFO, (NettyServer.java:37).<init>] register port :200
+[2017-02-09 11:19:09,678][INFO, (NettyServer.java:42).setInitializer] setInitializer port :200
+[2017-02-09 11:19:09,678][INFO, (NettyServerStart.java:56).run] GameServer Starting...
+[2017-02-09 11:19:09,686][INFO, (NettyServer.java:53).run] socket server started at port 200.
+[2017-02-09 11:19:09,686][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-09 11:20:12,124][INFO, (NettyServerStart.java:48).run] load the spring config file
+[2017-02-09 11:20:15,408][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:20:15,541][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:20:18,341][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 11:20:19,172][INFO, (NettyServer.java:37).<init>] register port :8888
+[2017-02-09 11:20:19,173][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8888
+[2017-02-09 11:20:19,173][INFO, (NettyServerStart.java:57).run] GameServer Starting...
+[2017-02-09 11:20:19,190][INFO, (NettyServer.java:53).run] socket server started at port 8888.
+[2017-02-09 11:20:19,192][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-09 11:20:56,840][INFO, (NettyServerStart.java:48).run] load the spring config file
+[2017-02-09 11:21:00,474][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:21:00,560][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:21:03,510][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 11:21:04,175][INFO, (NettyServer.java:37).<init>] register port :8888
+[2017-02-09 11:21:04,175][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8888
+[2017-02-09 11:21:04,175][INFO, (NettyServerStart.java:57).run] GameServer Starting...
+[2017-02-09 11:21:04,187][INFO, (NettyServer.java:53).run] socket server started at port 8888.
+[2017-02-09 11:21:04,187][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-09 11:22:24,310][INFO, (NettyServerStart.java:47).run] load the spring config file
+[2017-02-09 11:22:27,800][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:22:27,861][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:22:30,575][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 11:22:31,119][INFO, (NettyServer.java:37).<init>] register port :8888
+[2017-02-09 11:22:31,120][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8888
+[2017-02-09 11:22:31,120][INFO, (NettyServerStart.java:56).run] GameServer Starting...
+[2017-02-09 11:22:31,129][INFO, (NettyServer.java:53).run] socket server started at port 8888.
+[2017-02-09 11:22:31,129][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-09 11:33:49,993][INFO, (ServerInitializer.java:41).initChannel] init the channel of type : socket
+[2017-02-09 11:33:50,084][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:60385掉线并将其移出服务器
+[2017-02-09 11:38:33,623][INFO, (NettyServerStart.java:47).run] load the spring config file
+[2017-02-09 11:38:36,713][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:38:36,776][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:38:39,272][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 11:38:39,926][INFO, (NettyServer.java:37).<init>] register port :8888
+[2017-02-09 11:38:39,927][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8888
+[2017-02-09 11:38:39,927][INFO, (NettyServerStart.java:56).run] GameServer Starting...
+[2017-02-09 11:38:39,937][INFO, (NettyServer.java:53).run] socket server started at port 8888.
+[2017-02-09 11:38:39,937][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-09 11:39:28,666][INFO, (NettyServerStart.java:47).run] load the spring config file
+[2017-02-09 11:39:31,949][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:39:32,025][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:39:34,743][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 11:39:35,296][INFO, (NettyServer.java:37).<init>] register port :8080
+[2017-02-09 11:39:35,296][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8080
+[2017-02-09 11:39:35,296][INFO, (NettyServerStart.java:56).run] GameServer Starting...
+[2017-02-09 11:39:35,311][INFO, (NettyServer.java:53).run] socket server started at port 8080.
+[2017-02-09 11:39:35,312][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket
+[2017-02-09 11:46:56,322][INFO, (NettyServerStart.java:47).run] load the spring config file
+[2017-02-09 11:46:59,651][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:46:59,726][INFO, (FiexThreadPoolExecutor.java:29).<init>]  FiexThreadPoolExecutor1
+[2017-02-09 11:47:02,728][INFO, (ServerInitializer.java:30).init] init the HandlerDispatcher
+[2017-02-09 11:47:03,432][INFO, (NettyServer.java:37).<init>] register port :8080
+[2017-02-09 11:47:03,433][INFO, (NettyServer.java:42).setInitializer] setInitializer port :8080
+[2017-02-09 11:47:03,433][INFO, (NettyServerStart.java:56).run] GameServer Starting...
+[2017-02-09 11:47:03,445][INFO, (NettyServer.java:53).run] socket server started at port 8080.
+[2017-02-09 11:47:03,446][INFO, (NettyServer.java:62).run] the socketServer initialize request method is : socket

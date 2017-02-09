@@ -36,7 +36,7 @@
 
 	<bean id="dress" class="com.qingcity.entity.Dress"></bean>
 
-	<bean id="purchaseRecord" class="com.qingcity.entity.PurchaseRecord"></bean>
+	<bean id="bill" class="com.qingcity.entity.Bill"></bean>
 
 	<bean id="rechargeRecord" class="com.qingcity.entity.RechargeRecord"></bean>
 

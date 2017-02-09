@@ -10,7 +10,6 @@
 		<config>src/main/resources/config/applicationContext-bean.xml</config>
 		<config>src/main/resources/config/applicationContext-mybatis.xml</config>
 		<config>src/main/resources/config/applicationContext-netty.xml</config>
-		<config>src/main/resources/config/applicationContext-redis.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

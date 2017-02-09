@@ -15,7 +15,7 @@ public interface MusicMapper {
 	 *            前置条件
 	 * @return 符合条件的歌曲id
 	 */
-	public int selectMusicIdByPreCondition(int preCondition);
+	int selectMusicIdByPreCondition(int preCondition);
 
 	/**
 	 * 查询当前城下歌曲的数量
@@ -23,7 +23,7 @@ public interface MusicMapper {
 	 * @param city
 	 * @return
 	 */
-	public int selectMusicNum(int city);
+	int selectMusicNum(int city);
 
 	/**
 	 * 根据id删除音乐
@@ -32,7 +32,7 @@ public interface MusicMapper {
 	 *            歌曲id
 	 * @return 返回删除的行数
 	 */
-	public int deleteByMusicId(Integer musicid);
+	int deleteByMusicId(Integer musicid);
 
 	/**
 	 * 新加入歌曲信息
@@ -41,7 +41,7 @@ public interface MusicMapper {
 	 *            歌曲实体
 	 * @return 返回添加的歌曲数
 	 */
-	public int insertMusic(MusicEntity music);
+	int insertMusic(MusicEntity music);
 
 	/**
 	 * 可选择性的添加音乐信息
@@ -50,7 +50,7 @@ public interface MusicMapper {
 	 *            歌曲实体
 	 * @return 返回添加的歌曲数
 	 */
-	public int insertMusicSelective(MusicEntity music);
+	int insertMusicSelective(MusicEntity music);
 
 	/**
 	 * 根据id选择音乐
@@ -59,7 +59,7 @@ public interface MusicMapper {
 	 *            歌曲ID
 	 * @return 返回歌曲实体
 	 */
-	public MusicEntity selectMusicByMusicId(Integer musicId);
+	MusicEntity selectMusicByMusicId(Integer musicId);
 
 	/**
 	 * 根据歌曲id更新歌曲的前置解锁条件
@@ -70,7 +70,7 @@ public interface MusicMapper {
 	 *            解锁前置条件
 	 * @return 更新的音乐id
 	 */
-	public int updatePreCondition(@Param("musicId") int musicId, @Param("preCondtion") int preCondition);
+	int updatePreCondition(@Param("musicId") int musicId, @Param("preCondtion") int preCondition);
 
 	/**
 	 * 根据音乐名称更改音乐信息
@@ -79,7 +79,7 @@ public interface MusicMapper {
 	 *            音乐信息实体对象
 	 * @return 更新行数/音乐id
 	 */
-	public int updateMusicByMusicName(MusicEntity music);
+	int updateMusicByMusicName(MusicEntity music);
 
 	/**
 	 * 根据音乐id更改音乐信息
@@ -88,5 +88,5 @@ public interface MusicMapper {
 	 *            音乐信息实体对象
 	 * @return 更新行数/音乐id
 	 */
-	public int updateMusicByMusicId(MusicEntity music);
+	int updateMusicByMusicId(MusicEntity music);
 }

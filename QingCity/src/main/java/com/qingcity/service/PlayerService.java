@@ -14,7 +14,7 @@ public interface PlayerService {
 	 *            玩家id
 	 * @return 返回新增等级和当前等级剩余经验的键值对，其中键值分别为 exp 和 level
 	 */
-	public Map<String, Integer> LevelUp(int userId, int exp);
+	Map<String, Integer> LevelUp(int userId, int exp);
 
 	/**
 	 * 获取当前等级升级所需要的总经验值
@@ -22,7 +22,7 @@ public interface PlayerService {
 	 * @param level
 	 * @return
 	 */
-	public int getSumExperience(int level);
+	int getSumExperience(int level);
 
 	/**
 	 * 根据玩家id删除玩家信息，， 不推荐使用
@@ -31,7 +31,7 @@ public interface PlayerService {
 	 *            玩家id
 	 * @return 更新行数 >0则表示删除成功
 	 */
-	public int deleteByUserId(int userId);
+	int deleteByUserId(int userId);
 
 	/**
 	 * 可选择行的添加玩家信息,只用于刚注册时使用，需要保证玩家信息完整
@@ -40,7 +40,7 @@ public interface PlayerService {
 	 *            玩家信息对象
 	 * @return
 	 */
-	public int insertSelective(PlayerEntity player);
+	int insertSelective(PlayerEntity player);
 
 	/**
 	 * 根据玩家id查询玩家信息
@@ -49,7 +49,7 @@ public interface PlayerService {
 	 *            当前玩家id
 	 * @return 玩家信息
 	 */
-	public PlayerEntity selectByUserId(int userId);
+	PlayerEntity selectByUserId(int userId);
 
 	/**
 	 * 根据玩家等级查询玩家id
@@ -58,7 +58,7 @@ public interface PlayerService {
 	 *            查询等级
 	 * @return 玩家id
 	 */
-	public int selectUserByLevel(int level);
+	int selectUserByLevel(int level);
 
 	/**
 	 * 可选择行的更新玩家信息，例如只更新玩家经验值，只更新用户体力等等
@@ -67,7 +67,7 @@ public interface PlayerService {
 	 *            玩家信息对象
 	 * @return 更新行数 >0 则表示更新成功
 	 */
-	public int updateByUserIdSelective(PlayerEntity player);
+	int updateByUserIdSelective(PlayerEntity player);
 
 	/**
 	 * 检查玩家上次更新体力的时间
@@ -76,7 +76,7 @@ public interface PlayerService {
 	 *            玩家id
 	 * @return 上次更新体力的时间
 	 */
-	public Timestamp getLastAddPowerTime(int userId);
+	Timestamp getLastAddPowerTime(int userId);
 
 	/**
 	 * 更新玩家体力 从此需要查询上次的电梯里更新时间，从而判断需要自动恢复多少体力，此时体力恢复有上限，超出后不再多增，之后
@@ -89,7 +89,7 @@ public interface PlayerService {
 	 * 
 	 * @return -1 表示体力不足，1更新成功
 	 */
-	public int updatePower(int power, int userId);
+	int updatePower(int power, int userId);
 
 	/**
 	 * 获取玩家的当前体力值
@@ -97,7 +97,7 @@ public interface PlayerService {
 	 * @param userId
 	 * @return 玩家体力值
 	 */
-	public int getPower(int userId);
+	int getPower(int userId);
 
 	/**
 	 * 更新玩家体力
@@ -107,7 +107,7 @@ public interface PlayerService {
 	 * @param userId
 	 *            玩家id
 	 */
-	public int updateGold(int gold, int userId);
+	int updateGold(int gold, int userId);
 
 	/**
 	 * 获取玩家的当前金币值
@@ -116,7 +116,7 @@ public interface PlayerService {
 	 *            玩家id
 	 * @return 玩家金币值
 	 */
-	public int getGold(int userId);
+	int getGold(int userId);
 
 	/**
 	 * 更新玩家体力
@@ -126,7 +126,7 @@ public interface PlayerService {
 	 * @param userId
 	 *            玩家id
 	 */
-	public int updateDiamond(int diamond, int userId);
+	int updateDiamond(int diamond, int userId);
 
 	/**
 	 * 获取玩家的当前钻石值
@@ -135,7 +135,7 @@ public interface PlayerService {
 	 *            玩家id
 	 * @return 玩家的钻石数量
 	 */
-	public int getDiamond(int userId);
+	int getDiamond(int userId);
 
 	/**
 	 * 更新玩家的的头像
@@ -145,7 +145,7 @@ public interface PlayerService {
 	 * @param userId
 	 *            玩家id
 	 */
-	public void updateIcon(String icon, int userId);
+	void updateIcon(String icon, int userId);
 
 	/**
 	 * 获取当前玩家的头像名称
@@ -154,7 +154,7 @@ public interface PlayerService {
 	 *            玩家id
 	 * @return 头像名称
 	 */
-	public String getIcon(int userId);
+	String getIcon(int userId);
 
 	/**
 	 * 更新玩家昵称
@@ -164,7 +164,7 @@ public interface PlayerService {
 	 * @param nickname
 	 *            更新后的昵称
 	 */
-	public void updateNickname(int userId, String nickname);
+	void updateNickname(int userId, String nickname);
 
 	/**
 	 * 离开公会
@@ -172,7 +172,7 @@ public interface PlayerService {
 	 * @param userId
 	 *            准备离开工会的玩家id
 	 */
-	public void quitSociety(int userId);
+	void quitSociety(int userId);
 
 	/**
 	 * 加入公会
@@ -182,7 +182,7 @@ public interface PlayerService {
 	 * @param societyId
 	 *            公会id
 	 */
-	public void joinSociety(int userId, int societyId);
+	void joinSociety(int userId, int societyId);
 
 	/**
 	 * 更新玩家贡献值
@@ -192,7 +192,7 @@ public interface PlayerService {
 	 * @param contribution
 	 *            新增贡献值
 	 */
-	public void updateContribution(int userId, int contribution);
+	void updateContribution(int userId, int contribution);
 
 	/**
 	 * 更新玩家在公会中的职位
@@ -202,7 +202,7 @@ public interface PlayerService {
 	 * @param job
 	 *            1 会长，2 副会长，3 成员
 	 */
-	public void updateJob(int userId, int job);
+	void updateJob(int userId, int job);
 
 	/**
 	 * 查询玩家的公会信息
@@ -210,7 +210,7 @@ public interface PlayerService {
 	 * @param userId
 	 * @return
 	 */
-	public PlayerEntity getPlayerSocietyInfo(int userId);
+	PlayerEntity getPlayerSocietyInfo(int userId);
 
 	/**
 	 * 检查当前玩家是否拥有公会的管理员权限，管理员权限仅会长和副会长
@@ -219,6 +219,6 @@ public interface PlayerService {
 	 *            玩家id
 	 * @return 有权限则返回true 否则返回false
 	 */
-	public boolean hasManagerAuth(int userId);
+	boolean hasManagerAuth(int userId);
 
 }

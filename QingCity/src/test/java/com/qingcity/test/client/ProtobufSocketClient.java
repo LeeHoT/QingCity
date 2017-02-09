@@ -87,7 +87,7 @@ public class ProtobufSocketClient {
 	public static void main(String[] args) {
 		ProtobufSocketClient client = new ProtobufSocketClient();
 		client.connectServer();
-		ProtobufSocketClient.testLogin();
+		ProtobufSocketClient.register();
 
 	}
 
@@ -221,12 +221,12 @@ public class ProtobufSocketClient {
 	 * 注册测试
 	 */
 	public static void register() {
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 2; i++) {
 			RegisterCheck.Builder register = RegisterCheck.newBuilder();
-			register.setUsername("lalala" + i);
+			register.setUsername("llal李慧婷5");
 			register.setPassword(MD5Util.getMD5Str("lht19941009"));
 			register.setPassword2(MD5Util.getMD5Str("lht19941009"));
-			register.setEmail("871s9fdsffsdfa" + i + "@qq.com");
+			register.setEmail("871s9sqw545efd" + i + "@qq.com");
 			byte[] bytes = register.build().toByteArray();
 
 			MsgEntity test = new MsgEntity();

@@ -15,7 +15,7 @@ import java.sql.Timestamp;
 public class PlayerEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int userId; // userEntity 外键，也是主键
-	private int nickname;// 玩家昵称
+	private String nickname;// 玩家昵称
 	private Integer level;// 玩家等级
 	private Integer experience;// 玩家当前等级拥有的经验，假设玩家该等级需要总经验值为100*玩家等级
 	private int power; // 用户体力
@@ -36,11 +36,11 @@ public class PlayerEntity implements Serializable {
 		this.job = job;
 	}
 
-	public int getNickname() {
+	public String getNickname() {
 		return nickname;
 	}
 
-	public void setNickname(int nickname) {
+	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
 

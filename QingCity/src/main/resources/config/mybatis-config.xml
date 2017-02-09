@@ -9,7 +9,7 @@
 		<typeAlias alias="MailBox" type="com.qingcity.entity.MailBox" />
 		<typeAlias alias="Dress" type="com.qingcity.entity.Dress" />
 		<typeAlias alias="Backpack" type="com.qingcity.entity.Backpack" />
-		<typeAlias alias="PurchaseRecord" type="com.qingcity.entity.PurchaseRecord" />
+		<typeAlias alias="Bill" type="com.qingcity.entity.Bill" />
 		<typeAlias alias="RechargeRecord" type="com.qingcity.entity.RechargeRecord" />
 		<!-- package music -->
 		<typeAlias alias="MusicEntity" type="com.qingcity.entity.music.MusicEntity" />
@@ -31,7 +31,7 @@
 		<mapper resource="com/qingcity/dao/mapper/MailBoxMapper.xml" />
 		<mapper resource="com/qingcity/dao/mapper/DressMapper.xml" />
 		<mapper resource="com/qingcity/dao/mapper/BackpackMapper.xml" />
-		<mapper resource="com/qingcity/dao/mapper/PurchaseRecordMapper.xml" />
+		<mapper resource="com/qingcity/dao/mapper/BillMapper.xml" />
 		<mapper resource="com/qingcity/dao/mapper/RechargeRecordMapper.xml" />
 		<mapper resource="com/qingcity/dao/mapper/SocietysMapper.xml" />
 		<!-- package music -->
