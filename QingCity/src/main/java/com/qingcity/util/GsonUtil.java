@@ -14,6 +14,12 @@ import com.google.gson.reflect.TypeToken;
   */
 public class GsonUtil {
 
+	private static Gson instance = new Gson();
+
+	public static Gson getInstance() {
+		return instance;
+	}
+
 	/**
 	 * 获取json 对象
 	 * 

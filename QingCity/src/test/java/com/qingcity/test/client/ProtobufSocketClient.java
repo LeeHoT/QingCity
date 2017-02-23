@@ -21,9 +21,10 @@ import com.qingcity.proto.ChatProto.ChatMessage;
 import com.qingcity.proto.GameMessage.LoginCheck;
 import com.qingcity.proto.GameMessage.RegisterCheck;
 import com.qingcity.proto.KeepAlive.KeepAliveMsg;
+import com.qingcity.proto.Lottery.C2S_Lottery;
 import com.qingcity.proto.PkMsg.PkInfo;
 import com.qingcity.test.client.netty.ClientInboundHandler;
-import com.qingcity.util.MD5Util;
+import com.qingcity.util.MD5Utils;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -87,7 +88,7 @@ public class ProtobufSocketClient {
 	public static void main(String[] args) {
 		ProtobufSocketClient client = new ProtobufSocketClient();
 		client.connectServer();
-		ProtobufSocketClient.register();
+		ProtobufSocketClient.lottery();
 
 	}
 
@@ -136,16 +137,18 @@ public class ProtobufSocketClient {
 	public static List<byte[]> testLogin() {
 		List<byte[]> list = new ArrayList<>();
 		System.out.println(System.currentTimeMillis() / 1000);
-		for (int i = 0; i < 10; i++) {
-			LoginCheck.Builder login = LoginCheck.newBuilder();
-			login.setUsername("李慧婷" + i);
-			login.setPassword(MD5Util.getMD5Str("lht19941009"));
-			byte[] bytes = login.build().toByteArray();
-			MsgEntity test = new MsgEntity();
-			test.setMsgLength((short) bytes.length);
-			test.setCmdCode(CmdConstant.USER_LOGIN);
-			test.setData(bytes);
-			channelList.get(i).writeAndFlush(test);
+		for (int j = 0; j < 1000; j++) {
+			for (int i = 0; i < 10; i++) {
+				LoginCheck.Builder login = LoginCheck.newBuilder();
+				login.setUsername("李慧婷" + i);
+				login.setPassword(MD5Utils.getMD5("lht19941009"));
+				byte[] bytes = login.build().toByteArray();
+				MsgEntity test = new MsgEntity();
+				test.setMsgLength((short) bytes.length);
+				test.setCmdCode(CmdConstant.USER_LOGIN);
+				test.setData(bytes);
+				channelList.get(i).writeAndFlush(test);
+			}
 		}
 		System.out.println(System.currentTimeMillis() / 1000);
 		try {
@@ -182,39 +185,52 @@ public class ProtobufSocketClient {
 			channelList.get(i).writeAndFlush(test);
 		}
 		// 发送ping消息
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 10; j++) {
-				KeepAliveMsg.Builder keepAlive = KeepAliveMsg.newBuilder();
-				keepAlive.setContent("ping" + i + " " + j);
-				byte[] pb = keepAlive.build().toByteArray();
-				MsgEntity pmsg = new MsgEntity();
-				pmsg.setCmdCode(CmdConstant.PING);
-				pmsg.setData(pb);
-				pmsg.setMsgLength(pb.length);
-				channelList.get(i).writeAndFlush(pmsg);
-			}
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-		}
-		for (int i = 1; i <= 2; i++) {
-			System.out.println("------------");
-			ChatMessage.Builder chat = ChatMessage.newBuilder();
-			chat.setUId(60 + i);
-			chat.setUsername("李慧婷" + i);
-			chat.setTarget(ChatConstant.WORLD_MSG);
-			chat.setContent("世界里的各位你们好,我是李慧婷 " + i);
-			byte[] chatByte = chat.build().toByteArray();
-			MsgEntity test = new MsgEntity();
-			test.setMsgLength(chatByte.length);
-			test.setCmdCode((short) ChatConstant.WORLD_MSG);
-			test.setData(chatByte);
-			channelList.get(i).writeAndFlush(test);
-		}
+		// for (int i = 0; i < 3; i++) {
+		// for (int j = 0; j < 10; j++) {
+		// KeepAliveMsg.Builder keepAlive = KeepAliveMsg.newBuilder();
+		// keepAlive.setContent("ping" + i + " " + j);
+		// byte[] pb = keepAlive.build().toByteArray();
+		// MsgEntity pmsg = new MsgEntity();
+		// pmsg.setCmdCode(CmdConstant.PING);
+		// pmsg.setData(pb);
+		// pmsg.setMsgLength(pb.length);
+		// channelList.get(i).writeAndFlush(pmsg);
+		// }
+		// try {
+		// Thread.sleep(1000);
+		// } catch (InterruptedException e1) {
+		// // TODO Auto-generated catch block
+		// e1.printStackTrace();
+		// }
+		// }
+		// for (int i = 1; i <= 2; i++) {
+		// System.out.println("------------");
+		// ChatMessage.Builder chat = ChatMessage.newBuilder();
+		// chat.setUId(60 + i);
+		// chat.setUsername("李慧婷" + i);
+		// chat.setTarget(ChatConstant.WORLD_MSG);
+		// chat.setContent("世界里的各位你们好,我是李慧婷 " + i);
+		// byte[] chatByte = chat.build().toByteArray();
+		// MsgEntity test = new MsgEntity();
+		// test.setMsgLength(chatByte.length);
+		// test.setCmdCode((short) ChatConstant.WORLD_MSG);
+		// test.setData(chatByte);
+		// channelList.get(i).writeAndFlush(test);
+		// }
 		return list;
+	}
+
+	public static void lottery() {
+		C2S_Lottery.Builder lottery = C2S_Lottery.newBuilder();
+		lottery.setUserId(39);
+		lottery.setType(3);
+		byte[] bytes = lottery.build().toByteArray();
+		MsgEntity test = new MsgEntity();
+		test.setMsgLength((short) bytes.length);
+		test.setCmdCode(CmdConstant.DRAW_A_LOTTERY);
+		test.setData(bytes);
+		channelList.get(1).writeAndFlush(test);
+		channelList.get(1).closeFuture();
 	}
 
 	/**
@@ -224,8 +240,8 @@ public class ProtobufSocketClient {
 		for (int i = 0; i < 2; i++) {
 			RegisterCheck.Builder register = RegisterCheck.newBuilder();
 			register.setUsername("llal李慧婷5");
-			register.setPassword(MD5Util.getMD5Str("lht19941009"));
-			register.setPassword2(MD5Util.getMD5Str("lht19941009"));
+			register.setPassword(MD5Utils.getMD5("lht19941009"));
+			register.setPassword2(MD5Utils.getMD5("lht19941009"));
 			register.setEmail("871s9sqw545efd" + i + "@qq.com");
 			byte[] bytes = register.build().toByteArray();
 

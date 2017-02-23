@@ -3373,3 +3373,449 @@ Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long fo
 	... 26 more
 
 [2017-02-09 11:33:50,084][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:60385掉线并将其移出服务器
+[2017-02-14 10:36:19,954][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52645在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,954][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52646在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,954][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52644在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,954][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52648在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,969][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52646掉线并将其移出服务器
+[2017-02-14 10:36:19,969][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52645掉线并将其移出服务器
+[2017-02-14 10:36:19,969][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52644掉线并将其移出服务器
+[2017-02-14 10:36:19,969][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52648掉线并将其移出服务器
+[2017-02-14 10:36:19,971][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52647在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,971][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52649在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,971][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52650在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,971][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52651在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,973][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52654在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,972][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52652在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,973][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52655在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,975][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52656在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,975][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52659在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,976][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52660在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,973][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52653在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,976][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52662在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,974][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52658在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,977][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52657在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,977][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52647掉线并将其移出服务器
+[2017-02-14 10:36:19,978][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52663在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,977][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52651掉线并将其移出服务器
+[2017-02-14 10:36:19,979][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52661在Tue Feb 14 10:36:19 CST 2017发生连接异常
+[2017-02-14 10:36:19,979][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52652掉线并将其移出服务器
+[2017-02-14 10:36:19,979][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52655掉线并将其移出服务器
+[2017-02-14 10:36:19,979][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52650掉线并将其移出服务器
+[2017-02-14 10:36:19,980][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52659掉线并将其移出服务器
+[2017-02-14 10:36:19,980][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52656掉线并将其移出服务器
+[2017-02-14 10:36:19,980][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52649掉线并将其移出服务器
+[2017-02-14 10:36:19,981][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52660掉线并将其移出服务器
+[2017-02-14 10:36:19,981][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52662掉线并将其移出服务器
+[2017-02-14 10:36:19,981][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52654掉线并将其移出服务器
+[2017-02-14 10:36:19,981][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52653掉线并将其移出服务器
+[2017-02-14 10:36:19,982][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52658掉线并将其移出服务器
+[2017-02-14 10:36:19,982][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52657掉线并将其移出服务器
+[2017-02-14 10:36:19,982][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52663掉线并将其移出服务器
+[2017-02-14 10:36:19,982][ERROR, (ServerAdapter.java:55).channelInactive] [Client OutLine]:/127.0.0.1:52661掉线并将其移出服务器
+[2017-02-16 15:50:35,793][ERROR, (NettyServer.java:59).run] Can't find the requestType of http!Please check config file
+[2017-02-16 16:07:13,990][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:13,990][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:13,991][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:13,992][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:13,993][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:13,993][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:13,993][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:13,993][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:13,994][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:13,998][ERROR, (UserHandler.java:54).handleMsg] 实际消息和原消息不符!长度不一致。
+[2017-02-16 16:07:15,962][ERROR, (SocietyGroup.java:39).getChannels] 不存在 [1] 工会频道
+[2017-02-16 16:07:15,962][ERROR, (SocietyMessageHandler.java:35).process] 在发布公会消息的时候，玩家已登录，却不存在公会频道
+[2017-02-16 16:07:15,963][ERROR, (SocietyGroup.java:39).getChannels] 不存在 [2] 工会频道
+[2017-02-16 16:07:15,963][ERROR, (SocietyMessageHandler.java:35).process] 在发布公会消息的时候，玩家已登录，却不存在公会频道
+[2017-02-16 16:07:18,950][ERROR, (WorldGroup.java:92).getChannels] 不存在世界频道[0]
+[2017-02-16 16:07:18,950][ERROR, (WorldMessageHandler.java:32).process] 在发布世界消息的时候，玩家已登录，却不存在世界频道
+[2017-02-16 16:12:53,979][ERROR, (SocietyGroup.java:39).getChannels] 不存在 [1] 工会频道
+[2017-02-16 16:12:53,979][ERROR, (WorldGroup.java:92).getChannels] 不存在世界频道[0]
+[2017-02-16 16:12:54,017][ERROR, (SocietyGroup.java:39).getChannels] 不存在 [2] 工会频道
+[2017-02-16 16:13:42,411][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xd18c8cbc, /127.0.0.1:59570 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,412][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xd18c8cbc, /127.0.0.1:59570 => /127.0.0.1:8080]] from channelMap!,玩家[64]掉线
+[2017-02-16 16:13:42,413][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xa86bff9f, /127.0.0.1:59569 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,413][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xa86bff9f, /127.0.0.1:59569 => /127.0.0.1:8080]] from channelMap!,玩家[61]掉线
+[2017-02-16 16:13:42,414][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x8830c934, /127.0.0.1:59568 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,415][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x8830c934, /127.0.0.1:59568 => /127.0.0.1:8080]] from channelMap!,玩家[63]掉线
+[2017-02-16 16:13:42,415][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xc9011e77, /127.0.0.1:59571 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,416][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xc9011e77, /127.0.0.1:59571 => /127.0.0.1:8080]] from channelMap!,玩家[62]掉线
+[2017-02-16 16:13:42,416][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xca3cb074, /127.0.0.1:59573 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,416][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xca3cb074, /127.0.0.1:59573 => /127.0.0.1:8080]] from channelMap!,玩家[66]掉线
+[2017-02-16 16:13:42,417][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xb7d6923e, /127.0.0.1:59567 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,417][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xb7d6923e, /127.0.0.1:59567 => /127.0.0.1:8080]] from channelMap!,玩家[67]掉线
+[2017-02-16 16:13:42,418][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x175e5fa6, /127.0.0.1:59577 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,418][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x175e5fa6, /127.0.0.1:59577 => /127.0.0.1:8080]] from channelMap!,玩家[70]掉线
+[2017-02-16 16:13:42,419][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xd1614e28, /127.0.0.1:59572 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,419][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xd1614e28, /127.0.0.1:59572 => /127.0.0.1:8080]] from channelMap!,玩家[68]掉线
+[2017-02-16 16:13:42,420][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x6ffdf2c4, /127.0.0.1:59566 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,420][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x6ffdf2c4, /127.0.0.1:59566 => /127.0.0.1:8080]] from channelMap!,玩家[65]掉线
+[2017-02-16 16:13:42,421][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x4958e235, /127.0.0.1:59581 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:13:42,421][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x4958e235, /127.0.0.1:59581 => /127.0.0.1:8080]] from channelMap!,玩家[69]掉线
+[2017-02-16 16:16:53,737][ERROR, (Slf4JLogger.java:176).error] LEAK: ByteBuf.release() was not called before it's garbage-collected. Enable advanced leak reporting to find out where the leak occurred. To enable advanced leak reporting, specify the JVM option '-Dio.netty.leakDetectionLevel=advanced' or call ResourceLeakDetector.setLevel()
+[2017-02-16 16:18:42,411][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xdc91e9a0, /127.0.0.1:59665 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,412][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xdc91e9a0, /127.0.0.1:59665 => /127.0.0.1:8080]] from channelMap!,玩家[70]掉线
+[2017-02-16 16:18:42,412][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x0c516612, /127.0.0.1:59657 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,412][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x0c516612, /127.0.0.1:59657 => /127.0.0.1:8080]] from channelMap!,玩家[65]掉线
+[2017-02-16 16:18:42,413][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x66f0dd53, /127.0.0.1:59664 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,413][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x66f0dd53, /127.0.0.1:59664 => /127.0.0.1:8080]] from channelMap!,玩家[61]掉线
+[2017-02-16 16:18:42,414][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xc02b885c, /127.0.0.1:59659 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,414][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xc02b885c, /127.0.0.1:59659 => /127.0.0.1:8080]] from channelMap!,玩家[63]掉线
+[2017-02-16 16:18:42,414][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x29e021f7, /127.0.0.1:59658 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,415][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x29e021f7, /127.0.0.1:59658 => /127.0.0.1:8080]] from channelMap!,玩家[66]掉线
+[2017-02-16 16:18:42,415][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xdb392e71, /127.0.0.1:59663 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,415][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xdb392e71, /127.0.0.1:59663 => /127.0.0.1:8080]] from channelMap!,玩家[67]掉线
+[2017-02-16 16:18:42,416][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x2361e4a9, /127.0.0.1:59661 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,416][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x2361e4a9, /127.0.0.1:59661 => /127.0.0.1:8080]] from channelMap!,玩家[62]掉线
+[2017-02-16 16:18:42,416][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0xef427f4a, /127.0.0.1:59660 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,416][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0xef427f4a, /127.0.0.1:59660 => /127.0.0.1:8080]] from channelMap!,玩家[64]掉线
+[2017-02-16 16:18:42,417][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x52096a50, /127.0.0.1:59662 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,417][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x52096a50, /127.0.0.1:59662 => /127.0.0.1:8080]] from channelMap!,玩家[68]掉线
+[2017-02-16 16:18:42,417][WARN, (CheckChannelStatusTask.java:30).run] channel:[[id: 0x898983a0, /127.0.0.1:59671 => /127.0.0.1:8080]] had outline,it's time to kick off
+[2017-02-16 16:18:42,417][WARN, (PlayerChannelManager.java:80).removeChannel] Remove channel:[[id: 0x898983a0, /127.0.0.1:59671 => /127.0.0.1:8080]] from channelMap!,玩家[69]掉线
+[2017-02-16 16:19:13,057][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59659在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,057][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59657在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,057][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59664在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,057][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59661在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,060][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59657掉线并将其移出服务器
+[2017-02-16 16:19:13,060][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59664掉线并将其移出服务器
+[2017-02-16 16:19:13,060][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59661掉线并将其移出服务器
+[2017-02-16 16:19:13,060][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59659掉线并将其移出服务器
+[2017-02-16 16:19:13,061][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59658在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,061][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59673在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,061][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59675在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,061][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59662在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,062][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59660在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,062][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59674在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,063][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59676在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,063][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59663在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,064][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59666在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,063][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59665在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,066][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59669在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,065][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59667在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,067][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59671在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,066][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59668在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,066][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59670在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,068][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59673掉线并将其移出服务器
+[2017-02-16 16:19:13,068][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59675掉线并将其移出服务器
+[2017-02-16 16:19:13,067][ERROR, (ServerAdapter.java:139).exceptionCaught] [Client]: /127.0.0.1:59672在Thu Feb 16 16:19:13 CST 2017发生连接异常
+[2017-02-16 16:19:13,068][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59663掉线并将其移出服务器
+[2017-02-16 16:19:13,068][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59660掉线并将其移出服务器
+[2017-02-16 16:19:13,068][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59658掉线并将其移出服务器
+[2017-02-16 16:19:13,069][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59665掉线并将其移出服务器
+[2017-02-16 16:19:13,069][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59669掉线并将其移出服务器
+[2017-02-16 16:19:13,070][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59668掉线并将其移出服务器
+[2017-02-16 16:19:13,069][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59674掉线并将其移出服务器
+[2017-02-16 16:19:13,070][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59671掉线并将其移出服务器
+[2017-02-16 16:19:13,070][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59662掉线并将其移出服务器
+[2017-02-16 16:19:13,070][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59666掉线并将其移出服务器
+[2017-02-16 16:19:13,071][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59676掉线并将其移出服务器
+[2017-02-16 16:19:13,073][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59670掉线并将其移出服务器
+[2017-02-16 16:19:13,073][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59667掉线并将其移出服务器
+[2017-02-16 16:19:13,074][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:59672掉线并将其移出服务器
+[2017-02-17 15:31:48,926][ERROR, (UserHandler.java:111).handlerLoginCheck] protobuf格式不正确
+[2017-02-17 15:31:48,962][ERROR, (HandlerDispatcher.java:158).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.handler.UserHandler.validate(UserHandler.java:83)
+	at com.qingcity.handler.UserHandler.handlerLoginCheck(UserHandler.java:114)
+	at com.qingcity.handler.UserHandler.handleMsg(UserHandler.java:60)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-02-17 15:41:34,750][ERROR, (ServerAdapter.java:56).channelInactive] [Client OutLine]:/192.168.0.101:52278掉线并将其移出服务器
+[2017-02-17 15:43:29,666][ERROR, (ServerAdapter.java:56).channelInactive] [Client OutLine]:/192.168.0.101:52291掉线并将其移出服务器
+[2017-02-17 15:44:33,019][ERROR, (ServerAdapter.java:56).channelInactive] [Client OutLine]:/192.168.0.101:52303掉线并将其移出服务器
+[2017-02-17 16:14:37,510][ERROR, (ServerAdapter.java:56).channelInactive] [Client OutLine]:/192.168.0.106:55792掉线并将其移出服务器
+[2017-02-17 16:14:37,519][ERROR, (ServerAdapter.java:56).channelInactive] [Client OutLine]:/192.168.0.106:55793掉线并将其移出服务器
+[2017-02-17 16:20:19,586][ERROR, (ServerAdapter.java:56).channelInactive] [Client OutLine]:/192.168.0.106:56160掉线并将其移出服务器
+[2017-02-17 16:20:19,592][ERROR, (ServerAdapter.java:56).channelInactive] [Client OutLine]:/192.168.0.106:56161掉线并将其移出服务器
+[2017-02-19 11:43:04,049][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50190掉线并将其移出服务器
+[2017-02-19 11:43:36,367][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50195掉线并将其移出服务器
+[2017-02-19 11:44:45,947][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50200掉线并将其移出服务器
+[2017-02-19 11:45:00,304][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50205掉线并将其移出服务器
+[2017-02-19 11:45:29,968][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50210掉线并将其移出服务器
+[2017-02-19 11:45:50,516][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50214掉线并将其移出服务器
+[2017-02-19 12:05:38,624][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50225掉线并将其移出服务器
+[2017-02-19 12:06:07,508][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50235掉线并将其移出服务器
+[2017-02-19 12:06:47,153][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50241掉线并将其移出服务器
+[2017-02-19 12:07:35,935][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50246掉线并将其移出服务器
+[2017-02-19 12:20:51,447][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50253掉线并将其移出服务器
+[2017-02-19 12:24:09,731][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50370掉线并将其移出服务器
+[2017-02-19 12:24:48,475][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50376掉线并将其移出服务器
+[2017-02-19 12:26:52,796][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50383掉线并将其移出服务器
+[2017-02-19 12:27:18,797][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50393掉线并将其移出服务器
+[2017-02-19 12:30:36,418][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50404掉线并将其移出服务器
+[2017-02-19 12:30:51,054][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50411掉线并将其移出服务器
+[2017-02-19 12:36:20,909][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50415掉线并将其移出服务器
+[2017-02-19 12:36:38,593][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50428掉线并将其移出服务器
+[2017-02-19 12:37:22,957][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50438掉线并将其移出服务器
+[2017-02-19 12:37:52,556][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50445掉线并将其移出服务器
+[2017-02-19 12:38:19,533][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50449掉线并将其移出服务器
+[2017-02-19 12:40:12,085][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50459掉线并将其移出服务器
+[2017-02-19 12:41:06,246][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50467掉线并将其移出服务器
+[2017-02-19 12:49:51,141][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50507掉线并将其移出服务器
+[2017-02-19 12:55:18,128][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50541掉线并将其移出服务器
+[2017-02-19 12:55:38,658][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50570掉线并将其移出服务器
+[2017-02-19 12:55:51,140][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50583掉线并将其移出服务器
+[2017-02-19 12:56:35,130][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50587掉线并将其移出服务器
+[2017-02-19 12:57:25,539][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50592掉线并将其移出服务器
+[2017-02-19 12:58:38,682][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50599掉线并将其移出服务器
+[2017-02-19 12:59:19,135][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50608掉线并将其移出服务器
+[2017-02-19 13:00:10,312][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50619掉线并将其移出服务器
+[2017-02-19 13:00:38,689][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50623掉线并将其移出服务器
+[2017-02-19 13:03:42,358][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50627掉线并将其移出服务器
+[2017-02-19 13:21:06,364][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50718掉线并将其移出服务器
+[2017-02-19 14:01:21,494][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/192.168.0.102:50833掉线并将其移出服务器
+[2017-02-22 21:14:47,266][ERROR, (Slf4JLogger.java:176).error] LEAK: ByteBuf.release() was not called before it's garbage-collected. Enable advanced leak reporting to find out where the leak occurred. To enable advanced leak reporting, specify the JVM option '-Dio.netty.leakDetectionLevel=advanced' or call ResourceLeakDetector.setLevel()
+[2017-02-22 21:14:47,289][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65267在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,293][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65264在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,295][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65267掉线并将其移出服务器
+[2017-02-22 21:14:47,331][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65264掉线并将其移出服务器
+[2017-02-22 21:14:47,332][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65280在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,333][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65276在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,334][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65274在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,336][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65280掉线并将其移出服务器
+[2017-02-22 21:14:47,337][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65276掉线并将其移出服务器
+[2017-02-22 21:14:47,337][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65274掉线并将其移出服务器
+[2017-02-22 21:14:47,395][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65270在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,396][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65281在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,399][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65270掉线并将其移出服务器
+[2017-02-22 21:14:47,400][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65281掉线并将其移出服务器
+[2017-02-22 21:14:47,400][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65265在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,401][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65268在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,401][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65277在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,402][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65271在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,402][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65273在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,402][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65268掉线并将其移出服务器
+[2017-02-22 21:14:47,403][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65265掉线并将其移出服务器
+[2017-02-22 21:14:47,403][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65271掉线并将其移出服务器
+[2017-02-22 21:14:47,404][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65277掉线并将其移出服务器
+[2017-02-22 21:14:47,404][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65273掉线并将其移出服务器
+[2017-02-22 21:14:47,405][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65279在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,406][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65283在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,407][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65266在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,410][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65275在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,411][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65278在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,411][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65279掉线并将其移出服务器
+[2017-02-22 21:14:47,412][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65283掉线并将其移出服务器
+[2017-02-22 21:14:47,412][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65266掉线并将其移出服务器
+[2017-02-22 21:14:47,412][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65275掉线并将其移出服务器
+[2017-02-22 21:14:47,415][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65278掉线并将其移出服务器
+[2017-02-22 21:14:47,416][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65269在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,417][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65282在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,418][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65272在Wed Feb 22 21:14:47 CST 2017发生连接异常
+[2017-02-22 21:14:47,420][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65269掉线并将其移出服务器
+[2017-02-22 21:14:47,420][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65282掉线并将其移出服务器
+[2017-02-22 21:14:47,420][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65272掉线并将其移出服务器
+[2017-02-22 21:18:23,612][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65353在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,612][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65358在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,612][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65359在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,624][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65358掉线并将其移出服务器
+[2017-02-22 21:18:23,624][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65359掉线并将其移出服务器
+[2017-02-22 21:18:23,624][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65353掉线并将其移出服务器
+[2017-02-22 21:18:23,628][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65356在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,630][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65356掉线并将其移出服务器
+[2017-02-22 21:18:23,632][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65357在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,634][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65357掉线并将其移出服务器
+[2017-02-22 21:18:23,635][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65354在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,635][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65360在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,636][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65365在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,637][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65354掉线并将其移出服务器
+[2017-02-22 21:18:23,640][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65362在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,638][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65365掉线并将其移出服务器
+[2017-02-22 21:18:23,637][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65360掉线并将其移出服务器
+[2017-02-22 21:18:23,646][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65362掉线并将其移出服务器
+[2017-02-22 21:18:23,646][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65371在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,647][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65366在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,647][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65372在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,647][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65361在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,652][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65368在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,651][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65370在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,648][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65355在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,653][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65364在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,652][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65369在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,658][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65363在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,657][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65366掉线并将其移出服务器
+[2017-02-22 21:18:23,662][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65361掉线并将其移出服务器
+[2017-02-22 21:18:23,659][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65372掉线并将其移出服务器
+[2017-02-22 21:18:23,663][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65369掉线并将其移出服务器
+[2017-02-22 21:18:23,663][ERROR, (ServerAdapter.java:159).exceptionCaught] [Client]: /127.0.0.1:65367在Wed Feb 22 21:18:23 CST 2017发生连接异常
+[2017-02-22 21:18:23,663][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65370掉线并将其移出服务器
+[2017-02-22 21:18:23,663][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65368掉线并将其移出服务器
+[2017-02-22 21:18:23,664][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65371掉线并将其移出服务器
+[2017-02-22 21:18:23,665][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65364掉线并将其移出服务器
+[2017-02-22 21:18:23,665][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65355掉线并将其移出服务器
+[2017-02-22 21:18:23,679][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65363掉线并将其移出服务器
+[2017-02-22 21:18:23,679][ERROR, (ServerAdapter.java:57).channelInactive] [Client OutLine]:/127.0.0.1:65367掉线并将其移出服务器
+[2017-02-22 21:19:09,188][ERROR, (HandlerDispatcher.java:158).handMessageQueue] java.lang.NullPointerException
+	at com.qingcity.service.impl.LotteryServiceImpl.checkStatus(LotteryServiceImpl.java:50)
+	at com.qingcity.service.impl.LotteryServiceImpl$$FastClassBySpringCGLIB$$61c6147c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.qingcity.service.impl.LotteryServiceImpl$$EnhancerBySpringCGLIB$$a63a216.checkStatus(<generated>)
+	at com.qingcity.handler.LotteryHandler.HandleDrawALottery(LotteryHandler.java:53)
+	at com.qingcity.handler.LotteryHandler.handleMsg(LotteryHandler.java:42)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2017-02-22 21:24:27,949][ERROR, (HandlerDispatcher.java:158).handMessageQueue] org.springframework.dao.TransientDataAccessResourceException: Error attempting to get column 'LASTLOGINTIME' from result set.  Cause: java.sql.SQLException: Value '0000-00-00 00:00:00' can not be represented as java.sql.Timestamp
+; SQL []; Value '0000-00-00 00:00:00' can not be represented as java.sql.Timestamp; nested exception is java.sql.SQLException: Value '0000-00-00 00:00:00' can not be represented as java.sql.Timestamp
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:108)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy14.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:167)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:69)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy17.selectByUserId(Unknown Source)
+	at com.qingcity.service.impl.LotteryServiceImpl.checkStatus(LotteryServiceImpl.java:50)
+	at com.qingcity.service.impl.LotteryServiceImpl$$FastClassBySpringCGLIB$$61c6147c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.qingcity.service.impl.LotteryServiceImpl$$EnhancerBySpringCGLIB$$a63a216.checkStatus(<generated>)
+	at com.qingcity.handler.LotteryHandler.HandleDrawALottery(LotteryHandler.java:61)
+	at com.qingcity.handler.LotteryHandler.handleMsg(LotteryHandler.java:44)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Value '0000-00-00 00:00:00' can not be represented as java.sql.Timestamp
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ResultSetRow.getTimestampFast(ResultSetRow.java:935)
+	at com.mysql.jdbc.ByteArrayRow.getTimestampFast(ByteArrayRow.java:130)
+	at com.mysql.jdbc.ResultSetImpl.getTimestampInternal(ResultSetImpl.java:5950)
+	at com.mysql.jdbc.ResultSetImpl.getTimestamp(ResultSetImpl.java:5618)
+	at com.mysql.jdbc.ResultSetImpl.getTimestamp(ResultSetImpl.java:5647)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getTimestamp(DelegatingResultSet.java:317)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getTimestamp(DelegatingResultSet.java:317)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(ResultSetLogger.java:68)
+	at com.sun.proxy.$Proxy32.getTimestamp(Unknown Source)
+	at org.apache.ibatis.type.SqlTimestampTypeHandler.getNullableResult(SqlTimestampTypeHandler.java:38)
+	at org.apache.ibatis.type.SqlTimestampTypeHandler.getNullableResult(SqlTimestampTypeHandler.java:27)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:66)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getPropertyMappingValue(DefaultResultSetHandler.java:431)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyPropertyMappings(DefaultResultSetHandler.java:404)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:366)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:318)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:293)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:266)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:180)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 25 more
+
+[2017-02-22 21:28:58,134][ERROR, (HandlerDispatcher.java:158).handMessageQueue] org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'type' in 'class com.qingcity.entity.GiftRecord'
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:79)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy14.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:295)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy21.insertRecord(Unknown Source)
+	at com.qingcity.service.impl.LotteryServiceImpl.insertLotteryInfo(LotteryServiceImpl.java:44)
+	at com.qingcity.service.impl.LotteryServiceImpl$$FastClassBySpringCGLIB$$61c6147c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.qingcity.service.impl.LotteryServiceImpl$$EnhancerBySpringCGLIB$$a63a216.insertLotteryInfo(<generated>)
+	at com.qingcity.handler.LotteryHandler.SaveLotteryResult(LotteryHandler.java:95)
+	at com.qingcity.handler.LotteryHandler.HandleDrawALottery(LotteryHandler.java:84)
+	at com.qingcity.handler.LotteryHandler.handleMsg(LotteryHandler.java:44)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.handMessageQueue(HandlerDispatcher.java:156)
+	at com.qingcity.dispatcher.HandlerDispatcher$MessageWorker.run(HandlerDispatcher.java:140)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'type' in 'class com.qingcity.entity.GiftRecord'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:381)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:164)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:94)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:108)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:2420)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:114)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:50)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:494)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:458)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:44)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:34)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:55)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:41)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:279)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.<init>(BaseStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.<init>(PreparedStatementHandler.java:39)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.<init>(RoutingStatementHandler.java:45)
+	at org.apache.ibatis.session.Configuration.newStatementHandler(Configuration.java:502)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:47)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 26 more
+

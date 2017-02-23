@@ -2,13 +2,16 @@ package com.qingcity.util;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedHashMap;
@@ -38,6 +41,8 @@ public class FileUtil {
 
 	private static final String JSON_PATH = "src/main/resources/config/properties/json/";
 	private static final String EXCEL_PATH = "src/main/resources/config/properties/excel/";
+
+	private static final int BUFFER_SIZE = 1024;
 
 	public static String getJsonPath() {
 		return JSON_PATH;
@@ -299,6 +304,36 @@ public class FileUtil {
 		} finally {
 
 		}
+	}
+
+	/**
+	 * 将inputStream 读出byte数组中
+	 * 
+	 * @param inStream
+	 * @return
+	 * @throws IOException
+	 * @throws Exception
+	 */
+	public static byte[] readInputStream(InputStream inStream) throws IOException {
+		ByteArrayOutputStream outStream = new ByteArrayOutputStream();
+		byte[] buffer = new byte[BUFFER_SIZE];
+		int len = 0;
+		while ((len = inStream.read(buffer)) != -1) {
+			outStream.write(buffer, 0, len);
+		}
+		inStream.close();
+		return outStream.toByteArray();
+	}
+
+	public static final String readInputStream2String(InputStream in) throws UnsupportedEncodingException, IOException {
+		if (in == null)
+			return "";
+		StringBuffer out = new StringBuffer();
+		byte[] b = new byte[BUFFER_SIZE];
+		for (int n; (n = in.read(b)) != -1;) {
+			out.append(new String(b, 0, n, "UTF-8"));
+		}
+		return out.toString();
 	}
 
 }

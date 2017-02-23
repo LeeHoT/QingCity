@@ -11,6 +11,8 @@ import com.qingcity.util.ExceptionUtils;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
+import io.netty.handler.codec.http.HttpObjectAggregator;
+import io.netty.handler.codec.http.HttpServerCodec;
 
 public class ServerInitializer extends ChannelInitializer<SocketChannel> {
 	private static final Logger logger = LoggerFactory.getLogger(ServerInitializer.class);
@@ -41,26 +43,21 @@ public class ServerInitializer extends ChannelInitializer<SocketChannel> {
 				logger.info("init the channel of type : " + this.requestType.trim().toLowerCase());
 				ch.pipeline().addLast("protobufDecoder", new NettyMsgDecoder());
 				ch.pipeline().addLast("protobufEncoder", new NettyMsgEncoder());
-				// ch.pipeline().addLast("timeout", new
-				// ReadTimeoutHandler(this.timeout));
-//				ch.pipeline().addLast("heartbeat", new IdleStateHandler(READ_IDEL_TIME_OUT, WRITE_IDEL_TIME_OUT,
-//						ALL_IDEL_TIME_OUT, TimeUnit.SECONDS));
-				ch.pipeline().addLast("handler", new ServerAdapter(this.handlerDispatcher,this.chatMessageDispatcher));
+			} else if (ERequestType.HTTP.getValue().equals(this.requestType.trim().toLowerCase())) {
+				ch.pipeline().addLast("codec-http", new HttpServerCodec());
+				ch.pipeline().addLast("aggregator", new HttpObjectAggregator(65536));
 			} else {
-				logger.info("cannot inti the channel ,the type : " + this.requestType.trim()
+				logger.error("cannot inti the channel ,the type : " + this.requestType.trim()
 						+ "cannot be find,please check the request type whether it is " + ERequestType.SOCKET.getValue()
 						+ " !");
 				return;
 			}
+			ch.pipeline().addLast("handler", new ServerAdapter(this.handlerDispatcher, this.chatMessageDispatcher));
 		} catch (Exception e) {
 			logger.error(ExceptionUtils.getStackTrace(e));
 		}
 
 	}
-
-	// public void setTimeout(int timeout) {
-	// this.timeout = timeout;
-	// }
 
 	public void setHandlerDispatcher(HandlerDispatcher handlerDispatcher) {
 		this.handlerDispatcher = handlerDispatcher;

@@ -1,5 +1,8 @@
 package com.qingcity.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.qingcity.entity.Bill;
@@ -12,15 +15,62 @@ import com.qingcity.entity.Bill;
  */
 @Repository
 public interface BillMapper {
-	int deleteByPrimaryKey(Integer orderid);
+	/**
+	 * 根据订单id 查询 订单信息
+	 * 
+	 * @param orderid
+	 * @return 订单信息
+	 */
+	Bill selectByOrderId(String orderId);
 
-	int insert(Bill record);
+	/**
+	 * 根据订单号删除订单信息
+	 * 
+	 * @param orderid
+	 * @return 成功返回1 否则返回null
+	 */
+	int deleteByOrderId(String orderId);
 
-	int insertSelective(Bill record);
+	/**
+	 * 插入一个订单记录，
+	 * 
+	 * @param record
+	 * @return
+	 */
+	int insertBill(Bill record);
 
-	Bill selectByPrimaryKey(Integer orderid);
+	/**
+	 * 根据订单id 更新订单信息
+	 * 
+	 * @param record
+	 * @return
+	 */
+	int updateByOrderId(Bill record);
 
-	int updateByPrimaryKeySelective(Bill record);
+	/**
+	 * 查询某个订单的状态
+	 * 
+	 * @param orderId
+	 * @return 订单状态
+	 */
+	int selectStatusById(String orderId);
 
-	int updateByPrimaryKey(Bill record);
+	/**
+	 * 根据订单号查询订单中的商品id
+	 * 
+	 * @param orderId
+	 * @return
+	 */
+	int selectPidByOrderId(String orderId);
+
+	/**
+	 * 根据玩家id 查询当前玩家的所有订单信息
+	 * 
+	 * @param userId
+	 * @return
+	 */
+	List<Bill> selectBillByUserId(int userId);
+	
+	int updateStatusByOrderId(@Param("status")int status,@Param("orderId") String orderId);
+
 }

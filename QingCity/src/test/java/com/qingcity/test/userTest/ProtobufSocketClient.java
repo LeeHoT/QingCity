@@ -4,11 +4,9 @@ import com.qingcity.constants.CmdConstant;
 import com.qingcity.entity.MsgEntity;
 import com.qingcity.netty.NettyMsgDecoder;
 import com.qingcity.netty.NettyMsgEncoder;
-import com.qingcity.proto.GameMessage.LoginCheck;
 import com.qingcity.proto.GameMessage.RegisterCheck;
-import com.qingcity.proto.PkMsg.PkInfo;
 import com.qingcity.test.clientNettyTest.ClientInboundHandler;
-import com.qingcity.util.MD5Util;
+import com.qingcity.util.MD5Utils;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -39,7 +37,7 @@ public class ProtobufSocketClient {
 				}
 			});
 			ChannelFuture future = b.connect("127.0.0.1", 8080);
-			MD5Util md = new MD5Util();
+			MD5Utils md = new MD5Utils();
 
 			/**
 			 * 登录测试
@@ -55,8 +53,8 @@ public class ProtobufSocketClient {
 			//
 			RegisterCheck.Builder register = RegisterCheck.newBuilder();
 			register.setUsername("李慧婷");
-			register.setPassword(md.getMD5Str("lht19941009"));
-			register.setPassword2(md.getMD5Str("lht19941009"));
+			register.setPassword(md.getMD5("lht19941009"));
+			register.setPassword2(md.getMD5("lht19941009"));
 			register.setEmail("875269021@qq.com");
 			byte[] bTest = register.build().toByteArray();
 			System.out.println(bTest.length);

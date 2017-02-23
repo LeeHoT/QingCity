@@ -16,14 +16,13 @@ public class NettyMsgEncoder extends MessageToByteEncoder<MsgEntity> {
 		System.out.println("开始编码");
 		int dataLength = msg.getData() == null ? 0 : msg.getData().length;
 		System.out.println("正在编码的消息长度为" + msg.getData().length);
-		int prefix = 7;// 消息体前缀的长度 short(2)+Byte(1)+int(4)
+		int prefix = 6;// 消息体前缀的长度 short(2)+Byte(1)+int(4)
 		byteBuf.ensureWritable(prefix + dataLength);
 		byteBuf.writeShort(prefix + dataLength);// 写入消息总产度，为消息体长度+协议号长度+下次长度
 												// 占用2字节
 		byteBuf.writeShort(msg.getCmdCode());// 写入协议号
 												// 有CmdConstants.CmdConstant指定
-		System.out.println(msg.getCmdCode()); // 占用2字节
-		byteBuf.writeByte(msg.getProtocalType());
+		//byteBuf.writeByte(msg.getProtocalType());
 		byteBuf.writeInt(dataLength);// 写入消息长度 占用4字节
 		if (dataLength > 0) {
 			

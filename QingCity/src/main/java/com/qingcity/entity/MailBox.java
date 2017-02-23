@@ -15,6 +15,7 @@ public class MailBox implements Serializable {
 	private boolean isRead;// 是否已读
 	private Integer itemId; // 物品id,目前只有1体力，2金币,且只能有一种
 	private Integer itemNum; // 对应物品的数量
+	private String sender;
 
 	public int getId() {
 		return id;
@@ -86,6 +87,14 @@ public class MailBox implements Serializable {
 
 	public void setItemNum(Integer itemNum) {
 		this.itemNum = itemNum;
+	}
+
+	public String getSender() {
+		return sender;
+	}
+
+	public void setSender(String sender) {
+		this.sender = sender;
 	}
 
 }

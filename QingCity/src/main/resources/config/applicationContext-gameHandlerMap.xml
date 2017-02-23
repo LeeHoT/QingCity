@@ -16,6 +16,8 @@
 				</entry>
 				<entry key="201" value-ref="pkHandler">
 				</entry>
+				<entry key="203" value-ref="lotteryHandler">
+				</entry>
 			</map>
 		</constructor-arg>
 	</bean>

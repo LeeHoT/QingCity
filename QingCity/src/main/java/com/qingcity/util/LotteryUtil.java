@@ -3,16 +3,43 @@ package com.qingcity.util;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
+import com.qingcity.entity.Gift;
 
 /**
- * 概率抽奖和随机范围抽取固定数量随机数字抽奖以及 获取随机数字
- * @author Administrator
- *
- */ 
+ * 
+ * @author leehotin
+ * @Date 2017年2月21日 下午10:17:22
+ * @Description 概率抽奖和随机范围抽取固定数量随机数字抽奖以及 获取随机数字
+ */
 public class LotteryUtil {
+
+	private static final Integer totalNum = 10000;
+	private static Map<Integer, List<Gift>> map = new LinkedHashMap<>();
+
+	static {
+		// 加载当前有的奖品信息
+		String json = FileUtil.ReadFile(FileUtil.getJsonPath() + "gift.json");
+		ArrayList<Gift> giftList = GsonUtil.jsonToArrayList(json, Gift.class);
+		List<Gift> typeList = null;
+		for (Gift gift : giftList) {
+			if (map != null && map.get(gift.getType()) == null) {
+				typeList = new ArrayList<>();
+				typeList.add(gift);
+				map.put(gift.getType(), typeList);
+			} else {
+				map.get(gift.getType()).add(gift);
+			}
+		}
+	}
+
+	public static List<Gift> getGiftList(int type) {
+		return map.get(type);
+	}
 
 	/**
 	 * 有概率抽奖抽奖
@@ -50,6 +77,19 @@ public class LotteryUtil {
 		return sortOrignalRates.indexOf(nextDouble);
 	}
 
+	public static List<Double> CalulateOrignalRates(List<Gift> gifts) {
+		List<Double> orignalRates = new ArrayList<Double>((gifts.size()));
+		for (Gift gift : gifts) {
+			double probability = (double) gift.getCount() / totalNum;
+			System.out.println("概率" + probability);
+			if (probability < 0) {
+				probability = 0;
+			}
+			orignalRates.add(probability);
+		}
+		return orignalRates;
+	}
+
 	public static int getJD(List<Double> orignalRates) {
 		if (orignalRates == null || orignalRates.isEmpty()) {
 			return -1;
@@ -74,7 +114,7 @@ public class LotteryUtil {
 		double nextDouble = Math.random();
 		sortOrignalRates.add(nextDouble);
 		Collections.sort(sortOrignalRates);
-		
+
 		return sortOrignalRates.indexOf(nextDouble);
 	}
 

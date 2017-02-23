@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcity.dao.FriendsMapper">
+	<resultMap id="BaseResultMap" type="Friends">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="user1" property="user1" jdbcType="INTEGER" />
+		<result column="user2" property="user2" jdbcType="INTEGER" />
+		<result column="isFriend" property="isFriend" jdbcType="BIT" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, user1, user2,isFriend
+	</sql>
+	<select id="selectFriends" parameterType="Integer" resultType="Integer">
+		SELECT user1 AS friend FROM friends WHERE user2 =
+		#{userId} and
+		isFriend = true union all select user2 from friends
+		WHERE user1 =
+		#{userId} and isFriend = true
+	</select>
+
+	<select id="selectAddRequest" parameterType="Integer"
+		resultType="Integer">
+		SELECT user1 AS
+		request FROM friends WHERE user2 =
+		#{userId}
+		and
+		isFriend
+		=
+		false union
+		all
+		select user2 from friends
+		WHERE user1 =
+		#{userId} and
+		isFriend =
+		false
+	</select>
+
+	<select id="checkStatus" resultType="Integer">
+		select id from friends where
+		((user1 = #{userId} and
+		user2 = #{friendId}) or
+		(user1 = #{friendId} and
+		user2 = #{userId})) and isFriend = true
+	</select>
+
+	<update id="updateStatus">
+		<if test="isFriend">
+			update friends set isFriend = #{isFriend} where id = #{id}
+		</if>
+		<if test="!isFriend">
+			delete from friends where id = #{id}
+		</if>
+	</update>
+
+	<delete id="deleteFriend">
+		delete from friends where ((user1 = #{userId} and
+		user2 = #{friendId}) or
+		(user1 = #{friendId} and user2 = #{userId})) and isFriend=true
+	</delete>
+
+	<insert id="addRequest" parameterType="Friends">
+		insert into friends
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="user1 != null">
+				user1,
+			</if>
+			<if test="user2 != null">
+				user2,
+			</if>
+			<if test="isFriend != null">
+				isFriend
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="user1 != null">
+				#{user1,jdbcType=INTEGER},
+			</if>
+			<if test="user2 != null">
+				#{user2,jdbcType=INTEGER},
+			</if>
+			<if test="isFriend != null">
+				#{isFriend,jdbcType=BIT}
+			</if>
+		</trim>
+	</insert>
+</mapper>

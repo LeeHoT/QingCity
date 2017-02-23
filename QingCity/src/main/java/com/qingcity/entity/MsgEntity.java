@@ -11,8 +11,18 @@ public class MsgEntity implements Serializable {
 
 	private int msgLength;
 	private short cmdCode;// 储存命令码
+	private String requestType;//请求类型
 	private byte protocalType;// 协议类型 ProtocolType
 	private byte[] data;// 存放实际数据,用于protobuf解码成对应message
+	
+
+	public String getRequestType() {
+		return requestType;
+	}
+
+	public void setRequestType(String requestType) {
+		this.requestType = requestType;
+	}
 
 	public int getMsgLength() {
 		return msgLength;

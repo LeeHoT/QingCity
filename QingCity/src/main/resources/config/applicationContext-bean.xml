@@ -34,9 +34,9 @@
 
 	<bean id="backpack" class="com.qingcity.entity.Backpack"></bean>
 
-	<bean id="dress" class="com.qingcity.entity.Dress"></bean>
-
 	<bean id="bill" class="com.qingcity.entity.Bill"></bean>
+
+	<bean id="dress" class="com.qingcity.entity.Dress"></bean>
 
 	<bean id="rechargeRecord" class="com.qingcity.entity.RechargeRecord"></bean>
 
@@ -46,6 +46,11 @@
 		scope="prototype"></bean>
 
 	<bean id="scoietyGroup" class="com.qingcity.data.manager.SocietyGroup"
+		scope="prototype"></bean>
+
+	<bean id="gift" class="com.qingcity.entity.Gift" scope="prototype"></bean>
+
+	<bean id="giftRecord" class="com.qingcity.entity.GiftRecord"
 		scope="prototype"></bean>
 
 </beans>

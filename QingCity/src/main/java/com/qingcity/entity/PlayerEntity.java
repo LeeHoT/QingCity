@@ -22,6 +22,8 @@ public class PlayerEntity implements Serializable {
 	private int diamond; // 用户钻石
 	private int gold; // 用户金币
 	private Timestamp lastPowUpdateTime;// 上次体力更新时间
+	private Timestamp lastLoginTime;// 最近一次登录时间
+	private String signature;// 个性签名
 
 	private String icon;// 头像名称
 	private int contribution;// 玩家在公会中的贡献
@@ -114,6 +116,22 @@ public class PlayerEntity implements Serializable {
 
 	public void setLastPowUpdateTime(Timestamp lastPowUpdateTime) {
 		this.lastPowUpdateTime = lastPowUpdateTime;
+	}
+
+	public Timestamp getLastLoginTime() {
+		return lastLoginTime;
+	}
+
+	public void setLastLoginTime(Timestamp lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
+	}
+
+	public String getSignature() {
+		return signature;
+	}
+
+	public void setSignature(String signature) {
+		this.signature = signature;
 	}
 
 	public String getIcon() {

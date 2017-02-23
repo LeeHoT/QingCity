@@ -40,6 +40,14 @@ public interface PlayerMapper {
 	PlayerEntity selectByUserId(Integer userId);
 
 	/**
+	 * 根据昵称查询玩家信息
+	 * 
+	 * @param nickname
+	 * @return 玩家信息
+	 */
+	PlayerEntity selectByNickname(String nickname);
+
+	/**
 	 * 只查询该等级的第一个玩家 主要用于pk时使用
 	 * 
 	 * @param level
@@ -198,4 +206,26 @@ public interface PlayerMapper {
 	 * @return
 	 */
 	PlayerEntity getPlayerSocietyInfo(int userId);
+
+	/**
+	 * 更新玩家个性签名
+	 * 
+	 * @param signature
+	 *            个性签名，不得超过五十个字
+	 * @param userId
+	 *            玩家id
+	 * @return
+	 */
+	int updateSignature(@Param("signature") String signature, @Param("userId") Integer userId);
+
+	/**
+	 * 更新玩家最近一次登录时间
+	 * 
+	 * @param lastLoginTime
+	 *            最近一次登录时间
+	 * @param userId
+	 *            玩家id
+	 * @return
+	 */
+	int updateLoginTime(@Param("lastLoginTime") Timestamp lastLoginTime, @Param("userId") Integer userId);
 }

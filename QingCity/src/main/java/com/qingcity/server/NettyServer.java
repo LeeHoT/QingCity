@@ -34,12 +34,11 @@ public class NettyServer {
 	private final int port;
 
 	public NettyServer(int port) {
-		this.logger.info("register port :" + port);
+		this.logger.info("register port at: " + port);
 		this.port = port;
 	}
 
 	public void setInitializer(ServerInitializer initializer) {
-		this.logger.info("setInitializer port :" + port);
 		this.initializer = initializer;
 	}
 
@@ -52,22 +51,21 @@ public class NettyServer {
 			ChannelFuture cf = null;
 			this.logger.info(ERequestType.parse(this.initializer.getRequestType()).getValue()
 					+ " server started at port " + this.port + '.');
-
 			if (ERequestType.HTTP.equals(ERequestType.parse(this.initializer.getRequestType()))) {
-				this.logger.info("the server initialize request method is : " + this.initializer.getRequestType());
-				// 绑定端口 port
 				cf = b.bind(this.port).sync();
-			} else {
-				this.logger
-						.info("the socketServer initialize request method is : " + this.initializer.getRequestType());
-				// 绑定端口 port
+			} else if (ERequestType.SOCKET.equals(ERequestType.parse(this.initializer.getRequestType()))) {
 				cf = b.bind(new InetSocketAddress(this.port)).sync();
+			} else {
+				logger.error("Can't find the requestType of " + this.initializer.getRequestType()
+						+ "!Please check config file");
 			}
+			logger.debug("begin to check channelStatus,start the task");
 			ExecutorServiceUtil.run(new CheckChannelStatusTask(), 0, CheckChannelStatusTask.CLIENT_OUTLINE_TIME,
 					TimeUnit.MILLISECONDS);
 			cf.channel().closeFuture().sync();
 		} finally {
 			// 温柔的关闭 boss worker
+			logger.debug("boss and worker 线程关闭");
 			bossGroup.shutdownGracefully();
 			workerGroup.shutdownGracefully();
 		}

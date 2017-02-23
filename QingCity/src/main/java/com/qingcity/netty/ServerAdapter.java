@@ -5,9 +5,11 @@ import java.util.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.mchange.v2.sql.filter.SynchronizedFilterCallableStatement;
 import com.qingcity.chat.domain.ChatMessageReq;
 import com.qingcity.constants.ChatConstant;
 import com.qingcity.constants.CmdConstant;
+import com.qingcity.constants.ProtocalType;
 import com.qingcity.data.manager.PlayerChannelManager;
 import com.qingcity.dispatcher.ChatMessageDispatcher;
 import com.qingcity.dispatcher.HandlerDispatcher;
@@ -16,6 +18,7 @@ import com.qingcity.domain.GameRequest;
 import com.qingcity.entity.MsgEntity;
 import com.qingcity.proto.ChatProto.ChatMessage;
 import com.qingcity.proto.KeepAlive.KeepAliveMsg;
+import com.qingcity.proto.Player.PlayerInfo;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -61,6 +64,8 @@ public class ServerAdapter extends SimpleChannelInboundHandler<MsgEntity> {
 			// 无消息内容
 			return;
 		}
+
+		System.out.println("adapter method" + msg.getRequestType());
 		if (CmdConstant.PING == msg.getCmdCode()) {
 			System.out.println("收到ping消息");
 			// 客户端发来的PING消息，处理PING消息,并返回给客户端PONG。
@@ -69,11 +74,26 @@ public class ServerAdapter extends SimpleChannelInboundHandler<MsgEntity> {
 			System.out.println("处理聊天消息");
 			ChatMessage chatMsg = ChatMessage.parseFrom(msg.getData());
 			sendMessage(ctx, chatMsg);
-		} else
-
-		{
-			socketRequest(ctx, msg);
 		}
+		// else {
+		// PlayerInfo player = null;
+		// player = PlayerInfo.parseFrom(msg.getData());
+		// System.out.println(msg.getCmdCode());
+		// System.out.println("玩家id " + player.getUserId());
+		// System.out.println("新增钻石数量" + player.getDiamond());
+		//
+		// PlayerInfo.Builder resPlayer = PlayerInfo.newBuilder();
+		// resPlayer.setUserId(player.getUserId());
+		// resPlayer.setDiamond(500);
+		// byte[] b = resPlayer.build().toByteArray();
+		// MsgEntity resmsg = new MsgEntity();
+		// resmsg.setCmdCode(CmdConstant.S2C_ADDDIAMOND);
+		// resmsg.setData(b);
+		// resmsg.setMsgLength(b.length);
+		// System.out.println("系统开始返回消息");
+		// ctx.writeAndFlush(resmsg);
+		// }
+		socketRequest(ctx, msg);
 		// 客户端有数据传输到服务端，更新channel时间
 
 	}
@@ -103,16 +123,14 @@ public class ServerAdapter extends SimpleChannelInboundHandler<MsgEntity> {
 	 * 发送ping消息
 	 * 
 	 * @param ctx
-	 
-	private static void sendPing(ChannelHandlerContext ctx) {
-		KeepAliveMsg.Builder keepAlive = KeepAliveMsg.newBuilder();
-		MsgEntity msg = new MsgEntity();
-		byte[] pingB = keepAlive.build().toByteArray();
-		msg.setCmdCode(CmdConstant.PING);
-		msg.setData(pingB);
-		msg.setMsgLength(pingB.length);
-		ctx.writeAndFlush(msg);
-	}*/
+	 * 
+	 *            private static void sendPing(ChannelHandlerContext ctx) {
+	 *            KeepAliveMsg.Builder keepAlive = KeepAliveMsg.newBuilder();
+	 *            MsgEntity msg = new MsgEntity(); byte[] pingB =
+	 *            keepAlive.build().toByteArray();
+	 *            msg.setCmdCode(CmdConstant.PING); msg.setData(pingB);
+	 *            msg.setMsgLength(pingB.length); ctx.writeAndFlush(msg); }
+	 */
 
 	// @Override
 	// public void userEventTriggered(ChannelHandlerContext ctx, Object evt)

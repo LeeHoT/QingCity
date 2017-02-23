@@ -1,15 +1,11 @@
 package com.qingcity.test.userTest;
 
-import org.junit.Test;
-
 import com.qingcity.constants.CmdConstant;
 import com.qingcity.entity.MsgEntity;
 import com.qingcity.proto.GameMessage.LoginCheck;
 import com.qingcity.proto.GameMessage.RegisterCheck;
 import com.qingcity.test.netty.Initializer;
-import com.qingcity.util.MD5Util;
-
-import io.netty.channel.ChannelFuture;
+import com.qingcity.util.MD5Utils;
 
 public class ClientUserTest {
 
@@ -31,7 +27,7 @@ public class ClientUserTest {
 	public MsgEntity loginTest() {
 		LoginCheck.Builder login = LoginCheck.newBuilder();
 		login.setUsername("李慧婷");
-		login.setPassword(MD5Util.getMD5Str("lht19941009"));
+		login.setPassword(MD5Utils.getMD5("lht19941009"));
 		LoginCheck lo = login.build();
 		byte[] bTest = lo.toByteArray();
 		MsgEntity test = new MsgEntity();
@@ -49,8 +45,8 @@ public class ClientUserTest {
 	public MsgEntity registerTest() {
 		RegisterCheck.Builder register = RegisterCheck.newBuilder();
 		register.setUsername("金鸿轩");
-		register.setPassword(MD5Util.getMD5Str("lht19950125"));
-		register.setPassword2(MD5Util.getMD5Str("lht19950125"));
+		register.setPassword(MD5Utils.getMD5("lht19950125"));
+		register.setPassword2(MD5Utils.getMD5("lht19950125"));
 		register.setEmail("875269035@qq.com");
 		RegisterCheck reg = register.build();
 		byte[] bTest = reg.toByteArray();

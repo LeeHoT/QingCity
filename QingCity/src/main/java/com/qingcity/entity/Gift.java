@@ -1,60 +1,70 @@
 package com.qingcity.entity;
 
+import java.io.Serializable;
+
 /**
- * 奖品类
- * @author:leehotin
- * @version:1.0
+ * 
+ * @author leehotin
+ * @Date 2017年2月21日 下午7:58:31
+ * @Description 奖品类
  */
-public class Gift {
-	
-	private int index;
-	private String gitfId;
-	private String giftName;
-	private double probability;
+public class Gift implements Serializable {
+	private static final long serialVersionUID = 1L;
+	private Integer id;
+	private String name;
+	private Integer count;
+	private String notes;
+	private Integer type;
 
-	public Gift(int index, String gitfId, String giftName, double probability) {
-		this.index = index;
-		this.gitfId = gitfId;
-		this.giftName = giftName;
-		this.probability = probability;
+	public Gift() {
 	}
 
-	public int getIndex() {
-		return index;
+	public Gift(Integer id, String name, Integer count, String notes) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.count = count;
+		this.notes = notes;
 	}
 
-	public void setIndex(int index) {
-		this.index = index;
+	public Integer getId() {
+		return id;
 	}
 
-	public String getGitfId() {
-		return gitfId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	public void setGitfId(String gitfId) {
-		this.gitfId = gitfId;
+	public String getName() {
+		return name;
 	}
 
-	public String getGiftName() {
-		return giftName;
+	public void setName(String name) {
+		this.name = name == null ? null : name.trim();
 	}
 
-	public void setGiftName(String giftName) {
-		this.giftName = giftName;
+	public Integer getCount() {
+		return count;
 	}
 
-	public double getProbability() {
-		return probability;
+	public void setCount(Integer count) {
+		this.count = count;
 	}
 
-	public void setProbability(double probability) {
-		this.probability = probability;
+	public String getNotes() {
+		return notes;
 	}
 
-	@Override
-	public String toString() {
-		return "Gift [index=" + index + ", gitfId=" + gitfId + ", giftName=" + giftName + ", probability="
-				+ probability + "]";
+	public void setNotes(String notes) {
+		this.notes = notes == null ? null : notes.trim();
+	}
+
+	public Integer getType() {
+		return type;
+	}
+
+	public void setType(Integer type) {
+		this.type = type;
 	}
 
 }

@@ -11,10 +11,11 @@
 		<result column="isRead" property="isRead" jdbcType="BIT" />
 		<result column="itemId" property="itemId" jdbcType="INTEGER" />
 		<result column="itemNum" property="itemNum" jdbcType="INTEGER" />
+		<result column="sender" property="sender" jdbcType="VARCHAR" />
 	</resultMap>
 	<sql id="Base_Column_List">
 		id, userId, title, content, sendTime, overTime, isRead,
-		itemId, itemNum
+		itemId, itemNum,sender
 	</sql>
 
 	<!-- 查看邮件 -->
@@ -73,6 +74,9 @@
 			<if test="itemNum != null">
 				itemNum,
 			</if>
+			<if test="sender != null">
+				sender,
+			</if>
 		</trim>
 		<trim prefix="values (" suffix=")" suffixOverrides=",">
 			<if test="userId != null">
@@ -98,6 +102,9 @@
 			</if>
 			<if test="itemNum != null">
 				#{itemNum,jdbcType=INTEGER},
+			</if>
+			<if test="sender != null">
+				#{sender,jdbcType=VARCHAR},
 			</if>
 		</trim>
 	</insert>

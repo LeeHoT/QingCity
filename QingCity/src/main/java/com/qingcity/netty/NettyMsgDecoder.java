@@ -9,11 +9,10 @@ import java.nio.ByteOrder;
 import com.qingcity.entity.MsgEntity;
 
 /**
- * 定长解码器
- * 消息格式
- * +--------+-----+------+---------+----------------+      +-----+------+---------+----------------+
+ * 定长解码器 消息格式 
+ * +--------+-----+------+---------+----------------+      +-----+------+---------+----------------+ 
  * | Length1| CMD | TYPE | Length2 | Actual Content |----->| CMD | TYPE | Length2 | Actual Content |
- * |   2字节    | 1字节 | 2字节    |   4字节       | "HELLO, WORLD" |      | 1字节 | 2字节    |   4字节       | "HELLO, WORLD" |
+ * |  2字节       | 1字节 | 2字节    |   4字节       | "HELLO, WORLD" |      | 1字节 | 2字节    |   4字节       | "HELLO, WORLD" |
  * +--------+-----+------+---------+----------------+      +-----+------+---------+----------------+
  */
 public class NettyMsgDecoder extends LengthFieldBasedFrameDecoder {
@@ -48,6 +47,7 @@ public class NettyMsgDecoder extends LengthFieldBasedFrameDecoder {
 	@Override
 	protected Object decode(ChannelHandlerContext ctx, ByteBuf byteBuf) throws Exception {
 		System.out.println("before decoder readableBytes :" + byteBuf.readableBytes());
+		System.out.println("消息经过protobuf截码");
 		ByteBuf frame = (ByteBuf) super.decode(ctx, byteBuf);
 		if (frame == null) {
 			System.out.println("frame is " + frame);
@@ -55,11 +55,11 @@ public class NettyMsgDecoder extends LengthFieldBasedFrameDecoder {
 		}
 		System.out.println("after decoder readableBytes :" + frame.readableBytes());
 		short cmd = frame.readShort();// 先读取两个字节长度命令码
-		byte protoType = frame.readByte();// 一个字节长度协议类型
+		//byte protoType = frame.readByte();// 一个字节长度协议类型
 		int msgLen = frame.readInt();// 再读取四个字节长度消息长
 		System.out.println("协议号: " + cmd);
 		System.out.println("消息长度: " + msgLen);
-		System.out.println("消息类型: " + protoType);
+		//System.out.println("消息类型: " + protoType);
 		System.out.println("数据消息的实际接收长度: " + frame.readableBytes());
 		byte[] data = new byte[frame.readableBytes()];// 其它数据为实际数据
 		frame.readBytes(data);
@@ -67,13 +67,13 @@ public class NettyMsgDecoder extends LengthFieldBasedFrameDecoder {
 			System.out.println("消息实际长度和原始长度不一致。。请重新发送");
 			return null;
 		}
-		// for (int i = 0; i < data.length; i++) {
-		// System.out.print(data[i] + " ");
-		// }
+		for (int i = 0; i < data.length; i++) {
+			System.out.print(data[i] + " ");
+		}
 		MsgEntity msgVO = new MsgEntity();
 		msgVO.setMsgLength(msgLen);
 		msgVO.setCmdCode(cmd);
-		msgVO.setProtocalType(protoType);
+		//msgVO.setProtocalType(protoType);
 		msgVO.setData(data);
 		return msgVO;
 	}

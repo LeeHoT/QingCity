@@ -1,0 +1,34 @@
+option java_package="com.qingcity.proto";
+option java_outer_classname="Player";
+
+message getInfoRequest{
+  required int32 userId = 1;
+}
+
+message PlayerInfo{
+   optional int32 userId = 1;
+   optional int32 level = 2;
+   optional int32 experience = 3;
+   optional int32 power = 4;
+   optional int32 diamond = 5;
+   optional int32 gold = 6;
+   optional int32 societyId = 7;
+   optional int32 contribution = 8;
+   optional int32 job = 9;
+   optional int32 nickname = 10; 
+}
+
+message updateRequest{
+   required int32 userId = 1;
+   optional int32 power = 2;
+   optional int32 diamond = 3;
+   optional int32 gold = 4;
+}
+
+message udpateResponse{
+   required int32 userId = 1;
+   optional int32 power = 2;
+   optional int32 diamond = 3;
+   optional int32 gold = 4;
+}
+

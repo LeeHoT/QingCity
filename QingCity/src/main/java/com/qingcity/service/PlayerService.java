@@ -52,6 +52,14 @@ public interface PlayerService {
 	PlayerEntity selectByUserId(int userId);
 
 	/**
+	 * 根据昵称查询玩家信息
+	 * 
+	 * @param nickname
+	 * @return
+	 */
+	PlayerEntity selectByNickname(String nickname);
+
+	/**
 	 * 根据玩家等级查询玩家id
 	 * 
 	 * @param level
@@ -220,5 +228,23 @@ public interface PlayerService {
 	 * @return 有权限则返回true 否则返回false
 	 */
 	boolean hasManagerAuth(int userId);
+
+	/**
+	 * 更新玩家最近一次登录时间，时间即为当前时间(上次登录的下线时间)
+	 * 
+	 * @param userId
+	 *            玩家id
+	 */
+	void updateLoginTime(int userId);
+
+	/**
+	 * 更新玩家个性签名
+	 * 
+	 * @param signature
+	 *            个性签名
+	 * @param userId
+	 *            玩家id
+	 */
+	void updateSignature(String signature, int userId);
 
 }

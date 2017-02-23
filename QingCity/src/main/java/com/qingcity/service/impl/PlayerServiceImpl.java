@@ -22,8 +22,8 @@ public class PlayerServiceImpl implements PlayerService {
 	private static final Integer POWER_MILLISECOND = 3 * 60 * 1000;// 自动增加一体力需要3分钟的时间
 	private static final Integer POWER_UPPER_LIMIT = 60;// 体力自动恢复的上限
 
-	//private static final Integer CHAIR = 1;// 会长
-	//private static final Integer VICE_CHAIR = 2;// 副会长
+	// private static final Integer CHAIR = 1;// 会长
+	// private static final Integer VICE_CHAIR = 2;// 副会长
 	private static final Integer MEMBER = 3;// 成员
 
 	@Autowired
@@ -234,6 +234,21 @@ public class PlayerServiceImpl implements PlayerService {
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public PlayerEntity selectByNickname(String nickname) {
+		return playerMapper.selectByNickname(nickname);
+	}
+
+	@Override
+	public void updateLoginTime(int userId) {
+		playerMapper.updateLoginTime(TimeUtil.Date2Timestamp(new Date()), userId);
+	}
+
+	@Override
+	public void updateSignature(String signature, int userId) {
+		playerMapper.updateSignature(signature, userId);
 	}
 
 }

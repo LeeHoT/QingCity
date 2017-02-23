@@ -11,6 +11,9 @@
 		<result property="gold" column="GOLD" jdbcType="INTEGER" />
 		<result property="lastPowUpdateTime" column="LASTPOWUPDATETIME"
 			jdbcType="TIMESTAMP" />
+		<result property="lastLoginTime" column="LASTLOGINTIME"
+			jdbcType="TIMESTAMP" />
+		<result property="signature" column="SIGNATURE" jdbcType="VARCHAR" />
 		<result property="icon" column="ICON" jdbcType="VARCHAR" />
 		<result property="societyId" column="societyId" />
 		<result property="contribution" column="contribution" />
@@ -19,14 +22,19 @@
 	<!-- 可复用SQL语句 -->
 	<sql id="Base_Column_List">
 		userId, level,experience, power, diamond,
-		gold,icon,lastPowUpdateTime,nickname,contribution,societyId,job
+		gold,icon,lastPowUpdateTime,lastLoginTime,signature,nickname,contribution,societyId,job
 	</sql>
 	<!--根据id查询玩家信息，包括玩家姓名 -->
 	<select id="selectByUserId" parameterType="java.lang.Integer"
 		resultMap="playerResultMap">
 		select
 		<include refid="Base_Column_List" />
-		from player where p.userId = #{userId}
+		from player where userId = #{userId}
+	</select>
+	<select id="selectByNickname" parameterType="String" resultType="PlayerEntity">
+		select
+		<include refid="Base_Column_List" />
+		from player where nickname = #{nickname}
 	</select>
 	<!-- -->
 	<select id="selectPlayerByLevel" parameterType="Integer"
@@ -55,14 +63,14 @@
 		insert into player
 		(userId,level,experience,
 		power, diamond,
-		gold,lastPowUpdateTime,icon,nickname
+		gold,lastPowUpdateTime,lastLoginTime,signature,icon,nickname
 		)
 		values
 		(#{userId,jdbcType=INTEGER},#{level,jdbcType=INTEGER},
 		#{experience,jdbcType=INTEGER},
 		#{power,jdbcType=INTEGER},
 		#{diamond,jdbcType=INTEGER},
-		#{gold,jdbcType=INTEGER},#{lastPowUpdateTime,jdbcType=TIMESTAMP},
+		#{gold,jdbcType=INTEGER},#{lastPowUpdateTime,jdbcType=TIMESTAMP},#{lastLoginTime,jdbcType=TIMESTAMP},#{signature,jdbcType=VARCHAR},
 		#{icon,jdbcType=VARCHAR},#{nickname,jdbcType=VARCHAR}
 		)
 	</insert>
@@ -83,6 +91,12 @@
 			</if>
 			<if test="power != null &amp; lastPowUpdateTime != null">
 				power,lastPowUpdateTime,
+			</if>
+			<if test="lastLoginTime != null">
+				lastLoginTime,
+			</if>
+			<if test="signature != null">
+				signature,
 			</if>
 			<if test="diamond != null">
 				diamond,
@@ -118,6 +132,12 @@
 			</if>
 			<if test="power != null &amp; lastPowUpdateTime != null">
 				#{power,jdbcType=INTEGER},#{lastPowUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lastLoginTime != null">
+				#{lastLoginTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="signature != null">
+				#{signature,jdbcType=VARCHAR},
 			</if>
 			<if test="diamond != null">
 				#{diamond,jdbcType=INTEGER},
@@ -163,6 +183,12 @@
 			<if test="power != null &amp; lastPowUpdateTime != null">
 				power = power + #{power,jdbcType=INTEGER},
 				lastPowUpdateTime = #{lastPowUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lastLoginTime != null">
+				lastLoginTime = #{lastLoginTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="signature != null">
+				signature = #{signature,jdbcType=VARCHAR},
 			</if>
 			<if test="diamond != null">
 				diamond = diamond + #{diamond,jdbcType=INTEGER},
@@ -262,4 +288,14 @@
 		userId=#{userId}
 	</select>
 	<!-- *******************上边部分为和公会相关的信息******************* -->
+	<update id="updateSignature">
+		update player set signature =
+		#{signature,jdbcType=VARCHAR} where userId =
+		#{userId,jdbcType=INTEGER}
+	</update>
+
+	<update id="updateLoginTime">
+		update player set lastLoginTime = #{lastLoginTime} where userId = #{userId}
+	</update>
+	
 </mapper>

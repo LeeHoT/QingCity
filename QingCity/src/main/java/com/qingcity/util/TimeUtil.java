@@ -1,6 +1,7 @@
 package com.qingcity.util;
 
 import java.sql.Timestamp;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -13,9 +14,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class TimeUtil {
 
+	public final static String TIME_STAMP_PATTERN = "yyyyMMddHHmmssSSS";
+	public final static String STANDARD_DATETIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
+	public final static String STANDARD_DATE_PATTERN = "yyyy-MM-dd";
+	public final static String DATE_PATTERN = "yyyyMMdd";
 	private static TimeUtil instance = new TimeUtil();
 	private static final int SEASON = 3;// 三个月为一个赛季
-	private static String timeStrFormat = "yyyy-MM-dd HH:mm:ss";
+	private static String timeStrFormat = "yyyyMMddHHmmss";
 
 	public static TimeUtil getInstance() {
 		return instance;
@@ -59,7 +64,6 @@ public class TimeUtil {
 		Timestamp ts = null;
 
 		try {
-			System.out.println("string2timestamp : " + sdf.parse(t).getTime());
 			ts = new Timestamp(sdf.parse(t).getTime());
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
@@ -91,7 +95,6 @@ public class TimeUtil {
 	 * @return
 	 */
 	public static Timestamp Date2Timestamp(Date date) {
-		System.out.println("date2timestamp: " + date);
 		String d = Date2String(date);
 		return String2Timestamp(d);
 
@@ -105,9 +108,11 @@ public class TimeUtil {
 	 */
 	public static java.sql.Date UtilDate2SQLDate(Date date) {
 		// 先转为字符串
-		String udt = Date2String(date);
+		// String udt = Date2String(date);
+		java.sql.Date d = new java.sql.Date(date.getTime());
 		// 再转为sql Date
-		return String2SQLDate(udt);
+		return d;
+		// return String2SQLDate(udt);
 	}
 
 	/**
@@ -137,7 +142,6 @@ public class TimeUtil {
 	public static String Date2String(Date date) {
 		SimpleDateFormat sdf = new SimpleDateFormat(timeStrFormat);
 		String time = sdf.format(date);
-		System.out.println("dddddddddddddddddddd:" + time);
 		return time;
 	}
 
@@ -201,16 +205,83 @@ public class TimeUtil {
 		return day;
 	}
 
+	public static int getYear() {
+		Calendar now = new GregorianCalendar();
+		int year = now.get(Calendar.YEAR);
+		return year;
+	}
+
+	public static String getDate() {
+		SimpleDateFormat sdf = new SimpleDateFormat(timeStrFormat);
+		String temp = sdf.format(new Date());
+		String date = temp.substring(4, 8);
+		return date;
+	}
+
+	/**
+	 * 当月的第一天
+	 * 
+	 * @return
+	 */
+	public static String firstDayOfMonth() {
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.MONTH, 0);
+		calendar.set(Calendar.DAY_OF_MONTH, 1);
+		return TimeUtil.formatDate(calendar.getTime()) + " 00:00:00";
+	}
+
+	/**
+	 * 格式化日期
+	 * 
+	 * @param date
+	 * @return yyyy-MM-dd
+	 */
+	public static String formatDate(Date date) {
+		return formatDate(date, STANDARD_DATETIME_PATTERN);
+	}
+
+	public static String formatDate(Timestamp t, String pattern) {
+		return formatDate(new Date(t.getTime()), STANDARD_DATE_PATTERN);
+	}
+
+	/**
+	 * 格式化日期
+	 * 
+	 * @param date
+	 *            日期
+	 * @param pattern
+	 *            格式
+	 * @return
+	 */
+	public static String formatDate(Date date, String pattern) {
+		if (date == null)
+			return null;
+		DateFormat format = new SimpleDateFormat(pattern);
+		return format.format(date);
+	}
+
+	/**
+	 * 当月的最后一天
+	 * 
+	 * @return
+	 */
+	public static String lastDayOfMonth() {
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.MONTH, 1);
+		calendar.set(Calendar.DAY_OF_MONTH, 0);
+		return TimeUtil.formatDate(calendar.getTime()) + " 23:59:59";
+		// Calendar time = Calendar.getInstance();
+		// return String.valueOf(time.getActualMaximum(Calendar.DAY_OF_MONTH));
+	}
+
 	public static Date getStartTime() {
 		long current = System.currentTimeMillis();// 当前时间毫秒数
 		long zero = current / (1000 * 3600 * 24) * (1000 * 3600 * 24) - TimeZone.getDefault().getRawOffset();// 今天零点零分零秒的毫秒数
-		System.out.println(new Timestamp(zero));// 今天零点零分零秒
 		return new Timestamp(zero);
 	}
 
 	public static Date getEndTime() {
-		long current = System.currentTimeMillis();// 当前时间毫秒数
-		long zero = current / (1000 * 3600 * 24) * (1000 * 3600 * 24) - TimeZone.getDefault().getRawOffset();// 今天零点零分零秒的毫秒数
+		long zero = getStartTime().getTime();
 		long twelve = zero + 24 * 60 * 60 * 1000 - 1;// 今天23点59分59秒的毫秒数
 		return new Timestamp(twelve);
 	}
@@ -240,26 +311,26 @@ public class TimeUtil {
 		return new Date(time); // 将毫秒数转换成日期
 	}
 
-	@SuppressWarnings("static-access")
-	public static void main(String[] args) {
-		TimeUtil time = getInstance();
-		Date date = new Date();
-		System.out.println(time.Date2String(date)); // test Date2String
-		System.out.println("当前是第" + time.getSeason(date) + "赛季"); // test
-		System.out.println("当前是第" + time.getWeek(date) + "周");// test getWeek
-		System.out.println("今天是" + time.getDay() + "号"); // test getDay
-		String d = "2016-11-20 10:25:23";
-		System.out.println(time.Date2Timestamp(date).after(time.String2Timestamp(d)));
-		date = time.String2Date(d); // test String2Date
-		System.out.println(date);
-		System.out.println("Date 转化为字符串 " + time.Date2String(date));
-		Timestamp ts = time.Date2Timestamp(date);
-		System.out.println("Date 转化为Timestamp " + ts);
-		System.out.println("String 转化为Timestamp " + time.String2Timestamp(d));
-		System.out.println("Timestamp 转化为 Date " + time.Timestamp2Date(ts));
-		System.out.println("Timestamp 转化为String " + time.Timestamp2String(ts));
-		System.out.println("String 转化为 Date " + time.String2Date(d));
-
-	}
+	// @SuppressWarnings("static-access")
+	// public static void main(String[] args) {
+	// TimeUtil time = getInstance();
+	// Date date = new Date();
+	// System.out.println(time.Date2String(date)); // test Date2String
+	// System.out.println("当前是第" + time.getSeason(date) + "赛季"); // test
+	// System.out.println("当前是第" + time.getWeek(date) + "周");// test getWeek
+	// System.out.println("今天是" + time.getDay() + "号"); // test getDay
+	// String d = "2016-11-20 10:25:23";
+	// System.out.println(time.Date2Timestamp(date).after(time.String2Timestamp(d)));
+	// date = time.String2Date(d); // test String2Date
+	// System.out.println(date);
+	// System.out.println("Date 转化为字符串 " + time.Date2String(date));
+	// Timestamp ts = time.Date2Timestamp(date);
+	// System.out.println("Date 转化为Timestamp " + ts);
+	// System.out.println("String 转化为Timestamp " + time.String2Timestamp(d));
+	// System.out.println("Timestamp 转化为 Date " + time.Timestamp2Date(ts));
+	// System.out.println("Timestamp 转化为String " + time.Timestamp2String(ts));
+	// System.out.println("String 转化为 Date " + time.String2Date(d));
+	//
+	// }
 
 }

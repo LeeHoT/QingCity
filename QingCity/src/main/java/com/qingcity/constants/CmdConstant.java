@@ -12,10 +12,10 @@ public interface CmdConstant {
 			USER_REGISTER = 101, // 注册验证
 			USER_ADD_EMAIL = 102, // 添加邮箱
 			USER_ADD_IDCARD = 103, // 添加身份证号
-			USER_ADD_PHONE = 105, // 添加电话号
-
-			PK_SEARCH = 201, // pk查找对手
+			C2S_ADDDIAMOND = 105, // 添加电话号
+			S2C_ADDDIAMOND = 106, PK_SEARCH = 201, // pk查找对手
 			PK_COMPLETE = 202, // PK完成
+			DRAW_A_LOTTERY = 203, // 抽奖
 
 			COMMIT_RESULT = 2000, // 提交游戏结果
 
