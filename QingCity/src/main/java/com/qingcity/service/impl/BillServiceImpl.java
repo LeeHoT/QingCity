@@ -5,12 +5,15 @@ import java.util.List;
 import com.qingcity.entity.Bill;
 import com.qingcity.service.BillService;
 
+<<<<<<< HEAD
 /**
  * 
  * @author leehotin
  * @Date 2017年2月9日 下午7:04:56
  * @Description 订单service实现
  */
+=======
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 public class BillServiceImpl implements BillService {
 
 	@Override

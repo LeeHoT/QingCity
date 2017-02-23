@@ -27,8 +27,16 @@ public class NettyServerStart {
 		DOMConfigurator.configureAndWatch("src/main/resources/config/log4j.xml");
 		if (args.length > 0) {
 			port = Integer.parseInt(args[0]);
+<<<<<<< HEAD
 		} else {
 			port = PortConstant.GAME_SERVER;
+=======
+			System.out.println("端口已经定义好");
+		} else {
+			port = PortConstant.GAME_SERVER;
+			System.out.println("端口为自己设置" + port);
+
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 		}
 		run();
 	}
@@ -38,6 +46,7 @@ public class NettyServerStart {
 		factory = new FileSystemXmlApplicationContext("classpath:config/applicationContext.xml");
 		ServerInitializer initializer = (ServerInitializer) factory.getBean(ServerInitializer.class);
 		// 设定Server 监听端口
+		System.out.println("正在启动的端口为" + port);
 		NettyServer server = new NettyServer(port);
 		// 设定 initializer
 		server.setInitializer(initializer);

@@ -11,7 +11,11 @@ import java.util.Date;
  */
 public class RechargeRecord implements Serializable {
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
 	private String rechargeId; // 充值账单id
+=======
+	private Integer rechargeId; // 充值账单id
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 	private Integer userId; // 玩家id
 	private Integer pid; // 充值物品id
 	private Date time; // 充值时间
@@ -43,11 +47,19 @@ public class RechargeRecord implements Serializable {
 		this.status = status;
 	}
 
+<<<<<<< HEAD
 	public String getRechargeId() {
 		return rechargeId;
 	}
 
 	public void setRechargeId(String rechargeId) {
+=======
+	public Integer getRechargeId() {
+		return rechargeId;
+	}
+
+	public void setRechargeId(Integer rechargeId) {
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 		this.rechargeId = rechargeId;
 	}
 

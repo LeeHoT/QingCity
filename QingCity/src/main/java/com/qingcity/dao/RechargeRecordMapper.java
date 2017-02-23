@@ -15,6 +15,7 @@ import com.qingcity.entity.RechargeRecord;
  */
 @Repository
 public interface RechargeRecordMapper {
+<<<<<<< HEAD
 	/**
 	 * 查询订单详情
 	 * 
@@ -80,4 +81,17 @@ public interface RechargeRecordMapper {
 	 */
 	int updateStatusById(@Param("rechargeId") String rechargeId, @Param("status") int status);
 
+=======
+	int deleteByPrimaryKey(Integer rechargeid);
+
+	int insert(RechargeRecord record);
+
+	int insertSelective(RechargeRecord record);
+
+	RechargeRecord selectByPrimaryKey(Integer rechargeid);
+
+	int updateByPrimaryKeySelective(RechargeRecord record);
+
+	int updateByPrimaryKey(RechargeRecord record);
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 }

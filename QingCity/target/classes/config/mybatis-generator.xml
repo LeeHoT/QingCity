@@ -61,11 +61,19 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 		</javaClientGenerator>
 		
 		  
+<<<<<<< HEAD
 		<table tableName="gift" domainObjectName="Gift"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>
         <table tableName="giftRecord" domainObjectName="GiftRecord"
+=======
+		<table tableName="bill" domainObjectName="Bill"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="rechargeRecord" domainObjectName="RechargeRecord"
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>

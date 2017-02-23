@@ -3373,6 +3373,7 @@ Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long fo
 	... 26 more
 
 [2017-02-09 11:33:50,084][ERROR, (ServerAdapter.java:54).channelInactive] [Client OutLine]:/127.0.0.1:60385掉线并将其移出服务器
+<<<<<<< HEAD
 [2017-02-14 10:36:19,954][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52645在Tue Feb 14 10:36:19 CST 2017发生连接异常
 [2017-02-14 10:36:19,954][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52646在Tue Feb 14 10:36:19 CST 2017发生连接异常
 [2017-02-14 10:36:19,954][ERROR, (ServerAdapter.java:148).exceptionCaught] [Client]: /127.0.0.1:52644在Tue Feb 14 10:36:19 CST 2017发生连接异常
@@ -3819,3 +3820,5 @@ Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter 
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
 	... 26 more
 
+=======
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17

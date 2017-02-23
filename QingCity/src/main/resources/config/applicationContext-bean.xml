@@ -36,7 +36,11 @@
 
 	<bean id="bill" class="com.qingcity.entity.Bill"></bean>
 
+<<<<<<< HEAD
 	<bean id="dress" class="com.qingcity.entity.Dress"></bean>
+=======
+	<bean id="bill" class="com.qingcity.entity.Bill"></bean>
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 
 	<bean id="rechargeRecord" class="com.qingcity.entity.RechargeRecord"></bean>
 

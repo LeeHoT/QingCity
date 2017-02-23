@@ -1,8 +1,11 @@
 package com.qingcity.dao;
 
+<<<<<<< HEAD
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
+=======
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 import org.springframework.stereotype.Repository;
 
 import com.qingcity.entity.Bill;
@@ -15,6 +18,7 @@ import com.qingcity.entity.Bill;
  */
 @Repository
 public interface BillMapper {
+<<<<<<< HEAD
 	/**
 	 * 根据订单id 查询 订单信息
 	 * 
@@ -73,4 +77,17 @@ public interface BillMapper {
 	
 	int updateStatusByOrderId(@Param("status")int status,@Param("orderId") String orderId);
 
+=======
+	int deleteByPrimaryKey(Integer orderid);
+
+	int insert(Bill record);
+
+	int insertSelective(Bill record);
+
+	Bill selectByPrimaryKey(Integer orderid);
+
+	int updateByPrimaryKeySelective(Bill record);
+
+	int updateByPrimaryKey(Bill record);
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 }

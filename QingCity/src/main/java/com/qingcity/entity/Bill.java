@@ -11,7 +11,11 @@ import java.util.Date;
  */
 public class Bill implements Serializable {
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
 	private String orderId; // 订单号 : "System.currentTimeMillis()/1000"+userId
+=======
+	private Integer orderId; // 订单号 : "System.currentTimeMillis()/1000"+userId
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 	private Integer pid; // 物品id
 	private Date time; // 购买时间
 	private Integer status; // 付款状态 1.已付款 2.待付款
@@ -44,11 +48,19 @@ public class Bill implements Serializable {
 		this.status = status;
 	}
 
+<<<<<<< HEAD
 	public String getOrderId() {
 		return orderId;
 	}
 
 	public void setOrderId(String orderId) {
+=======
+	public Integer getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(Integer orderId) {
+>>>>>>> 5c0e5bc843bdb11b1826aeb31ab6f881df5aeb17
 		this.orderId = orderId;
 	}
 
